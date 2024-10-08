@@ -1,0 +1,4 @@
+                             color process_type scale variation      source_filename source_histname                         alias      title combine_idx
+Signal_B1_MD2000_MBH10000_n2     2       SIGNAL   1.0      lumi  .//BH_$process.root        h$region  Signal_B1_MD2000_MBH10000_n2  BH signal         NaN
+Signal_B1_MD2000_MBH10000_n2     2       SIGNAL   1.0   nominal  .//BH_$process.root        h$region  Signal_B1_MD2000_MBH10000_n2  BH signal         NaN
+data_obs                         1         DATA   1.0   nominal  .//BH_$process.root        h$region                          Data       Data         NaN

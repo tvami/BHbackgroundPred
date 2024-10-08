@@ -1,0 +1,6 @@
+            lnN shapes syst_type      source_filename source_histname direction variation_alias
+lumi      1.016    NaN       lnN                  NaN             NaN       NaN             NaN
+pileup      NaN    1.0    shapes  .//BH_$process.root         HIST_UP        Up          PUsyst
+pileup      NaN    1.0    shapes  .//BH_$process.root       HIST_DOWN      Down          PUsyst
+systOnPS    NaN    1.0    shapes  .//BH_$process.root         HIST_UP        Up          PSsyst
+systOnPS    NaN    1.0    shapes  .//BH_$process.root       HIST_DOWN      Down          PSsyst
