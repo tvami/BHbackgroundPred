@@ -5,7 +5,12 @@
 cmsrel CMSSW_14_1_0_pre4
 cd CMSSW_14_1_0_pre4/src
 cmsenv
-git clone git@github.com:tvami/BHbackgroundPred.git
+git clone git@github.com:tvami/BHbackgroundPred.git .
+git clone https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit.git HiggsAnalysis/CombinedLimit
+cd HiggsAnalysis/CombinedLimit
+git fetch origin
+git checkout v10.0.1
+cd ../..
 scram b -j
 ```
 
