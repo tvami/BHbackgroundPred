@@ -15,5 +15,5 @@ git clone --branch el9_matplotlib_plotting git@github.com:JHU-Tools/2DAlphabet.g
 python3 -m virtualenv twoD-env
 source twoD-env/bin/activate
 cd 2DAlphabet/
-python setup.py develop
+python3 setup.py develop
 ```
