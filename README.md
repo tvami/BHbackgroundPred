@@ -16,10 +16,11 @@ scram b -j
 
 ## Set up the enviroment (only once)
 ```
-python -m virtualenv twoD-env
+python3 -m virtualenv twoD-env
 source twoD-env/bin/activate
 cd 2DAlphabet
-python setup.py develop
+python3 setup.py develop
+cd ..
 ```
 
 ## Use the enviroment 
