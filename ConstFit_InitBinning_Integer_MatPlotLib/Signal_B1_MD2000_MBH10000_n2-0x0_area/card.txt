@@ -41,6 +41,8 @@ Background_fail_LOW_bin_8-1              flatParam
 Background_fail_LOW_bin_9-1              flatParam
 Background_fail_LOW_bin_10-1             flatParam
 Background_fail_SIG_bin_1-1              flatParam
+Background_fail_SIG_bin_2-1              flatParam
+Background_fail_SIG_bin_3-1              flatParam
 Background_fail_HIGH_bin_1-1             flatParam
 Background_fail_LOW_bin_1-1              flatParam
 Background_fail_LOW_bin_2-1              flatParam
@@ -53,5 +55,7 @@ Background_fail_LOW_bin_8-1              flatParam
 Background_fail_LOW_bin_9-1              flatParam
 Background_fail_LOW_bin_10-1             flatParam
 Background_fail_SIG_bin_1-1              flatParam
+Background_fail_SIG_bin_2-1              flatParam
+Background_fail_SIG_bin_3-1              flatParam
 Background_fail_HIGH_bin_1-1             flatParam
 Background_rpf_0x0_par0                  flatParam

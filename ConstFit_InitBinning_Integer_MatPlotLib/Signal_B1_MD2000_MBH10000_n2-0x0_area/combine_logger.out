@@ -1,37 +1,32 @@
 CascadeMinimizer.cc[188] : (in function: improveOnce) - Minimization configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
 CascadeMinimizer.cc[215] : (in function: improveOnce) - Minimization finished with status=0
 CascadeMinimizer.cc[219] : (in function: improveOnce) - Minimization success! status=0
-CascadeMinimizer.cc[188] : (in function: improveOnce) - Minimization configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
-CascadeMinimizer.cc[215] : (in function: improveOnce) - Minimization finished with status=0
-CascadeMinimizer.cc[219] : (in function: improveOnce) - Minimization success! status=0
-CascadeMinimizer.cc[188] : (in function: improveOnce) - Minimization configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
-CascadeMinimizer.cc[215] : (in function: improveOnce) - Minimization finished with status=0
-CascadeMinimizer.cc[219] : (in function: improveOnce) - Minimization success! status=0
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_LOW_bin_10-1 at boundary (within ~1sigma): 0.076024+/-0.198296
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_LOW_bin_6-1 at boundary (within ~1sigma): 0.570167+/-0.600399
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_LOW_bin_7-1 at boundary (within ~1sigma): 0.337031+/-0.448036
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_LOW_bin_8-1 at boundary (within ~1sigma): 0.198027+/-0.310709
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_LOW_bin_9-1 at boundary (within ~1sigma): 0.118012+/-0.231167
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_SIG_bin_1-1 at boundary (within ~1sigma): 0.125802+/-0.354227
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_HIGH_bin_1-1 at boundary (within ~1sigma): 0.0131949+/-0.186084
-CascadeMinimizer.cc[483] : (in function: minimize) - [WARNING] After fit, some parameters are found at the boundary (within ~1sigma)
-CascadeMinimizer.cc[188] : (in function: improveOnce) - Minimization configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
-CascadeMinimizer.cc[215] : (in function: improveOnce) - Minimization finished with status=0
-CascadeMinimizer.cc[219] : (in function: improveOnce) - Minimization success! status=0
-FitDiagnostics.cc[318] : (in function: runSpecific) -  Fit B-only, status = 0, numBadNLL = 0, covariance quality = -1
-CascadeMinimizer.cc[188] : (in function: improveOnce) - Minimization configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
-CascadeMinimizer.cc[215] : (in function: improveOnce) - Minimization finished with status=0
-CascadeMinimizer.cc[219] : (in function: improveOnce) - Minimization success! status=0
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_LOW_bin_10-1 at boundary (within ~1sigma): 0.0766143+/-0.226556
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_LOW_bin_6-1 at boundary (within ~1sigma): 0.570785+/-0.603597
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_LOW_bin_7-1 at boundary (within ~1sigma): 0.33787+/-0.47215
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_LOW_bin_8-1 at boundary (within ~1sigma): 0.199245+/-0.316689
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_LOW_bin_9-1 at boundary (within ~1sigma): 0.117532+/-0.267508
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_SIG_bin_1-1 at boundary (within ~1sigma): 0.123905+/-0.426474
-utils.cc[1040] : (in function: anyParameterAtBoundaries) - [WARNING] Found parameter Background_fail_HIGH_bin_1-1 at boundary (within ~1sigma): 0.0133308+/-0.171277
-CascadeMinimizer.cc[483] : (in function: minimize) - [WARNING] After fit, some parameters are found at the boundary (within ~1sigma)
-CascadeMinimizer.cc[188] : (in function: improveOnce) - Minimization configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
-CascadeMinimizer.cc[215] : (in function: improveOnce) - Minimization finished with status=0
-CascadeMinimizer.cc[219] : (in function: improveOnce) - Minimization success! status=0
-FitterAlgoBase.cc[344] : (in function: doFit) - Running Minos for POI r
-FitDiagnostics.cc[443] : (in function: runSpecific) - Fit S+B, status = 0, numBadNLL = 0, covariance quality = -1
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binpass_LOW_obsOnly: in 10 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binpass_SIG_obsOnly: in 3 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binpass_HIGH_obsOnly: in 1 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binfail_LOW_obsOnly: in 10 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binfail_SIG_obsOnly: in 3 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binfail_HIGH_obsOnly: in 1 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+AsymptoticLimits.cc[428] : (in function: runLimitExpected) - Median for expected limits = 1.04688, Sigma for expected limits = 0.53413
+AsymptoticLimits.cc[191] : (in function: runLimit) - NLL at global minimum of data = -140.482 (r=7.68908e-06)
+AsymptoticLimits.cc[211] : (in function: runLimit) - NLL at global minimum of asimov = -140.425 (r=9.42937e-09)
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 1.200008:	q_mu = 4.43969	q_A  = 4.41591	Pmu = 0.01756	1-Pb  = 0.49774	CLs  = 0.03527
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.600008:	q_mu = 2.18914	q_A  = 2.17143	Pmu = 0.06949	1-Pb  = 0.49760	CLs  = 0.13965
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.958287:	q_mu = 3.53098	q_A  = 3.50910	Pmu = 0.03012	1-Pb  = 0.49767	CLs  = 0.06051
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 1.074996:	q_mu = 3.96936	q_A  = 3.94652	Pmu = 0.02317	1-Pb  = 0.49771	CLs  = 0.04655
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 1.026196:	q_mu = 3.78598	q_A  = 3.76352	Pmu = 0.02584	1-Pb  = 0.49769	CLs  = 0.05192
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 1.049436:	q_mu = 3.87329	q_A  = 3.85065	Pmu = 0.02453	1-Pb  = 0.49770	CLs  = 0.04929
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 1.039657:	q_mu = 3.83655	q_A  = 3.81398	Pmu = 0.02507	1-Pb  = 0.49770	CLs  = 0.05038
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 1.044301:	q_mu = 3.85400	q_A  = 3.83140	Pmu = 0.02481	1-Pb  = 0.49770	CLs  = 0.04986

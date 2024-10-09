@@ -15,10 +15,12 @@
           3800,
           4000,
           5000,
+          6000,
+          7000,
           8000
         ],
         "NAME": "ST",
-        "SIGEND": 5000,
+        "SIGEND": 7000,
         "SIGSTART": 4000,
         "TITLE": "S_{T} [GeV]"
       },
@@ -55,10 +57,12 @@
   "NAME": "NotRelevantString",
   "OPTIONS": {
     "blindedFit": [
-      "pass"
+      "pass_SIG",
+      "pass_HIGH"
     ],
     "blindedPlots": [
-      "pass"
+      "pass_SIG",
+      "pass_HIGH"
     ],
     "plotEvtsPerUnitVolt": true,
     "plotTemplateComparisonsVol": true
