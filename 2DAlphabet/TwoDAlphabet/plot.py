@@ -313,7 +313,7 @@ class Plotter(object):
                 #for proj in ['postfit_projx','postfit_projy']:
                     for islice in range(3):
                         projn     = f'{proj}{islice}'
-                        if projn != 'postfit_projx2': continue
+                        #if projn != 'postfit_projx2': continue
                         sig_projn = projn
                         if self.twoD.options.plotPrefitSigInFitB and self.fittag == 'b':
                             sig_projn = projn.replace('postfit','prefit') # Plot prefit signal in b-only plots
@@ -931,7 +931,8 @@ def plot_gof(tag, subtag, seed=123456, condor=False):
         gof_data = gof_limit_tree.limit
 
         # Get toys
-        toy_limit_tree.Draw('limit>>hlimit','limit>1.0 && limit<%s && limit != %s'%(gof_data*2.0,gof_data)) 
+        #toy_limit_tree.Draw('limit>>hlimit','limit>1.0 && limit<%s && limit != %s'%(gof_data*2.0,gof_data)) 
+        toy_limit_tree.Draw('limit>>hlimit','limit>1.0')
         htoy_gof = ROOT.gDirectory.Get('hlimit')
         time.sleep(1) # if you don't sleep the code moves too fast and won't perform the fit
         htoy_gof.Fit("gaus")

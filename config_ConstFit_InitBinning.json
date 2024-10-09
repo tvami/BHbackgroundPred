@@ -62,9 +62,9 @@
             "X": {
                 "NAME": "ST",
                 "TITLE": "S_{T} [GeV]",
-                "BINS":   [2000,2200,2400,2600,2800,3000,3200,3400,3600,3800,4000,5000,8000],
+                "BINS":   [2000,2200,2400,2600,2800,3000,3200,3400,3600,3800,4000,5000,6000,7000,8000],
                 "SIGSTART": 4000,
-                "SIGEND": 5000
+                "SIGEND": 7000
             },
             "Y": {
                 "NAME": "N",
@@ -76,8 +76,8 @@
         }
     },
     "OPTIONS": {
-        "blindedFit": ["pass"],
-        "blindedPlots": ["pass"],
+        "blindedFitA": ["pass_SIG", "pass_HIGH"],
+        "blindedPlotsA": ["pass_SIG", "pass_HIGH"],
         "plotTemplateComparisonsVol": true,
         "plotEvtsPerUnitVolt" : true
     }
