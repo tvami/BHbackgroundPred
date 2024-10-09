@@ -1,0 +1,21 @@
+CascadeMinimizer.cc[188] : (in function: improveOnce) - Minimization configured with Type=Minuit2, Algo=Migrad, strategy=0, tolerance=0.1
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_SIG_obsOnly, expected yield = -9.98256 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_HIGH_obsOnly, expected yield = -15.1569 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binfail_SIG_obsOnly, expected yield = -0.317619 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binfail_HIGH_obsOnly, expected yield = -0.302606 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_SIG_obsOnly, expected yield = -5.19267 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_HIGH_obsOnly, expected yield = -8.46494 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_SIG_obsOnly, expected yield = -8.48044 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_HIGH_obsOnly, expected yield = -14.9083 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_SIG_obsOnly, expected yield = -3.57923 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_HIGH_obsOnly, expected yield = -7.60372 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_HIGH_obsOnly, expected yield = -2.11384 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_SIG_obsOnly, expected yield = -7.46778 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_HIGH_obsOnly, expected yield = -13.6136 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_SIG_obsOnly, expected yield = -9.03191 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_HIGH_obsOnly, expected yield = -16.015 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_SIG_obsOnly, expected yield = -1.78712 (observed: 0)
+CachingNLL.cc[715] : (in function: evaluate) - underflow (expected events <=0) in total event yield for pdf_binpass_HIGH_obsOnly, expected yield = -5.01959 (observed: 0)
+CascadeMinimizer.cc[215] : (in function: improveOnce) - Minimization finished with status=-1
+CascadeMinimizer.cc[220] : (in function: improveOnce) - Minimization ended with latest status != 0 or 1
+FitterAlgoBase.cc[260] : (in function: doFit) - Initial minimization failed. Aborting.
