@@ -2,8 +2,8 @@
 
 ## Set up
 ```
-cmsrel CMSSW_10_6_14
-cd CMSSW_10_6_14/src
+cmsrel CMSSW_14_1_0_pre4
+cd CMSSW_14_1_0_pre4/src
 cmsenv
 git clone git@github.com:tvami/BHbackgroundPred.git
 scram b -j
@@ -19,7 +19,7 @@ python setup.py develop
 
 ## Use the enviroment 
 ```
-cd /path/to/CMSSW_10_6_14/src
+cd /path/to/CMSSW_14_1_0_pre4/src
 cmsenv
 source twoD-env/bin/activate
 ```
