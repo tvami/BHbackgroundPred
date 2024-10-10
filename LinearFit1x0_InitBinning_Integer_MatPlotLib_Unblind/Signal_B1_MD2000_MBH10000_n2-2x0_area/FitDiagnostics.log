@@ -1,0 +1,49 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is FitDiagnostics
+Set Default Value of Parameter r To : 1
+>>> 0 out of 6 channels masked
+
+>> Found 19 floating parameters
+>> The following parameters are protected in the event of negative eigenvalues:
+>> Verifying eigenvalues are all positive (iteration 0)
+Eigenvalue 18 : -1.12947e-07
+ - 0.72609	Background_rpf_2x0_par0
+ - -0.682171	Background_rpf_2x0_par3
+ - -0.0834226	Background_rpf_2x0_par1
+ - 0.021827	Background_rpf_2x0_par2
+ - -2.24138e-06	Background_fail_LOW_bin_1-1
+>> Attempt 0 failed, remove the variable with largest eigenvector component...
+>> Dropping Background_rpf_2x0_par0 from the hessian
+>> Verifying eigenvalues are all positive (iteration 1)
+>> All eigenvalues are positive
+>> Inverting Hessian...
+>> Matrix inverted
+>> Note: the following parameters were dropped to make the covariance matrix pos-def:
+     - Background_rpf_2x0_par0
+ Fit B-only, status = 0, numBadNLL = 0, covariance quality = -1
+Running Minos for POI r
+>> Found 20 floating parameters
+>> The following parameters are protected in the event of negative eigenvalues: r
+>> Verifying eigenvalues are all positive (iteration 0)
+Eigenvalue 19 : -6.39093e-07
+ - 0.721747	Background_rpf_2x0_par0
+ - -0.686654	Background_rpf_2x0_par3
+ - -0.0845187	Background_rpf_2x0_par1
+ - 0.0210772	Background_rpf_2x0_par2
+ - 9.40897e-05	r
+>> Attempt 0 failed, remove the variable with largest eigenvector component...
+>> Dropping Background_rpf_2x0_par0 from the hessian
+>> Verifying eigenvalues are all positive (iteration 1)
+>> All eigenvalues are positive
+>> Inverting Hessian...
+>> Matrix inverted
+>> Note: the following parameters were dropped to make the covariance matrix pos-def:
+     - Background_rpf_2x0_par0
+Fit S+B, status = 0, numBadNLL = 0, covariance quality = -1
+
+ --- FitDiagnostics ---
+Best fit r: 1.00694e-07  -1.00694e-07/+50  (68% CL)
+Done in 0.00 min (cpu), 0.00 min (real)
+21 log messages saved to combine_logger.out

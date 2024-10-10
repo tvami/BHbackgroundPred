@@ -313,7 +313,7 @@ class Plotter(object):
                 #for proj in ['postfit_projx','postfit_projy']:
                     for islice in range(3):
                         projn     = f'{proj}{islice}'
-                        #if projn != 'postfit_projx2': continue
+                        if projn != 'postfit_projx2': continue
                         sig_projn = projn
                         if self.twoD.options.plotPrefitSigInFitB and self.fittag == 'b':
                             sig_projn = projn.replace('postfit','prefit') # Plot prefit signal in b-only plots
