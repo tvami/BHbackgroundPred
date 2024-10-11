@@ -1,0 +1,6 @@
+Background_rpf_1x0_par0:lumi = 8.215969354132312e-05
+Background_rpf_1x0_par1:Background_rpf_1x0_par0 = -0.7298328983736226
+Background_rpf_1x0_par1:lumi = -0.00012694596809284566
+r:Background_rpf_1x0_par0 = 0.23769248417538258
+r:Background_rpf_1x0_par1 = -0.3599799525323185
+r:lumi = -0.008037771359541073

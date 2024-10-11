@@ -1,0 +1,85 @@
+{
+    "NAME": "NotRelevantString",
+    "GLOBAL": {
+        "FILE": "BH_$process.root",
+        "HIST": "h$region",
+        "HIST_UPvolt": "h$region_$syst_up",
+        "HIST_DOWNvolt": "h$region_$syst_down",
+        "path": "./histograms_for_2DAlphabet_v3/",
+        "SIGNAME": ["Signal_B1_MD2000_MBH10000_n2"],
+        "SIGNAME1":  ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800"] 
+    },
+    "REGIONS": {
+        "pass": {
+            "PROCESSES": ["SIGNAME"],
+            "BINNING": "default"
+        },
+        "fail": {
+            "PROCESSES": ["SIGNAME"],
+            "BINNING": "default"
+        }
+    },
+    "PROCESSES": {
+        "data_obs": {
+            "SYSTEMATICS":[],
+            "COLOR": "black",
+            "SCALE": 1.0,
+            "TYPE": "DATA",
+            "TITLE": "Fake Data",
+            "ALIAS": "FakeData",
+            "LOC": "path/FILE:HIST"
+        },
+        "SIGNAME": {
+            "SYSTEMATICSvolt": ["lumi","pileup", "systOnF", "systOnG", "systOnTrigger", "systOnPt", "systOnMuReco", "systOnMuID", "systOnMuTrigger"],
+            "SYSTEMATICS": ["lumi"],
+            "COLOR": "red",
+            "SCALE": 1.0,
+            "TYPE": "SIGNAL",
+            "TITLE": "BH signal",
+            "LOC": "path/FILE:HIST"
+        }
+    },
+    "SYSTEMATICS": {
+        "lumi": {
+                "CODE": 0,
+                "VAL": 1.016
+        },
+        "pileup": {
+            "ALIAS": "PUsyst",
+            "UP": "path/FILE:HIST_UP",
+            "DOWN": "path/FILE:HIST_DOWN",
+            "SIGMA": 1.0
+        },
+        "systOnPS": {
+            "ALIAS": "PSsyst",
+            "UP": "path/FILE:HIST_UP",
+            "DOWN": "path/FILE:HIST_DOWN",
+            "SIGMA": 1.0
+        }
+    },
+    "BINNING": {
+        "default": {
+            "X": {
+                "NAME": "ST",
+                "TITLE": "S_{T}",
+                "BINS":   [2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000,13000],
+                "SIGSTART": 4000,
+                "SIGEND": 7000
+            },
+            "Y": {
+                "NAME": "N",
+                "TITLE": "N",
+                "NBINS": 1,
+                "MIN": 5,
+                "MAX": 20
+            }
+        }
+    },
+    "OPTIONS": {
+        "blindedFitA": ["pass_SIG", "pass_HIGH"],
+        "blindedPlotsA": ["pass_SIG", "pass_HIGH"],
+        "plotTemplateComparisonsVol": true,
+        "plotEvtsPerUnitVolt" : true
+    }
+}
+

@@ -332,6 +332,11 @@ class Plotter(object):
                         )
                         slice_str = '%s < %s < %s'%slice_edges
 
+                        if (region == "pass") :
+                            slice_str = "PS score > 0.63"
+                        elif (region == "fail") :
+                            slice_str = "PS score < 0.63"
+
                         out_pad_name = f'{self.dir}/base_figs/{projn}_{region}{"" if not logyFlag else "_logy"}'
 
                         # If user requested sub-titles, obtain the ones for this specific region
@@ -577,7 +582,7 @@ def make_ax_1D(outname, binning, data, bkgs=[], signals=[], title='', subtitle='
         ax.step(x=edges, y=np.hstack([sigarr, sigarr[-1]]), where='post', color=sigColors[i], label=sigNamesLatex[i])
 
     if logyFlag:
-        ax.set_ylim(0.0000000001, totalBkg_arr.max()*1e5)
+        ax.set_ylim(0.0001, totalBkg_arr.max()*1e5)
         ax.set_yscale('log')
     else:
         ax.set_ylim(0, totalBkg_arr.max()*1.38)
@@ -597,7 +602,7 @@ def make_ax_1D(outname, binning, data, bkgs=[], signals=[], title='', subtitle='
     hep.cms.lumitext(lumiText, ax=ax)                       # Typically luminosity + sqrt(s)
     # Can't use the hep.cms.text() wrapper without "CMS" being added, so add the slice text manually
     if slicetitle:
-        slicetitle = r'${}$ {}'.format(slicetitle.replace('#','\\'), units)
+        slicetitle = r'${}$'.format(slicetitle.replace('#','\\'))
         ax.text(0.3, 0.95, slicetitle, ha='center', va='top', fontsize='small', transform=ax.transAxes)
     if subtitle:
         # Check if user requested multi-line
