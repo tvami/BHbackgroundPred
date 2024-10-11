@@ -355,7 +355,7 @@ if __name__ == "__main__":
     # No CS models:
     #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_gmsbStau-1029", "Signal_gmsbStau-1218", "Signal_gmsbStau-1409", "Signal_gmsbStau-1599", "Signal_gmsbStau-200", "Signal_gmsbStau-247", "Signal_gmsbStau-308", "Signal_gmsbStau-432", "Signal_gmsbStau-557", "Signal_gmsbStau-651", "Signal_gmsbStau-745", "Signal_gmsbStau-871", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-200", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871", "Signal_stop-1000", "Signal_stop-1200", "Signal_stop-1400", "Signal_stop-1600", "Signal_stop-1800", "Signal_stop-2000", "Signal_stop-2200", "Signal_stop-2400", "Signal_stop-2600", "Signal_stop-500", "Signal_stop-800", "Signal_tauPrime1e-1000", "Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800", "Signal_tauPrime1e-200", "Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800", "Signal_tauPrime2e-1000", "Signal_tauPrime2e-1400", "Signal_tauPrime2e-1800", "Signal_tauPrime2e-200", "Signal_tauPrime2e-2200", "Signal_tauPrime2e-2600", "Signal_tauPrime2e-400", "Signal_tauPrime2e-600"]
 
-    # tf_type = '0x0'
+    #tf_type = '0x0'
     tf_type = '1x0'
 
     for signal in signal_areas :
@@ -367,7 +367,6 @@ if __name__ == "__main__":
       while not (fitPassed) :
         print("\n\n\nperform_fit with rMax = " + str(rMax))
         perform_fit(signal,tf_type,rMax,extra='--robustHesse 1')
-        #perform_fit(signal,'0x0',rMax,extra='')
         # Do fitting until the fit passes
         with open(workingArea + "/" + signal + f"-{tf_type}_area/FitDiagnostics.log", 'r') as file:
           content = file.read()
@@ -376,10 +375,10 @@ if __name__ == "__main__":
       plot_fit(signal,tf_type)
       print("\n\n\nFit is succesful, running limits now for " + str(signal))
       run_limits(signal,tf_type)
-      #GOF(signal,'0x0',condor=False)
-      #plot_GOF(signal,'0x0',condor=False)
-      #SignalInjection(signal, '0x0', r=0, condor=False)
-      #plot_SignalInjection(signal, '0x0', r=0, condor=False)
-    #   Impacts(signal,'0x0')
+      #GOF(signal,tf_type,condor=False)
+      #plot_GOF(signal,tf_type,condor=False)
+      #SignalInjection(signal, tf_type, r=0, condor=False)
+      #plot_SignalInjection(signal, tf_type, r=0, condor=False)
+      #Impacts(signal,tf_type)
       os.system("cp " + workingArea + "/base.root " + workingArea + "/" + signal + f"-{tf_type}_area/.")
       open(workingArea + "/" + signal + f"-{tf_type}_area/done", 'w').close()

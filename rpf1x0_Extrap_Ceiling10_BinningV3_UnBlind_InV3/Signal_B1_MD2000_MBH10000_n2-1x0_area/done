@@ -1,0 +1,4 @@
+Run limits output:
+Doing GLOBAL variable replacement in input json...
+cd rpf1x0_Extrap_Ceiling10_BinningV3_UnBlind_InV3/Signal_B1_MD2000_MBH10000_n2-1x0_area
+Executing: combine -M AsymptoticLimits -d card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 1
