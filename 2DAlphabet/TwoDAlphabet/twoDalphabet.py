@@ -465,7 +465,7 @@ class TwoDAlphabet:
 
         for i in range(allVars.getSize()):
             var = allVars[i]
-            if 'mask_' in var.GetName() and '_SIG_' in var.GetName():
+            if 'mask_' in var.GetName() and ('_SIG_' or '_HIGH_') in var.GetName():
                 if var.getValV() == 1:
                     masked_regions.append(var.GetName())
         f.Close()
@@ -929,7 +929,7 @@ def _runMLfit(cardOrW, blinding, verbosity, rMin, rMax, setParams, usePreviousFi
         raise RuntimeError("Invalid cminDefaultMinimizerStrategy passed ({}) - please ensure that defMinStrat = 0, 1, or 2".format(defMinStrat))
     if usePreviousFit: param_options = ''
     else:              param_options = '--text2workspace "--channel-masks" '
-    params_to_set = ','.join(['mask_%s_SIG=1'%r for r in blinding]+['%s=%s'%(p,v) for p,v in setParams.items()]+['r=1'])
+    params_to_set = ','.join(['mask_%s_%s=1'%(r,suffix) for r in blinding for suffix in ['SIG', 'HIGH']]+['%s=%s'%(p,v) for p,v in setParams.items()]+['r=1'])
     param_options += '--setParameters '+params_to_set
 
     fit_cmd = 'combine -M FitDiagnostics {card_or_w} {param_options} --saveWorkspace --cminDefaultMinimizerStrategy {defMinStrat} --rMin {rmin} --rMax {rmax} -v {verbosity} {extra}'

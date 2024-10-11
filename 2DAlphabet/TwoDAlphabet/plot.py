@@ -135,7 +135,7 @@ class Plotter(object):
             binning,_ = self.twoD.GetBinningFor(region)
             if len(self.twoD.options.blindedPlots) > 0:
                 if region in self.twoD.options.blindedPlots:
-                    blinding = [1]
+                    blinding = [1,2]
                 else: blinding = []
             else: blinding = []
 
@@ -577,7 +577,7 @@ def make_ax_1D(outname, binning, data, bkgs=[], signals=[], title='', subtitle='
         ax.step(x=edges, y=np.hstack([sigarr, sigarr[-1]]), where='post', color=sigColors[i], label=sigNamesLatex[i])
 
     if logyFlag:
-        ax.set_ylim(0.0001, totalBkg_arr.max()*1e5)
+        ax.set_ylim(0.0000000001, totalBkg_arr.max()*1e5)
         ax.set_yscale('log')
     else:
         ax.set_ylim(0, totalBkg_arr.max()*1.38)
