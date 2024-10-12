@@ -172,8 +172,8 @@ def plot_fit(signal, tf):
     print("Doing twoD.ledger.select")
     subset = twoD.ledger.select(_select_signal, '{}'.format(signal), tf) 
     print("Doing twoD.StdPlots")
-    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset)
-    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, True)
+    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, lumiText=r'60 $fb^{-1}$ (13 TeV)')
+    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, True, lumiText=r'60 $fb^{-1}$ (13 TeV)')
 
 def GOF(signal,tf,condor=True, extra=''):
     # replace the blindedFit option in the config file with COMMENT to effectively "unblind" the GoF
@@ -358,7 +358,9 @@ def test_FTest(poly1, poly2, signal=''):
 if __name__ == "__main__":
     make_workspace()
 
-    signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
+    # signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
+    # signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
+    signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
     #signal_areas = ["Signal_ppStau-557"]
     #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800"]
     #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871"]
