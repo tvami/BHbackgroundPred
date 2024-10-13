@@ -613,7 +613,9 @@ def make_ax_1D(outname, binning, data, bkgs=[], signals=[], title='', subtitle='
                 ax.text(0.3, 0.95-(0.06*(i+1)), r'%s'%title, ha='center', va='top', fontsize='small', transform=ax.transAxes)
 
     # pull
-    dataMinusBkg = data_arr - totalBkg_arr
+    # TAV: After unblinding one needs to come back to this
+    #dataMinusBkg = data_arr - totalBkg_arr
+    dataMinusBkg = np.where(data_arr == 0, 0, data_arr - totalBkg_arr)
     data_error = np.where(dataMinusBkg<0, upper_errors - data_arr, data_arr - lower_errors)
     sigmas = np.sqrt(data_error**2 + totalBkg_err**2) 
     #sigmas = np.sqrt(np.sqrt(data_arr)*np.sqrt(data_arr) + totalBkg_err*totalBkg_err)
