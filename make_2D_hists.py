@@ -75,6 +75,8 @@ def make_output_rootfile(h_PASS, h_FAIL, sample, out_dir):
         filename = f"BH_Signal_{signal_name}.root"
     elif sample == "QCD":
         filename = "BH_FakeData.root"
+    elif sample == "data":
+        filename = "BH_Data.root"
     
     if not os.path.exists(f"{out_dir}/"):
         os.makedirs(f"{out_dir}/")
@@ -99,7 +101,8 @@ if __name__ == '__main__':
     N = 5
     sample = "signal" # QCD, signal, data
     lumi = 59.8 * 1000 # unit pb^-1
-    outDir = "./histograms_for_2DAlphabet_v3"
+    outDir = "./histograms_for_2DAlphabet_v4"
+    blind = False
     
     if sample == "QCD":
     
@@ -195,6 +198,27 @@ if __name__ == '__main__':
             hist_FAIL.Scale(crossSectionArray_blackmax[sample_type] * lumi / ngen)
             
             make_output_rootfile(hist_PASS, hist_FAIL, sample_type, outDir)
+
+    elif sample == "data":
+        data_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_data_new"
+        
+        hist_PASS = ROOT.TH2F(f"Hist_PASS_{sample}", "ST vs Multiplicity 2D Hist", int((xmax-xmin)/50.), xmin, xmax, 20, 0, 20)
+        hist_FAIL = ROOT.TH2F(f"Hist_FAIL_{sample}", "ST vs Multiplicity 2D Hist", int((xmax-xmin)/50.), xmin, xmax, 20, 0, 20)
+        
+        tchain = ROOT.TChain("Events")
+        for rootfile in os.listdir(data_dir):
+            if rootfile.endswith(".root") and rootfile.find(f"geq{int(N+1)}Objects") != -1 and rootfile.find("0849") == -1:
+                tchain.Add(os.path.join(data_dir, rootfile))
+        
+        PASS_blind = PASS
+        if blind:
+            PASS_blind = f"{PASS} && ST < 4000"
+        
+        tchain.Draw(f"Multiplicity:ST >> Hist_PASS_{sample}",f"{PASS_blind}")
+        tchain.Draw(f"Multiplicity:ST >> Hist_FAIL_{sample}",f"{FAIL}")
+        
+        make_output_rootfile(hist_PASS, hist_FAIL, sample, outDir)
+        
 
     
     
