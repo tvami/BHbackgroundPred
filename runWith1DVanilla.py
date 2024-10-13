@@ -22,7 +22,6 @@ def _get_other_region_names(pass_reg_name):
 
 # Helper function to generate constraints for parametric Transfer Functions
 # Change values as you see fit
-'''
 def _generate_constraints(nparams):
     out = {}
     for i in range(nparams):
@@ -31,26 +30,21 @@ def _generate_constraints(nparams):
         else:
             out[i] = {"MIN":-50,"MAX":50}
     return out
-'''
-def _generate_constraints(nparams):
-    '''generates constraints for every parameter'''
-    out = {}
-    for i in range(nparams):
-        if i == 0:
-            out[i] = {"MIN":-1.0,"MAX":50}
-        else:
-            out[i] = {"MIN":-500,"MAX":500}
-    return out
 
 # Dict to store transfer function forms and constraints
 _rpf_options = {
     '0x0': {
         'form': '0.1*(@0)',
-        'constraints': _generate_constraints(1)
+        'constraints': {
+            0: {"MIN": 0.0, "MAX": 50},
+        }
     },
     '1x0': {
         'form': '0.1*(@0+@1*x)',
-        'constraints': _generate_constraints(2)
+        'constraints': {
+            0: {"MIN": 0.0, "MAX": 50},
+            1: {"MIN": -50, "MAX": 500}
+        }
     },
     '0x1': {
         'form': '0.1*(@0+@1*y)',
@@ -74,7 +68,10 @@ _rpf_options = {
     },
     'expo': {
         'form': 'exp(-@0*x+@1)',
-        'constraints': _generate_constraints(2)
+        'constraints': {
+            0: {"MIN": -1.0, "MAX": 50},
+            1: {"MIN": -500, "MAX": 500}
+        }
     }
 }
 
@@ -358,19 +355,9 @@ def test_FTest(poly1, poly2, signal=''):
 if __name__ == "__main__":
     make_workspace()
 
-    # signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
+    signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
     # signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
-    signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
-    #signal_areas = ["Signal_ppStau-557"]
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800"]
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871"]
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871", "Signal_gluinoCS-1800","Signal_gmsbStau-1218", "Signal_gmsbStau-1409", "Signal_gmsbStau-1599","Signal_gmsbStau-247", "Signal_gmsbStau-308", "Signal_gmsbStau-432", "Signal_gmsbStau-557", "Signal_gmsbStau-651", "Signal_gmsbStau-745", "Signal_gmsbStau-871", "Signal_stop-1000", "Signal_stop-1200", "Signal_stop-1400", "Signal_stop-1600", "Signal_stop-1800", "Signal_stop-2000", "Signal_stop-2200", "Signal_stop-2400", "Signal_stop-2600", "Signal_stop-500", "Signal_stop-800", "Signal_stopCS-1200", "Signal_stopCS-1400", "Signal_stopCS-1600", "Signal_stopCS-1800", "Signal_stopCS-2000", "Signal_stopCS-2200", "Signal_stopCS-2400", "Signal_stopCS-2600", "Signal_stopCS-500", "Signal_stopCS-800","Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800","Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800", "Signal_tauPrime2e-2600", "Signal_tauPrime2e-400", "Signal_tauPrime2e-600"]
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_gluinoCS-1800", "Signal_gluinoCS-2000", "Signal_gluinoCS-2200", "Signal_gluinoCS-2400", "Signal_gluinoCS-2600", "Signal_gluinoCS-500", "Signal_gluinoCS-800", "Signal_gmsbStau-1029", "Signal_gmsbStau-1218", "Signal_gmsbStau-1409", "Signal_gmsbStau-1599", "Signal_gmsbStau-200", "Signal_gmsbStau-247", "Signal_gmsbStau-308", "Signal_gmsbStau-432", "Signal_gmsbStau-557", "Signal_gmsbStau-651", "Signal_gmsbStau-745", "Signal_gmsbStau-871", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-200", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871", "Signal_stop-1000", "Signal_stop-1200", "Signal_stop-1400", "Signal_stop-1600", "Signal_stop-1800", "Signal_stop-2000", "Signal_stop-2200", "Signal_stop-2400", "Signal_stop-2600", "Signal_stop-500", "Signal_stop-800", "Signal_stopCS-1000", "Signal_stopCS-1200", "Signal_stopCS-1400", "Signal_stopCS-1600", "Signal_stopCS-1800", "Signal_stopCS-2000", "Signal_stopCS-2200", "Signal_stopCS-2400", "Signal_stopCS-2600", "Signal_stopCS-500", "Signal_stopCS-800", "Signal_tauPrime1e-1000", "Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800", "Signal_tauPrime1e-200", "Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800",  "Signal_tauPrime2e-200", "Signal_tauPrime2e-800", "Signal_tauPrime2e-1000", "Signal_tauPrime2e-1400", "Signal_tauPrime2e-1800", "Signal_tauPrime2e-2200", "Signal_tauPrime2e-2600"]
-    #signal_areas = ["Signal_tauPrime1e-200", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800", "Signal_tauPrime1e-1000", "Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800", "Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600",  "Signal_tauPrime2e-200", "Signal_tauPrime2e-400", "Signal_tauPrime2e-600", "Signal_tauPrime2e-800", "Signal_tauPrime2e-1000", "Signal_tauPrime2e-1400", "Signal_tauPrime2e-1800", "Signal_tauPrime2e-2200", "Signal_tauPrime2e-2600"]
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_gluinoCS-1800", "Signal_gluinoCS-2000", "Signal_gluinoCS-2200", "Signal_gluinoCS-2400", "Signal_gluinoCS-2600", "Signal_gluinoCS-500", "Signal_gluinoCS-800", "Signal_gmsbStau-1029", "Signal_gmsbStau-1218", "Signal_gmsbStau-1409", "Signal_gmsbStau-1599", "Signal_gmsbStau-200", "Signal_gmsbStau-247", "Signal_gmsbStau-308", "Signal_gmsbStau-432", "Signal_gmsbStau-557", "Signal_gmsbStau-651", "Signal_gmsbStau-745", "Signal_gmsbStau-871", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-200", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871", "Signal_stop-1000", "Signal_stop-1200", "Signal_stop-1400", "Signal_stop-1600", "Signal_stop-1800", "Signal_stop-2000", "Signal_stop-2200", "Signal_stop-2400", "Signal_stop-2600", "Signal_stop-500", "Signal_stop-800", "Signal_stopCS-1000", "Signal_stopCS-1200", "Signal_stopCS-1400", "Signal_stopCS-1600", "Signal_stopCS-1800", "Signal_stopCS-2000", "Signal_stopCS-2200", "Signal_stopCS-2400", "Signal_stopCS-2600", "Signal_stopCS-500", "Signal_stopCS-800", "Signal_tauPrime1e-1000", "Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800", "Signal_tauPrime1e-200", "Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800",  "Signal_tauPrime2e-200", "Signal_tauPrime2e-400", "Signal_tauPrime2e-600", "Signal_tauPrime2e-800", "Signal_tauPrime2e-1000", "Signal_tauPrime2e-1400", "Signal_tauPrime2e-1800", "Signal_tauPrime2e-2200", "Signal_tauPrime2e-2600"]
-    #signal_areas = ["Signal_tauPrime1e-1000", "Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800", "Signal_tauPrime1e-200", "Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800", "Signal_tauPrime2e-1000", "Signal_tauPrime2e-1400", "Signal_tauPrime2e-1800", "Signal_tauPrime2e-200", "Signal_tauPrime2e-2200", "Signal_tauPrime2e-2600", "Signal_tauPrime2e-400", "Signal_tauPrime2e-600"]
-    # No CS models:
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_gmsbStau-1029", "Signal_gmsbStau-1218", "Signal_gmsbStau-1409", "Signal_gmsbStau-1599", "Signal_gmsbStau-200", "Signal_gmsbStau-247", "Signal_gmsbStau-308", "Signal_gmsbStau-432", "Signal_gmsbStau-557", "Signal_gmsbStau-651", "Signal_gmsbStau-745", "Signal_gmsbStau-871", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-200", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871", "Signal_stop-1000", "Signal_stop-1200", "Signal_stop-1400", "Signal_stop-1600", "Signal_stop-1800", "Signal_stop-2000", "Signal_stop-2200", "Signal_stop-2400", "Signal_stop-2600", "Signal_stop-500", "Signal_stop-800", "Signal_tauPrime1e-1000", "Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800", "Signal_tauPrime1e-200", "Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800", "Signal_tauPrime2e-1000", "Signal_tauPrime2e-1400", "Signal_tauPrime2e-1800", "Signal_tauPrime2e-200", "Signal_tauPrime2e-2200", "Signal_tauPrime2e-2600", "Signal_tauPrime2e-400", "Signal_tauPrime2e-600"]
+    #signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
 
     #tf_type = '0x0'
     #tf_type = '1x0'
