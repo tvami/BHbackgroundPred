@@ -1,0 +1,7 @@
+,process,region,binning,color,process_type,scale,variation,source_filename,source_histname,alias,title,combine_idx,lnN,shapes,syst_type,direction,variation_alias
+0,data_obs,pass,default,black,DATA,1.0,nominal,./histograms_for_2DAlphabet_v3//BH_FakeData.root,hpass,FakeData,Fake Data,,,,,,
+9,Signal_B1_MD4000_MBH9000_n2,pass,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v3//BH_Signal_B1_MD4000_MBH9000_n2.root,hpass,Signal_B1_MD4000_MBH9000_n2,BH signal,,1.016,,lnN,,
+10,Signal_B1_MD4000_MBH9000_n2,pass,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v3//BH_Signal_B1_MD4000_MBH9000_n2.root,hpass,Signal_B1_MD4000_MBH9000_n2,BH signal,,,,,,
+15,data_obs,fail,default,black,DATA,1.0,nominal,./histograms_for_2DAlphabet_v3//BH_FakeData.root,hfail,FakeData,Fake Data,,,,,,
+24,Signal_B1_MD4000_MBH9000_n2,fail,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v3//BH_Signal_B1_MD4000_MBH9000_n2.root,hfail,Signal_B1_MD4000_MBH9000_n2,BH signal,,1.016,,lnN,,
+25,Signal_B1_MD4000_MBH9000_n2,fail,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v3//BH_Signal_B1_MD4000_MBH9000_n2.root,hfail,Signal_B1_MD4000_MBH9000_n2,BH signal,,,,,,

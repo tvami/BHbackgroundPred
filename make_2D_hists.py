@@ -99,7 +99,7 @@ if __name__ == '__main__':
     PASS = f"SVM_score >= {SVM_score_cut}"
     FAIL = f"SVM_score <  {SVM_score_cut}"
     N = 5
-    sample = "signal" # QCD, signal, data
+    sample = "data" # QCD, signal, data
     lumi = 59.8 * 1000 # unit pb^-1
     outDir = "./histograms_for_2DAlphabet_v4"
     blind = False
@@ -207,7 +207,7 @@ if __name__ == '__main__':
         
         tchain = ROOT.TChain("Events")
         for rootfile in os.listdir(data_dir):
-            if rootfile.endswith(".root") and rootfile.find(f"geq{int(N+1)}Objects") != -1 and rootfile.find("0849") == -1:
+            if rootfile.endswith(".root") and rootfile.find(f"geq{int(N+1)}Objects") != -1:
                 tchain.Add(os.path.join(data_dir, rootfile))
         
         PASS_blind = PASS
