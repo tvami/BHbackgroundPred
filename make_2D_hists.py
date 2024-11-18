@@ -98,10 +98,12 @@ if __name__ == '__main__':
     SVM_score_cut = 0.63
     PASS = f"SVM_score >= {SVM_score_cut}"
     FAIL = f"SVM_score <  {SVM_score_cut}"
+    # PASS = f"SVM_score >= 0.5 && SVM_score <= 0.63"
+    # FAIL = f"SVM_score < 0.5"
     N = 5
-    sample = "data" # QCD, signal, data
-    lumi = 59.8 * 1000 # unit pb^-1
-    outDir = "./histograms_for_2DAlphabet_v4"
+    sample = "data"  # QCD, signal, data
+    lumi = 137.62 * 1000  # 96.14 * 1000 # 59.8 * 1000 # unit pb^-1
+    outDir = "./histograms_for_2DAlphabet_v10"
     blind = False
     
     if sample == "QCD":
@@ -200,15 +202,22 @@ if __name__ == '__main__':
             make_output_rootfile(hist_PASS, hist_FAIL, sample_type, outDir)
 
     elif sample == "data":
-        data_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_data_new"
+        data18_dir     = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_data18"
+        data16_dir     = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_data16_110424"
+        data16post_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_data16post_111224"
+        data17_dir     = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_data17_111224"
         
         hist_PASS = ROOT.TH2F(f"Hist_PASS_{sample}", "ST vs Multiplicity 2D Hist", int((xmax-xmin)/50.), xmin, xmax, 20, 0, 20)
         hist_FAIL = ROOT.TH2F(f"Hist_FAIL_{sample}", "ST vs Multiplicity 2D Hist", int((xmax-xmin)/50.), xmin, xmax, 20, 0, 20)
         
         tchain = ROOT.TChain("Events")
-        for rootfile in os.listdir(data_dir):
-            if rootfile.endswith(".root") and rootfile.find(f"geq{int(N+1)}Objects") != -1:
-                tchain.Add(os.path.join(data_dir, rootfile))
+        # List of directories to process
+        directories = [data18_dir, data16_dir, data16post_dir, data17_dir]
+        # Loop over each directory
+        for data_dir in directories:
+            for rootfile in os.listdir(data_dir):
+                if rootfile.endswith(".root") and rootfile.find(f"geq{int(N+1)}Objects") != -1:
+                    tchain.Add(os.path.join(data_dir, rootfile))
         
         PASS_blind = PASS
         if blind:

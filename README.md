@@ -34,3 +34,18 @@ source twoD-env/bin/activate
 ```
 python3 runWith1DVanilla.py ConstFit_InitBinning_Integer_MatPlotLib config_ConstFit_InitBinning.json
 ```
+
+## Histograms versions
+v1: was SVM cut at 0.5, QCD fake data
+v2: is cut at 0.63, QCD fake data
+v3: is cut at 0.63, but X axis going to 13 TeV, QCD fake data
+v4: is cut at 0.63, X axis going to 13 TeV, real JetHT data
+v4_blind: is cut at 0.63, X axis going to 13 TeV, real JetHT data, data blinded ST>=4 TeV
+v5: is cut at 0.5, X axis going to 13 TeV, QCD fake data
+v6: is CR (0-0.5) + VR (0.5-0.63), X axis going to 13 TeV, real JetHT data (2018)
+v7: is CR (0-0.4) + VR (0.4-0.5), X axis going to 13 TeV, real JetHT data (2018)
+v8: is cut at 0.63, X axis going to 13 TeV, real JetHT data (2018+2016preVFP+2016postVFP). —> need to fix Sphericity cut!!!
+v9: is CR (0-0.5) + VR (0.5-0.63), X axis going to 13 TeV, real JetHT data (2018+2016preVFP+2016postVFP) —> need to fix!!!
+v10: is cut at 0.63, X axis going to 13 TeV, real JetHT data (full run2) —> need to fix!!! —> Fixed!
+v11: is CR (0-0.5) + VR (0.5-0.63), X axis going to 13 TeV, real JetHT data (full run2) —> need to fix!!! —> Fixed!
+v12: is SVM cut at 0.63, apply Sphericity > 0.1, X axis going to 13 TeV, real JetHT data (full run2)
