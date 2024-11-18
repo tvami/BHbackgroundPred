@@ -1,13 +1,13 @@
 void limits_combine_59p8fb_signals_MD2000_BH()
 {
 //=========Macro generated from canvas: climits/climits
-//=========  (Mon Oct 14 19:00:23 2024) by ROOT version 6.14/09
+//=========  (Wed Nov  6 10:33:29 2024) by ROOT version 6.14/09
    TCanvas *climits = new TCanvas("climits", "climits",0,0,700,600);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
    climits->SetHighLightColor(2);
-   climits->Range(0.796,-6.4,12.076,2.933333);
+   climits->Range(0.796,-6,12.076,0.6666667);
    climits->SetFillColor(0);
    climits->SetBorderMode(0);
    climits->SetBorderSize(2);
@@ -53,7 +53,7 @@ void limits_combine_59p8fb_signals_MD2000_BH()
    
    TH1F *Graph_Graph01 = new TH1F("Graph_Graph01","",100,2.2,11.8);
    Graph_Graph01->SetMinimum(1e-05);
-   Graph_Graph01->SetMaximum(100);
+   Graph_Graph01->SetMaximum(1);
    Graph_Graph01->SetDirectory(0);
    Graph_Graph01->SetStats(0);
    Graph_Graph01->SetLineStyle(0);
@@ -275,7 +275,7 @@ void limits_combine_59p8fb_signals_MD2000_BH()
    
    TH1F *Graph_Graph_Graph014 = new TH1F("Graph_Graph_Graph014","",100,2.2,11.8);
    Graph_Graph_Graph014->SetMinimum(1e-05);
-   Graph_Graph_Graph014->SetMaximum(100);
+   Graph_Graph_Graph014->SetMaximum(1);
    Graph_Graph_Graph014->SetDirectory(0);
    Graph_Graph_Graph014->SetStats(0);
    Graph_Graph_Graph014->SetLineStyle(0);
@@ -554,7 +554,7 @@ void limits_combine_59p8fb_signals_MD2000_BH()
    
    TH1F *Graph_copy = new TH1F("Graph_copy","",100,2.2,11.8);
    Graph_copy->SetMinimum(1e-05);
-   Graph_copy->SetMaximum(100);
+   Graph_copy->SetMaximum(1);
    Graph_copy->SetDirectory(0);
    Graph_copy->SetStats(0);
    Graph_copy->SetLineStyle(0);

@@ -235,7 +235,7 @@ else:
       g_mclimit.SetMaximum(0.002)
     if ("BH" in cstr) :
       g_mclimit.GetXaxis().SetRangeUser(2.5, 11.5)
-      g_mclimit.SetMaximum(1e2)
+      g_mclimit.SetMaximum(1)
       g_mclimit.SetMinimum(1e-5)
 # Expected
 # g_mclimit = TGraph(len(x_mass), x_mass, y_mclimit)
