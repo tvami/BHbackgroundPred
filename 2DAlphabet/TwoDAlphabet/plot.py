@@ -334,8 +334,10 @@ class Plotter(object):
 
                         if (region == "pass") :
                             slice_str = "PS score > 0.63"
+                            # slice_str = "0.5 <= PS score <= 0.63"
                         elif (region == "fail") :
                             slice_str = "PS score < 0.63"
+                            # slice_str = "PS score < 0.5"
 
                         out_pad_name = f'{self.dir}/base_figs/{projn}_{region}{"" if not logyFlag else "_logy"}'
 
@@ -950,10 +952,10 @@ def plot_gof(tag, subtag, seed=123456, condor=False):
 
         # Write out for reference
         with open('gof_results.txt','w') as out:
-            out.write('Test statistic in data = '+str(gof_data))
-            out.write('Mean from toys = '+str(gaus.GetParameter(1)))
-            out.write('Width from toys = '+str(gaus.GetParameter(2)))
-            out.write('p-value = '+str(pvalue))
+            out.write('Test statistic in data = '+str(gof_data)+'\n')
+            out.write('Mean from toys = '+str(gaus.GetParameter(1))+'\n')
+            out.write('Width from toys = '+str(gaus.GetParameter(2))+'\n')
+            out.write('p-value = '+str(pvalue)+'\n')
 
         # Extend the axis if needed
         if htoy_gof.GetXaxis().GetXmax() < gof_data:
@@ -972,7 +974,7 @@ def plot_gof(tag, subtag, seed=123456, condor=False):
         arrow.SetLineWidth(2)
 
         # Legend
-        leg = ROOT.TLegend(0.1,0.7,0.4,0.9)
+        leg = ROOT.TLegend(0.6,0.7,0.9,0.9)
         leg.SetLineColor(ROOT.kWhite)
         leg.SetLineWidth(0)
         leg.SetFillStyle(0)
@@ -984,6 +986,8 @@ def plot_gof(tag, subtag, seed=123456, condor=False):
         # Draw
         cout = ROOT.TCanvas('cout','cout',800,700)
         htoy_gof.SetTitle('')
+        htoy_gof.GetXaxis().SetTitle('Saturated likelihood ratio')
+        htoy_gof.GetYaxis().SetTitle('Toys / bin')
         htoy_gof.Draw('pez')
         arrow.Draw()
         leg.Draw()

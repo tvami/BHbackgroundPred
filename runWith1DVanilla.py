@@ -162,15 +162,15 @@ def perform_fit(signal, tf, rMaxExt = 30, extra=''):
     print("perform fit")
     twoD.MLfit('{}-{}_area'.format(signal, tf), rMin=0, rMax=rMaxExt, verbosity=1, extra=extra)
 
-def plot_fit(signal, tf):
+def plot_fit(signal, tf, lumi='137.4'):
     working_area = workingArea
     print("DoingTwoDAlphabet")
     twoD = TwoDAlphabet(working_area, '{}/runConfig.json'.format(working_area), loadPrevious=True)
     print("Doing twoD.ledger.select")
     subset = twoD.ledger.select(_select_signal, '{}'.format(signal), tf) 
     print("Doing twoD.StdPlots")
-    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, lumiText=r'60 $fb^{-1}$ (13 TeV)')
-    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, True, lumiText=r'60 $fb^{-1}$ (13 TeV)')
+    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, lumiText=lumi+r' $fb^{-1}$ (13 TeV)')
+    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, True, lumiText=lumi+r' $fb^{-1}$ (13 TeV)')
 
 def GOF(signal,tf,condor=True, extra=''):
     # replace the blindedFit option in the config file with COMMENT to effectively "unblind" the GoF
@@ -184,12 +184,12 @@ def GOF(signal,tf,condor=True, extra=''):
         twoD.MakeCard(subset, signame+'_area')
     if condor == False:
         twoD.GoodnessOfFit(
-            signame+'-{}_area'.format(tf), ntoys=500, freezeSignal=0,
+            signame+'-{}_area'.format(tf), ntoys=5000, freezeSignal=0,
             condor=False
         )
     else:
         twoD.GoodnessOfFit(
-            signame+'-{}_area'.format(tf), ntoys=500, freezeSignal=0,
+            signame+'-{}_area'.format(tf), ntoys=5000, freezeSignal=0,
             condor=True, njobs=10
         )
 
@@ -355,10 +355,10 @@ def test_FTest(poly1, poly2, signal=''):
 if __name__ == "__main__":
     make_workspace()
 
-    signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
+    # signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
     #signal_areas = ["Signal_B1_MD2000_MBH3000_n2"]
     # signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
-    #signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
+    signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
 
     #tf_type = '0x0'
     #tf_type = '1x0'
@@ -378,11 +378,11 @@ if __name__ == "__main__":
           content = file.read()
           if not "Fit failed" in content: fitPassed = True
           rMax = rMax / 10.
-      plot_fit(signal,tf_type)
+      plot_fit(signal,tf_type,lumi='137.4')
       print("\n\n\nFit is succesful, running limits now for " + str(signal))
       run_limits(signal,tf_type)
-      #GOF(signal,tf_type,condor=False)
-      #plot_GOF(signal,tf_type,condor=False)
+    #   GOF(signal,tf_type,condor=False)
+    #   plot_GOF(signal,tf_type,condor=False)
       #SignalInjection(signal, tf_type, r=0, condor=False)
       #plot_SignalInjection(signal, tf_type, r=0, condor=False)
       #Impacts(signal,tf_type)
