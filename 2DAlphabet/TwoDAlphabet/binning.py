@@ -369,7 +369,11 @@ def stitch_hists_in_x(name,binning,histList,blinded=[]):
             for xbin in range(1,h.GetNbinsX()+1):
                 stitched_xindex = xbin + bin_jump
                 stitched_hist.SetBinContent(stitched_xindex,ybin,h.GetBinContent(xbin,ybin))
-                stitched_hist.SetBinError(stitched_xindex,ybin,h.GetBinError(xbin,ybin))
+                # if we are in "zero" bin, let's use Poisson stats for zero as unc
+                unc = 1.841 if h.GetBinContent(xbin,ybin) < 0.001 else h.GetBinError(xbin,ybin)
+                stitched_hist.SetBinError(stitched_xindex,ybin,unc) 
+                # this was the original code
+                #stitched_hist.SetBinError(stitched_xindex,ybin,h.GetBinError(xbin,ybin))
 
         bin_jump += histList[i].GetNbinsX()
 
