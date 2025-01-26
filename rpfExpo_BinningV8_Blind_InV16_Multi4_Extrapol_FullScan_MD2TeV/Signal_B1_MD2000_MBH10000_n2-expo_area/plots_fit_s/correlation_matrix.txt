@@ -1,0 +1,10 @@
+Background_fail_par0:Background_rpf_expo_par0 = -0.0011790875208136998
+Background_fail_par0:Background_rpf_expo_par1 = -0.000766073997469638
+Background_fail_par0:lumi = 0.05944313504847998
+Background_fail_par0:r = -0.9199322653451892
+Background_rpf_expo_par0:lumi = -8.282014847026012e-05
+Background_rpf_expo_par1:Background_rpf_expo_par0 = 0.8003580553743662
+Background_rpf_expo_par1:lumi = -5.380971591558652e-05
+r:Background_rpf_expo_par0 = 0.0012817112126392086
+r:Background_rpf_expo_par1 = 0.0008327504228696504
+r:lumi = -0.06461686072309722

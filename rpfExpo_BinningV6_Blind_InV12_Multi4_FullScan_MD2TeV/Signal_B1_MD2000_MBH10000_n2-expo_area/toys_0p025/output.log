@@ -1,0 +1,19 @@
+/home/users/dazhang/works/phaseSpace/BlackHoleSearch/CMSSW_14_1_0_pre4/src/rpfExpo_BinningV6_Blind_InV12_Multi4_FullScan_MD2TeV/Signal_B1_MD2000_MBH10000_n2-expo_area/toys_0p025
+combine -M HybridNew -H AsymptoticLimits -d ../card.txt --LHCmode LHC-limits --plot=limit_scan_card_0.025.png -m 125 --expectedFromGrid=0.025 --rRelAcc 0.005 --rAbsAcc 0.0005  --adaptiveToys 1 -T 500
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> using the Profile Likelihood test statistic modified for upper limits (Q_LHC)
+>>> Method used is HybridNew
+>>> Method used to hint where the upper limit is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0339
+
+[WARNING] Minimization finished with status 1 (covariance matrix forced positive definite), this could indicate a problem with the minimum!
+[WARNING] Minimization finished with status 1 (covariance matrix forced positive definite), this could indicate a problem with the minimum!
+Info in <TCanvas::Print>: png file limit_scan_card_0.025.png has been created
+
+ -- Hybrid New -- 
+Limit: r < 0.297417 +/- 0.00112643 @ 95% CL
+Done in 2.12 min (cpu), 2.14 min (real)

@@ -1,0 +1,123 @@
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binpass_LOW_obsOnly: in 4 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binpass_SIG_obsOnly: in 2 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binpass_HIGH_obsOnly: in 4 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binfail_LOW_obsOnly: in 4 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binfail_SIG_obsOnly: in 2 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+ToyMCSamplerOpt.cc[146] : (in function: generateAsimov) - Using internal logic for binned/unbinned Asimov dataset generation
+ToyMCSamplerOpt.cc[214] : (in function: generateWithHisto) - Generating asimov with histogram for pdf pdf_binfail_HIGH_obsOnly: in 4 x-bins
+ToyMCSamplerOpt.cc[215] : (in function: generateWithHisto) -  , in 1 y-bins
+AsymptoticLimits.cc[191] : (in function: runLimit) - NLL at global minimum of data = -107871 (r=0.000552105)
+AsymptoticLimits.cc[211] : (in function: runLimit) - NLL at global minimum of asimov = 86.8371 (r=0.423266)
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 1.005764:	q_mu = 7.72563	q_A  = 0.00000	Pmu = 0.00000	1-Pb  = 0.00000	CLs  = 0.00000
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.503158:	q_mu = 2.82631	q_A  = 0.00000	Pmu = 0.00000	1-Pb  = 0.00000	CLs  = 0.00000
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.251855:	q_mu = 0.85882	q_A  = 0.00000	Pmu = 0.00000	1-Pb  = 0.00000	CLs  = 0.00000
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.126204:	q_mu = 0.19767	q_A  = 0.00000	Pmu = 0.00000	1-Pb  = 0.00000	CLs  = 0.00000
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.063378:	q_mu = 0.02377	q_A  = 0.00000	Pmu = 0.00000	1-Pb  = 0.00000	CLs  = 0.00000
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.031965:	q_mu = 0.00000	q_A  = 0.00000	Pmu = 0.50000	1-Pb  = 0.50000	CLs  = 1.00000
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.047671:	q_mu = 0.00253	q_A  = 0.00000	Pmu = 0.00000	1-Pb  = 0.00000	CLs  = 0.00000
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.039818:	q_mu = 0.00000	q_A  = 0.00000	Pmu = 0.50000	1-Pb  = 0.50000	CLs  = 1.00000
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.043745:	q_mu = 0.00000	q_A  = 0.00000	Pmu = 0.50000	1-Pb  = 0.50000	CLs  = 1.00000
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.045708:	q_mu = 0.00057	q_A  = 0.00000	Pmu = 0.00000	1-Pb  = 0.00000	CLs  = 0.00000
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.044726:	q_mu = 0.00000	q_A  = 0.00000	Pmu = 0.50000	1-Pb  = 0.50000	CLs  = 1.00000
+AsymptoticLimits.cc[337] : (in function: getCLs) - At r = 0.045217:	q_mu = 0.00010	q_A  = 0.00000	Pmu = 0.00000	1-Pb  = 0.00000	CLs  = 0.00000
+HybridNew.cc[442] : (in function: runLimit) - Search for upper limit to the limit
+HybridNew.cc[1152] : (in function: eval) -  CLs = 1.00201 +/- 0.00347686
+	1-Pb = 0.996 +/- 0.00282276
+	Pmu = 0.998 +/- 0.001998
+HybridNew.cc[1152] : (in function: eval) -  CLs = 1 +/- 0
+	1-Pb = 1 +/- 0
+	Pmu = 1 +/- 0
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.997996 +/- 0.00346294
+	1-Pb = 0.998 +/- 0.001998
+	Pmu = 0.996 +/- 0.00282276
+HybridNew.cc[1152] : (in function: eval) -  CLs = 1 +/- 0
+	1-Pb = 1 +/- 0
+	Pmu = 1 +/- 0
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.201232 +/- 0.0182861
+	1-Pb = 0.974 +/- 0.00711674
+	Pmu = 0.196 +/- 0.017753
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0124224 +/- 0.00504196
+	1-Pb = 0.966 +/- 0.00810481
+	Pmu = 0.012 +/- 0.0048695
+HybridNew.cc[454] : (in function: runLimit) - Search for lower limit to the limit
+HybridNew.cc[1152] : (in function: eval) -  CLs = 1.88235 +/- 0.55225
+	1-Pb = 0.034 +/- 0.00810481
+	Pmu = 0.064 +/- 0.0109457
+HybridNew.cc[475] : (in function: runLimit) - Now doing proper bracketing & bisection
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0581967 +/- 0.00474654
+	1-Pb = 0.976 +/- 0.00306098
+	Pmu = 0.0568 +/- 0.0046292
+HybridNew.cc[513] : (in function: runLimit) - Trying to move the interval edges closer
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.348361 +/- 0.0218429
+	1-Pb = 0.976 +/- 0.00684456
+	Pmu = 0.34 +/- 0.0211849
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.188139 +/- 0.0177635
+	1-Pb = 0.978 +/- 0.00655988
+	Pmu = 0.184 +/- 0.0173288
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.112705 +/- 0.0143587
+	1-Pb = 0.976 +/- 0.00684456
+	Pmu = 0.11 +/- 0.0139929
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0627564 +/- 0.00491992
+	1-Pb = 0.9752 +/- 0.0031103
+	Pmu = 0.0612 +/- 0.00479394
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0701844 +/- 0.00579248
+	1-Pb = 0.976 +/- 0.00342228
+	Pmu = 0.0685 +/- 0.00564835
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0266393 +/- 0.00729414
+	1-Pb = 0.976 +/- 0.00684456
+	Pmu = 0.026 +/- 0.00711674
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0623462 +/- 0.00490483
+	1-Pb = 0.9752 +/- 0.0031103
+	Pmu = 0.0608 +/- 0.00477926
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0508197 +/- 0.00445198
+	1-Pb = 0.976 +/- 0.00306098
+	Pmu = 0.0496 +/- 0.00434234
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0122449 +/- 0.00496949
+	1-Pb = 0.98 +/- 0.00626099
+	Pmu = 0.012 +/- 0.0048695
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0446383 +/- 0.00468326
+	1-Pb = 0.9745 +/- 0.00352489
+	Pmu = 0.0435 +/- 0.00456113
+HybridNew.cc[586] : (in function: runLimit) -  Fit to 5 points: 1.181837 +/- 0.010018 
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0317623 +/- 0.00561777
+	1-Pb = 0.976 +/- 0.00483983
+	Pmu = 0.031 +/- 0.00548078
+HybridNew.cc[586] : (in function: runLimit) -  Fit to 6 points: 1.183190 +/- 0.009898 
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0298047 +/- 0.00545602
+	1-Pb = 0.973 +/- 0.00512552
+	Pmu = 0.029 +/- 0.00530651
+HybridNew.cc[586] : (in function: runLimit) -  Fit to 7 points: 1.183323 +/- 0.009632 
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.039548 +/- 0.00442171
+	1-Pb = 0.9735 +/- 0.0035915
+	Pmu = 0.0385 +/- 0.00430219
+HybridNew.cc[586] : (in function: runLimit) -  Fit to 8 points: 1.186709 +/- 0.009746 
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.022541 +/- 0.00672305
+	1-Pb = 0.976 +/- 0.00684456
+	Pmu = 0.022 +/- 0.00655988
+HybridNew.cc[586] : (in function: runLimit) -  Fit to 9 points: 1.186071 +/- 0.009462 
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0277207 +/- 0.00526429
+	1-Pb = 0.974 +/- 0.0050323
+	Pmu = 0.027 +/- 0.00512552
+HybridNew.cc[586] : (in function: runLimit) -  Fit to 10 points: 1.186644 +/- 0.009616 
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.038501 +/- 0.00436383
+	1-Pb = 0.974 +/- 0.00355837
+	Pmu = 0.0375 +/- 0.00424816
+HybridNew.cc[586] : (in function: runLimit) -  Fit to 11 points: 1.187253 +/- 0.009344 
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0222222 +/- 0.00662689
+	1-Pb = 0.99 +/- 0.00444972
+	Pmu = 0.022 +/- 0.00655988
+HybridNew.cc[586] : (in function: runLimit) -  Fit to 12 points: 1.187146 +/- 0.009252 
+HybridNew.cc[1152] : (in function: eval) -  CLs = 0.0143443 +/- 0.00538448
+	1-Pb = 0.976 +/- 0.00684456
+	Pmu = 0.014 +/- 0.00525433
+HybridNew.cc[586] : (in function: runLimit) -  Fit to 13 points: 1.186250 +/- 0.008748 

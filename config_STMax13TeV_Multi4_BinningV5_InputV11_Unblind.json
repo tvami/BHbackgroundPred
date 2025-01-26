@@ -26,8 +26,8 @@
             "COLOR": "black",
             "SCALE": 1.0,
             "TYPE": "DATA",
-            "TITLE": "Data",
-            "ALIAS": "Data",
+            "TITLE": "Fake Data",
+            "ALIAS": "FakeData",
             "LOC": "path/FILE:HIST"
         },
         "SIGNAME": {

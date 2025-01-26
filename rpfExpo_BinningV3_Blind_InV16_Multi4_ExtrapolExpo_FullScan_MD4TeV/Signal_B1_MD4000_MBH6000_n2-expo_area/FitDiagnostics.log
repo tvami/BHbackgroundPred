@@ -1,0 +1,81 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is FitDiagnostics
+Set Default Value of Parameter mask_pass_SIG To : 1
+Set Default Value of Parameter mask_pass_HIGH To : 1
+Set Default Value of Parameter r To : 1
+>>> 2 out of 6 channels masked
+
+>> Found 14 floating parameters
+>> The following parameters are protected in the event of negative eigenvalues:
+>> Verifying eigenvalues are all positive (iteration 0)
+>> All eigenvalues are positive
+>> Inverting Hessian...
+>> Matrix inverted
+ Fit B-only, status = 0, numBadNLL = 0, covariance quality = -1
+Running Minos for POI r
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (3.52368e+09) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=6.48244e+08	Background_fail_HIGH_bin_2-1=3.9391e+08	Background_fail_LOW_bin_1-1=1.72858e+08	Background_fail_LOW_bin_2-1=9.55625e+08	Background_fail_LOW_bin_3-1=6.55858e+08	Background_fail_LOW_bin_4-1=6.23422e+08	Background_fail_SIG_bin_1-1=9.17192e+08	Background_fail_SIG_bin_2-1=1.49707e+06	Background_fail_par0=42.8807	Background_fail_par1=-40.9154	Background_rpf_expo_par0=-38.5032	Background_rpf_expo_par1=441.304	SVM=1.62071	lumi=-0.216481	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (3.52368e+09) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=4.37904e+08	Background_fail_HIGH_bin_2-1=7.42665e+08	Background_fail_LOW_bin_1-1=5.78054e+08	Background_fail_LOW_bin_2-1=1.05309e+08	Background_fail_LOW_bin_3-1=9.99222e+08	Background_fail_LOW_bin_4-1=6.59983e+08	Background_fail_SIG_bin_1-1=8.65255e+08	Background_fail_SIG_bin_2-1=3.35219e+08	Background_fail_par0=98.1038	Background_fail_par1=-39.2582	Background_rpf_expo_par0=41.8575	Background_rpf_expo_par1=383.344	SVM=-0.633298	lumi=-0.12482	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (3.52368e+09) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=1.57785e+08	Background_fail_HIGH_bin_2-1=9.40352e+08	Background_fail_LOW_bin_1-1=1.00272e+07	Background_fail_LOW_bin_2-1=94204.5	Background_fail_LOW_bin_3-1=6.19078e+06	Background_fail_LOW_bin_4-1=1.76931e+08	Background_fail_SIG_bin_1-1=1.75861e+07	Background_fail_SIG_bin_2-1=8.80516e+08	Background_fail_par0=99.9577	Background_fail_par1=-29.9552	Background_rpf_expo_par0=0.881169	Background_rpf_expo_par1=317.998	SVM=-1.13109	lumi=-0.104577	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (9.0136e+12) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=5.50811e+08	Background_fail_HIGH_bin_2-1=9.97978e+08	Background_fail_LOW_bin_1-1=4.85941e+08	Background_fail_LOW_bin_2-1=8.51656e+08	Background_fail_LOW_bin_3-1=8.78977e+08	Background_fail_LOW_bin_4-1=1.54152e+08	Background_fail_SIG_bin_1-1=6.93687e+08	Background_fail_SIG_bin_2-1=8.11028e+08	Background_fail_par0=99.8808	Background_fail_par1=-29.5706	Background_rpf_expo_par0=40.9721	Background_rpf_expo_par1=222.775	SVM=-1.14911	lumi=-0.102801	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (9.0136e+12) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=7.22306e+07	Background_fail_HIGH_bin_2-1=4.23913e+08	Background_fail_LOW_bin_1-1=2.23955e+08	Background_fail_LOW_bin_2-1=6.02961e+07	Background_fail_LOW_bin_3-1=8.59865e+06	Background_fail_LOW_bin_4-1=1.90906e+07	Background_fail_SIG_bin_1-1=4.49983e+08	Background_fail_SIG_bin_2-1=8.69393e+08	Background_fail_par0=99.9133	Background_fail_par1=-29.4209	Background_rpf_expo_par0=0.729331	Background_rpf_expo_par1=344.659	SVM=-1.15763	lumi=-0.103446	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (9.0136e+12) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=1.18198e+08	Background_fail_HIGH_bin_2-1=8.38748e+08	Background_fail_LOW_bin_1-1=3.98704e+08	Background_fail_LOW_bin_2-1=2.98166e+07	Background_fail_LOW_bin_3-1=2.36364e+08	Background_fail_LOW_bin_4-1=1.65988e+08	Background_fail_SIG_bin_1-1=1.44943e+08	Background_fail_SIG_bin_2-1=9.78175e+08	Background_fail_par0=99.059	Background_fail_par1=-30.049	Background_rpf_expo_par0=49.8486	Background_rpf_expo_par1=106.035	SVM=-1.11428	lumi=-0.0947994	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (9.0136e+12) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=299488	Background_fail_HIGH_bin_2-1=9.54461e+08	Background_fail_LOW_bin_1-1=1.27527e+08	Background_fail_LOW_bin_2-1=255197	Background_fail_LOW_bin_3-1=1.13099e+08	Background_fail_LOW_bin_4-1=8.09264e+08	Background_fail_SIG_bin_1-1=8.08767e+08	Background_fail_SIG_bin_2-1=4.14027e+08	Background_fail_par0=99.8939	Background_fail_par1=-29.4449	Background_rpf_expo_par0=2.06006	Background_rpf_expo_par1=476.888	SVM=-1.15589	lumi=-0.103046	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (3.44151e+20) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=9.69452e+08	Background_fail_HIGH_bin_2-1=3.137e+08	Background_fail_LOW_bin_1-1=9.9698e+08	Background_fail_LOW_bin_2-1=5.16041e+08	Background_fail_LOW_bin_3-1=1.1751e+08	Background_fail_LOW_bin_4-1=1.94673e+06	Background_fail_SIG_bin_1-1=1.19918e+07	Background_fail_SIG_bin_2-1=4.37308e+08	Background_fail_par0=98.9784	Background_fail_par1=-29.69	Background_rpf_expo_par0=42.6335	Background_rpf_expo_par1=120.42	SVM=-1.10693	lumi=-0.0934379	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (3.44151e+20) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=3.47458e+08	Background_fail_HIGH_bin_2-1=5.44863e+08	Background_fail_LOW_bin_1-1=2.39081e+08	Background_fail_LOW_bin_2-1=8.311e+08	Background_fail_LOW_bin_3-1=7.71864e+08	Background_fail_LOW_bin_4-1=9.48667e+08	Background_fail_SIG_bin_1-1=3.1095e+08	Background_fail_SIG_bin_2-1=5.66124e+08	Background_fail_par0=1.00444	Background_fail_par1=-34.7957	Background_rpf_expo_par0=27.9707	Background_rpf_expo_par1=207.935	SVM=-0.133796	lumi=0.0974873	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (3.44151e+20) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=8.84177e+06	Background_fail_HIGH_bin_2-1=70.0191	Background_fail_LOW_bin_1-1=1.21105e+06	Background_fail_LOW_bin_2-1=1.78493e+08	Background_fail_LOW_bin_3-1=8.3513e+08	Background_fail_LOW_bin_4-1=5.98214e+06	Background_fail_SIG_bin_1-1=8.83783e+08	Background_fail_SIG_bin_2-1=3.50883e+08	Background_fail_par0=1.00556	Background_fail_par1=-34.7967	Background_rpf_expo_par0=46.4713	Background_rpf_expo_par1=60.1622	SVM=-0.133548	lumi=0.0974633	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (3.44151e+20) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=172618	Background_fail_HIGH_bin_2-1=4.73811	Background_fail_LOW_bin_1-1=1.1829e+06	Background_fail_LOW_bin_2-1=3.5534e+07	Background_fail_LOW_bin_3-1=1.59497e+07	Background_fail_LOW_bin_4-1=1.09628e+07	Background_fail_SIG_bin_1-1=5.44441e+07	Background_fail_SIG_bin_2-1=1.27005e+07	Background_fail_par0=1.00556	Background_fail_par1=-34.7967	Background_rpf_expo_par0=46.4521	Background_rpf_expo_par1=65.5068	SVM=-0.133548	lumi=0.0974634	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (3.44151e+20) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=90639.1	Background_fail_HIGH_bin_2-1=2.37441	Background_fail_LOW_bin_1-1=2.57686e+06	Background_fail_LOW_bin_2-1=3.11436e+06	Background_fail_LOW_bin_3-1=3.00021e+07	Background_fail_LOW_bin_4-1=4.45835e+06	Background_fail_SIG_bin_1-1=2.11834e+07	Background_fail_SIG_bin_2-1=4.98129e+06	Background_fail_par0=1.00554	Background_fail_par1=-34.7967	Background_rpf_expo_par0=46.2361	Background_rpf_expo_par1=66.5636	SVM=-0.133549	lumi=0.0974636	r=0.0129256
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (3.44151e+20) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=440416	Background_fail_HIGH_bin_2-1=2.01745	Background_fail_LOW_bin_1-1=7.85515e+06	Background_fail_LOW_bin_2-1=3.17536e+06	Background_fail_LOW_bin_3-1=4.70095e+07	Background_fail_LOW_bin_4-1=36689.1	Background_fail_SIG_bin_1-1=1.30047e+08	Background_fail_SIG_bin_2-1=3.08603e+07	Background_fail_par0=1.00298	Background_fail_par1=-34.7903	Background_rpf_expo_par0=-13.476	Background_rpf_expo_par1=96.1142	SVM=-0.134418	lumi=0.0975187	r=0.0129256
+
+>> Found 15 floating parameters
+>> The following parameters are protected in the event of negative eigenvalues: r
+>> Verifying eigenvalues are all positive (iteration 0)
+>> All eigenvalues are positive
+>> Inverting Hessian...
+>> Matrix inverted
+Fit S+B, status = 0, numBadNLL = 0, covariance quality = -1
+
+ --- FitDiagnostics ---
+Best fit r: 0.00162987  -0.00162987/+49.9984  (68% CL)
+Done in 0.00 min (cpu), 0.00 min (real)
+25 log messages saved to combine_logger.out

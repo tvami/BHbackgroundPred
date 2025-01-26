@@ -1,13 +1,13 @@
 void limits_combine_59p8fb_signals_MD2000_BH()
 {
 //=========Macro generated from canvas: climits/climits
-//=========  (Fri Oct 11 11:57:55 2024) by ROOT version 6.14/09
+//=========  (Mon Oct 14 15:44:47 2024) by ROOT version 6.14/09
    TCanvas *climits = new TCanvas("climits", "climits",0,0,700,600);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
    climits->SetHighLightColor(2);
-   climits->Range(0.796,-7.8,12.076,4.2);
+   climits->Range(3.076,-6.4,11.956,2.933333);
    climits->SetFillColor(0);
    climits->SetBorderMode(0);
    climits->SetBorderSize(2);
@@ -50,14 +50,14 @@ void limits_combine_59p8fb_signals_MD2000_BH()
    graph->SetMarkerStyle(7);
    
    TH1F *Graph_Graph01 = new TH1F("Graph_Graph01","",100,2.2,11.8);
-   Graph_Graph01->SetMinimum(1e-06);
-   Graph_Graph01->SetMaximum(1000);
+   Graph_Graph01->SetMinimum(1e-05);
+   Graph_Graph01->SetMaximum(100);
    Graph_Graph01->SetDirectory(0);
    Graph_Graph01->SetStats(0);
    Graph_Graph01->SetLineStyle(0);
    Graph_Graph01->SetMarkerStyle(20);
    Graph_Graph01->GetXaxis()->SetTitle("m(BH) [TeV]");
-   Graph_Graph01->GetXaxis()->SetRange(4,97);
+   Graph_Graph01->GetXaxis()->SetRange(24,97);
    Graph_Graph01->GetXaxis()->SetLabelFont(42);
    Graph_Graph01->GetXaxis()->SetLabelOffset(0.007);
    Graph_Graph01->GetXaxis()->SetLabelSize(0.05);
@@ -108,14 +108,14 @@ void limits_combine_59p8fb_signals_MD2000_BH()
    graph->SetMarkerStyle(7);
    
    TH1F *Graph_Graph_Graph012 = new TH1F("Graph_Graph_Graph012","",100,2.2,11.8);
-   Graph_Graph_Graph012->SetMinimum(1e-06);
-   Graph_Graph_Graph012->SetMaximum(1000);
+   Graph_Graph_Graph012->SetMinimum(1e-05);
+   Graph_Graph_Graph012->SetMaximum(100);
    Graph_Graph_Graph012->SetDirectory(0);
    Graph_Graph_Graph012->SetStats(0);
    Graph_Graph_Graph012->SetLineStyle(0);
    Graph_Graph_Graph012->SetMarkerStyle(20);
    Graph_Graph_Graph012->GetXaxis()->SetTitle("m(BH) [TeV]");
-   Graph_Graph_Graph012->GetXaxis()->SetRange(4,97);
+   Graph_Graph_Graph012->GetXaxis()->SetRange(24,97);
    Graph_Graph_Graph012->GetXaxis()->SetLabelFont(42);
    Graph_Graph_Graph012->GetXaxis()->SetLabelOffset(0.007);
    Graph_Graph_Graph012->GetXaxis()->SetLabelSize(0.05);
@@ -391,14 +391,14 @@ void limits_combine_59p8fb_signals_MD2000_BH()
    tex->Draw();
    
    TH1F *Graph_copy = new TH1F("Graph_copy","",100,2.2,11.8);
-   Graph_copy->SetMinimum(1e-06);
-   Graph_copy->SetMaximum(1000);
+   Graph_copy->SetMinimum(1e-05);
+   Graph_copy->SetMaximum(100);
    Graph_copy->SetDirectory(0);
    Graph_copy->SetStats(0);
    Graph_copy->SetLineStyle(0);
    Graph_copy->SetMarkerStyle(20);
    Graph_copy->GetXaxis()->SetTitle("m(BH) [TeV]");
-   Graph_copy->GetXaxis()->SetRange(4,97);
+   Graph_copy->GetXaxis()->SetRange(24,97);
    Graph_copy->GetXaxis()->SetLabelFont(42);
    Graph_copy->GetXaxis()->SetLabelOffset(0.007);
    Graph_copy->GetXaxis()->SetLabelSize(0.05);

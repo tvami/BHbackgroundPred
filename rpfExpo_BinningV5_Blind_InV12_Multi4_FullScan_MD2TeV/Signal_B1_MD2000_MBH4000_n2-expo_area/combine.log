@@ -1,0 +1,817 @@
+
+>>> Random number generator seed is 123456
+>>> Method used is AsymptoticLimits
+Creating pdfs for individual modes (6): .    1.    2.    3.    4.    5.    6done.
+Importing combined pdf model_s
+Importing combined pdf model_b
+Nuisance parameters after fit for asimov dataset: 
+  1) RooRealVar:: lumi = 0 +/- 0.996657
+Using internal logic for binned/unbinned Asimov dataset generation
+[#1] INFO:InputArguments -- RooAbsReal::createHistogram(pdf_binpass_LOW_obsOnly) INFO: Model has intrinsic binning definition, selecting that binning for the histogram
+Generating asimov with histogram for pdf pdf_binpass_LOW_obsOnly: in 4 x-bins
+ , in 1 y-bins
+Using internal logic for binned/unbinned Asimov dataset generation
+[#1] INFO:InputArguments -- RooAbsReal::createHistogram(pdf_binpass_SIG_obsOnly) INFO: Model has intrinsic binning definition, selecting that binning for the histogram
+Generating asimov with histogram for pdf pdf_binpass_SIG_obsOnly: in 2 x-bins
+ , in 1 y-bins
+Using internal logic for binned/unbinned Asimov dataset generation
+[#1] INFO:InputArguments -- RooAbsReal::createHistogram(pdf_binpass_HIGH_obsOnly) INFO: Model has intrinsic binning definition, selecting that binning for the histogram
+Generating asimov with histogram for pdf pdf_binpass_HIGH_obsOnly: in 5 x-bins
+ , in 1 y-bins
+Using internal logic for binned/unbinned Asimov dataset generation
+[#1] INFO:InputArguments -- RooAbsReal::createHistogram(pdf_binfail_LOW_obsOnly) INFO: Model has intrinsic binning definition, selecting that binning for the histogram
+Generating asimov with histogram for pdf pdf_binfail_LOW_obsOnly: in 4 x-bins
+ , in 1 y-bins
+Using internal logic for binned/unbinned Asimov dataset generation
+[#1] INFO:InputArguments -- RooAbsReal::createHistogram(pdf_binfail_SIG_obsOnly) INFO: Model has intrinsic binning definition, selecting that binning for the histogram
+Generating asimov with histogram for pdf pdf_binfail_SIG_obsOnly: in 2 x-bins
+ , in 1 y-bins
+Using internal logic for binned/unbinned Asimov dataset generation
+[#1] INFO:InputArguments -- RooAbsReal::createHistogram(pdf_binfail_HIGH_obsOnly) INFO: Model has intrinsic binning definition, selecting that binning for the histogram
+Generating asimov with histogram for pdf pdf_binfail_HIGH_obsOnly: in 5 x-bins
+ , in 1 y-bins
+Global observables for data: 
+  1) RooRealVar:: lumi_In = 0
+Global observables for asimov: 
+  1) RooRealVar:: lumi_In = 0
+Fit to asimov dataset:
+
+  RooFitResult: minimized FCN value: -345310, estimated distance to minimum: 0.0179833
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=-1 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+               lumi_In    0.0000e+00
+  n_exp_binfail_HIGH_proc_Background    1.0000e+00
+  n_exp_binfail_LOW_proc_Background    1.0000e+00
+  n_exp_binfail_SIG_proc_Background    1.0000e+00
+  n_exp_binpass_HIGH_proc_Background_expo    1.0000e+00
+  n_exp_binpass_LOW_proc_Background_expo    1.0000e+00
+  n_exp_binpass_SIG_proc_Background_expo    1.0000e+00
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+  Background_fail_HIGH_bin_1-1    6.4686e+01    6.4528e+01 +/-  6.51e+00  <none>
+  Background_fail_HIGH_bin_2-1    2.1634e+01    2.1573e+01 +/-  3.73e+00  <none>
+  Background_fail_HIGH_bin_3-1    3.7580e+00    3.7370e+00 +/-  1.55e+00  <none>
+  Background_fail_HIGH_bin_4-1    1.2337e+00    1.2256e+00 +/-  8.75e-01  <none>
+  Background_fail_LOW_bin_1-1    3.1302e+05    3.1302e+05 +/-  5.43e+02  <none>
+  Background_fail_LOW_bin_2-1    5.9413e+04    5.9416e+04 +/-  2.11e+02  <none>
+  Background_fail_LOW_bin_3-1    1.3377e+04    1.3378e+04 +/-  9.70e+01  <none>
+  Background_fail_LOW_bin_4-1    3.3321e+03    3.3323e+03 +/-  4.79e+01  <none>
+  Background_fail_SIG_bin_1-1    8.5888e+02    8.5887e+02 +/-  2.42e+01  <none>
+  Background_fail_SIG_bin_2-1    2.3525e+02    2.3498e+02 +/-  1.26e+01  <none>
+  Background_rpf_expo_par0   -1.0000e+00   -9.9254e-01 +/-  8.23e-02  <none>
+  Background_rpf_expo_par1   -9.0095e-01   -9.0069e-01 +/-  3.02e-03  <none>
+                  lumi    0.0000e+00    1.4260e-01 +/-  9.97e-01  <none>
+                     r    2.0000e-01    4.5159e-06 +/-  3.37e-05  <none>
+
+Will search for NLL crossing by stepping
+At r = 1.000000:	delta(nll) = 1691762.58674
+
+At r = 0.500000:	delta(nll) = 781697.86360
+
+At r = 0.250000:	delta(nll) = 352653.63099
+
+At r = 0.125000:	delta(nll) = 154019.07402
+
+At r = 0.062500:	delta(nll) = 64630.84984
+
+At r = 0.031250:	delta(nll) = 25716.48523
+
+At r = 0.015625:	delta(nll) = 9542.66390
+
+At r = 0.007812:	delta(nll) = 3345.70945
+
+At r = 0.003906:	delta(nll) = 1115.72667
+
+At r = 0.001953:	delta(nll) = 361.31755
+
+At r = 0.000977:	delta(nll) = 112.99914
+
+At r = 0.000488:	delta(nll) = 31.99250
+
+At r = 0.000244:	delta(nll) = 8.65370
+
+At r = 0.000122:	delta(nll) = 2.34024
+
+At r = 0.000061:	delta(nll) = 0.65000
+
+At r = 0.000122:	delta(nll) = 2.34025
+
+At r = 0.000092:	delta(nll) = 1.36962
+
+At r = 0.000122:	delta(nll) = 2.34024
+
+At r = 0.000107:	delta(nll) = 1.82379
+
+At r = 0.000114:	delta(nll) = 2.07425
+
+At r = 0.000111:	delta(nll) = 1.94706
+
+At r = 0.000109:	delta(nll) = 1.88500
+
+At r = 0.000111:	delta(nll) = 1.94707
+
+At r = 0.000110:	delta(nll) = 1.91588
+
+Median for expected limits = 0.000109673, Sigma for expected limits = 5.59564e-05
+Will search for NLL crossing by bisection
+At r = 0.000055:	delta(nll) = 0.53471
+
+At r = 0.000082:	delta(nll) = 1.12363
+
+At r = 0.000069:	delta(nll) = 0.80360
+
+At r = 0.000062:	delta(nll) = 0.66270
+
+At r = 0.000058:	delta(nll) = 0.59706
+
+At r = 0.000057:	delta(nll) = 0.56551
+
+Will search for NLL crossing by bisection
+At r = 0.000083:	delta(nll) = 1.14530
+
+At r = 0.000070:	delta(nll) = 0.83143
+
+At r = 0.000076:	delta(nll) = 0.98238
+
+At r = 0.000080:	delta(nll) = 1.06235
+
+At r = 0.000078:	delta(nll) = 1.02204
+
+At r = 0.000077:	delta(nll) = 1.00218
+
+Will search for NLL crossing by bisection
+At r = 0.000166:	delta(nll) = 4.15306
+
+At r = 0.000138:	delta(nll) = 2.93145
+
+At r = 0.000152:	delta(nll) = 3.51666
+
+At r = 0.000159:	delta(nll) = 3.82847
+
+At r = 0.000155:	delta(nll) = 3.67095
+
+At r = 0.000157:	delta(nll) = 3.74937
+
+At r = 0.000156:	delta(nll) = 3.71006
+
+Will search for NLL crossing by bisection
+At r = 0.000245:	delta(nll) = 8.69497
+
+At r = 0.000200:	delta(nll) = 5.95274
+
+At r = 0.000223:	delta(nll) = 7.26229
+
+At r = 0.000211:	delta(nll) = 6.59201
+
+At r = 0.000206:	delta(nll) = 6.26847
+
+At r = 0.000209:	delta(nll) = 6.42927
+
+At r = 0.000210:	delta(nll) = 6.51042
+
+At r = 0.000211:	delta(nll) = 6.55121
+
+At r = 0.000210:	delta(nll) = 6.53079
+
+At r = 0.000211:	delta(nll) = 6.54098
+
+Restricting r to positive values.
+  1) RooRealVar::            Background_fail_HIGH_bin_1-1 = 69
+  2) RooRealVar::            Background_fail_HIGH_bin_2-1 = 17
+  3) RooRealVar::            Background_fail_HIGH_bin_3-1 = 5
+  4) RooRealVar::            Background_fail_HIGH_bin_4-1 = 5
+  5) RooRealVar::             Background_fail_LOW_bin_1-1 = 313851
+  6) RooRealVar::             Background_fail_LOW_bin_2-1 = 58924
+  7) RooRealVar::             Background_fail_LOW_bin_3-1 = 13117
+  8) RooRealVar::             Background_fail_LOW_bin_4-1 = 3240
+  9) RooRealVar::             Background_fail_SIG_bin_1-1 = 872
+ 10) RooRealVar::             Background_fail_SIG_bin_2-1 = 227
+ 11) RooRealVar::                Background_rpf_expo_par0 = 0.1 +/- 0.1
+ 12) RooRealVar::                Background_rpf_expo_par1 = 0.1 +/- 0.1
+ 13) RooRealVar::                                    lumi = 0 +/- 1
+ 14) RooRealVar::                                 lumi_In = 0
+ 15) RooRealVar::      n_exp_binfail_HIGH_proc_Background = 1
+ 16) RooRealVar::       n_exp_binfail_LOW_proc_Background = 1
+ 17) RooRealVar::       n_exp_binfail_SIG_proc_Background = 1
+ 18) RooRealVar:: n_exp_binpass_HIGH_proc_Background_expo = 1
+ 19) RooRealVar::  n_exp_binpass_LOW_proc_Background_expo = 1
+ 20) RooRealVar::  n_exp_binpass_SIG_proc_Background_expo = 1
+ 21) RooRealVar::                                       r = 2
+
+Make global fit of real data
+NLL at global minimum of data = -4.36154e+06 (r=6.72335e-05)
+   0) Background_fail_HIGH_bin_1-1   =   61.2849
+   1) Background_fail_HIGH_bin_2-1   =   19.6586
+   2) Background_fail_HIGH_bin_3-1   =   3.52671
+   3) Background_fail_HIGH_bin_4-1   =  0.983556
+   4) Background_fail_LOW_bin_1-1    =    313062
+   5) Background_fail_LOW_bin_2-1    =   59410.5
+   6) Background_fail_LOW_bin_3-1    =   13356.1
+   7) Background_fail_LOW_bin_4-1    =   3304.63
+   8) Background_fail_SIG_bin_1-1    =   840.905
+   9) Background_fail_SIG_bin_2-1    =   225.892
+  10) Background_rpf_expo_par0       = -0.999981
+  11) Background_rpf_expo_par1       = -0.901449
+  12) lumi                           = -0.000158317
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 6.72335e-05
+
+
+Make global fit of asimov data
+NLL at global minimum of asimov = -4.36177e+06 (r=2.08067e-09)
+   0) Background_fail_HIGH_bin_1-1   = 1.00111e-06
+   1) Background_fail_HIGH_bin_2-1   = 1.00276e-06
+   2) Background_fail_HIGH_bin_3-1   = 1.00185e-06
+   3) Background_fail_HIGH_bin_4-1   = 1.0017e-06
+   4) Background_fail_LOW_bin_1-1    =    243735
+   5) Background_fail_LOW_bin_2-1    = 1.08243e-06
+   6) Background_fail_LOW_bin_3-1    = 1.57597e-06
+   7) Background_fail_LOW_bin_4-1    = 1.01087e-06
+   8) Background_fail_SIG_bin_1-1    = 1.00001e-06
+   9) Background_fail_SIG_bin_2-1    = 1.00008e-06
+  10) Background_rpf_expo_par0       = -0.945584
+  11) Background_rpf_expo_par1       =  -1.19768
+  12) lumi                           =        -7
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              =   1.20007
+
+At r = 1.200067:	q_mu = 4131006.78206	q_A  = 4132985.62820	Pmu = 0.00000	1-Pb  = 0.68678	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   = 1.08521e-06
+   1) Background_fail_HIGH_bin_2-1   = 1.06225e-06
+   2) Background_fail_HIGH_bin_3-1   = 1.04043e-06
+   3) Background_fail_HIGH_bin_4-1   = 1.02073e-06
+   4) Background_fail_LOW_bin_1-1    =    278374
+   5) Background_fail_LOW_bin_2-1    = 8.5986e-06
+   6) Background_fail_LOW_bin_3-1    = 1.14016e-06
+   7) Background_fail_LOW_bin_4-1    = 1.14554e-06
+   8) Background_fail_SIG_bin_1-1    = 1.12933e-06
+   9) Background_fail_SIG_bin_2-1    = 1.1084e-06
+  10) Background_rpf_expo_par0       = -0.987308
+  11) Background_rpf_expo_par1       =  -1.02038
+  12) lumi                           =        -7
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              =  0.600067
+
+At r = 0.600067:	q_mu = 1915947.51271	q_A  = 1917925.97856	Pmu = 0.00000	1-Pb  = 0.76254	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   = 1.15095e-06
+   1) Background_fail_HIGH_bin_2-1   = 1.47401e-06
+   2) Background_fail_HIGH_bin_3-1   = 1.88007e-06
+   3) Background_fail_HIGH_bin_4-1   = 2.21344e-06
+   4) Background_fail_LOW_bin_1-1    =    296118
+   5) Background_fail_LOW_bin_2-1    =   24523.5
+   6) Background_fail_LOW_bin_3-1    = 1.1423e-06
+   7) Background_fail_LOW_bin_4-1    = 1.08698e-06
+   8) Background_fail_SIG_bin_1-1    = 1.03478e-06
+   9) Background_fail_SIG_bin_2-1    = 1.00486e-06
+  10) Background_rpf_expo_par0       =        50
+  11) Background_rpf_expo_par1       =  0.198268
+  12) lumi                           =        -7
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              =  0.300067
+
+At r = 0.300067:	q_mu = 871337.16705	q_A  = 872816.67996	Pmu = 0.00000	1-Pb  = 0.78587	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   = 1.07498e-06
+   1) Background_fail_HIGH_bin_2-1   = 1.07464e-06
+   2) Background_fail_HIGH_bin_3-1   = 1.0747e-06
+   3) Background_fail_HIGH_bin_4-1   = 1.07584e-06
+   4) Background_fail_LOW_bin_1-1    =    304353
+   5) Background_fail_LOW_bin_2-1    =   42444.4
+   6) Background_fail_LOW_bin_3-1    = 1.26005e-06
+   7) Background_fail_LOW_bin_4-1    = 1.10511e-06
+   8) Background_fail_SIG_bin_1-1    = 1.08211e-06
+   9) Background_fail_SIG_bin_2-1    = 1.07641e-06
+  10) Background_rpf_expo_par0       =   29.0091
+  11) Background_rpf_expo_par1       = -0.245067
+  12) lumi                           =        -7
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              =  0.150067
+
+At r = 0.150067:	q_mu = 383745.60432	q_A  = 384701.92392	Pmu = 0.00000	1-Pb  = 0.77977	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   = 1.00254e-06
+   1) Background_fail_HIGH_bin_2-1   = 1.00173e-06
+   2) Background_fail_HIGH_bin_3-1   = 1.00112e-06
+   3) Background_fail_HIGH_bin_4-1   = 1.00065e-06
+   4) Background_fail_LOW_bin_1-1    =    308683
+   5) Background_fail_LOW_bin_2-1    =   50924.2
+   6) Background_fail_LOW_bin_3-1    = 3.31187e-06
+   7) Background_fail_LOW_bin_4-1    = 1.00235e-06
+   8) Background_fail_SIG_bin_1-1    = 1.00225e-06
+   9) Background_fail_SIG_bin_2-1    = 1.00321e-06
+  10) Background_rpf_expo_par0       =   6.97993
+  11) Background_rpf_expo_par1       = -0.732402
+  12) lumi                           =        -7
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.0750672
+
+At r = 0.075067:	q_mu = 162005.81195	q_A  = 162961.94359	Pmu = 0.00000	1-Pb  = 0.88219	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   = 1.00567e-06
+   1) Background_fail_HIGH_bin_2-1   = 1.00478e-06
+   2) Background_fail_HIGH_bin_3-1   = 1.00334e-06
+   3) Background_fail_HIGH_bin_4-1   = 1.00138e-06
+   4) Background_fail_LOW_bin_1-1    =    310143
+   5) Background_fail_LOW_bin_2-1    =   56671.6
+   6) Background_fail_LOW_bin_3-1    =   5377.76
+   7) Background_fail_LOW_bin_4-1    = 1.00002e-06
+   8) Background_fail_SIG_bin_1-1    = 1.00459e-06
+   9) Background_fail_SIG_bin_2-1    = 1.00561e-06
+  10) Background_rpf_expo_par0       =    5.0808
+  11) Background_rpf_expo_par1       = -0.761312
+  12) lumi                           =        -7
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.0375672
+
+At r = 0.037567:	q_mu = 65622.70477	q_A  = 66228.79729	Pmu = 0.00000	1-Pb  = 0.88105	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   = 1.01464e-06
+   1) Background_fail_HIGH_bin_2-1   = 1.0107e-06
+   2) Background_fail_HIGH_bin_3-1   = 1.15513e-06
+   3) Background_fail_HIGH_bin_4-1   = 2.22135e-06
+   4) Background_fail_LOW_bin_1-1    =    311163
+   5) Background_fail_LOW_bin_2-1    =   58863.7
+   6) Background_fail_LOW_bin_3-1    =   9111.25
+   7) Background_fail_LOW_bin_4-1    = 1.01859e-06
+   8) Background_fail_SIG_bin_1-1    = 1.51806e-06
+   9) Background_fail_SIG_bin_2-1    = 1.0727e-06
+  10) Background_rpf_expo_par0       =   2.99234
+  11) Background_rpf_expo_par1       = -0.804997
+  12) lumi                           =        -7
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.0188172
+
+At r = 0.018817:	q_mu = 24576.98315	q_A  = 24966.38246	Pmu = 0.00000	1-Pb  = 0.89197	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   = 1.12196e-06
+   1) Background_fail_HIGH_bin_2-1   = 1.12533e-06
+   2) Background_fail_HIGH_bin_3-1   = 1.10962e-06
+   3) Background_fail_HIGH_bin_4-1   = 1.00559e-06
+   4) Background_fail_LOW_bin_1-1    =    311645
+   5) Background_fail_LOW_bin_2-1    =   59790.1
+   6) Background_fail_LOW_bin_3-1    =   11338.6
+   7) Background_fail_LOW_bin_4-1    =   1183.49
+   8) Background_fail_SIG_bin_1-1    = 1.05206e-06
+   9) Background_fail_SIG_bin_2-1    = 1.09316e-06
+  10) Background_rpf_expo_par0       =   1.86306
+  11) Background_rpf_expo_par1       = -0.828453
+  12) lumi                           =        -7
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.00944223
+
+At r = 0.009442:	q_mu = 8791.87755	q_A  = 8981.06610	Pmu = 0.00000	1-Pb  = 0.84218	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   = 1.21922e-06
+   1) Background_fail_HIGH_bin_2-1   = 1.09423e-06
+   2) Background_fail_HIGH_bin_3-1   = 1.02513e-06
+   3) Background_fail_HIGH_bin_4-1   = 2.23715e-06
+   4) Background_fail_LOW_bin_1-1    =    311968
+   5) Background_fail_LOW_bin_2-1    =   60036.9
+   6) Background_fail_LOW_bin_3-1    =   12527.3
+   7) Background_fail_LOW_bin_4-1    =   2115.66
+   8) Background_fail_SIG_bin_1-1    =   210.739
+   9) Background_fail_SIG_bin_2-1    = 1.35412e-06
+  10) Background_rpf_expo_par0       =   1.03838
+  11) Background_rpf_expo_par1       = -0.846985
+  12) lumi                           =        -7
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.00475473
+
+At r = 0.004755:	q_mu = 2994.27272	q_A  = 3060.43918	Pmu = 0.00000	1-Pb  = 0.72618	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   =   9.04092
+   1) Background_fail_HIGH_bin_2-1   = 3.9281e-06
+   2) Background_fail_HIGH_bin_3-1   = 2.53328e-06
+   3) Background_fail_HIGH_bin_4-1   = 7.48179e-06
+   4) Background_fail_LOW_bin_1-1    =    312215
+   5) Background_fail_LOW_bin_2-1    =     60009
+   6) Background_fail_LOW_bin_3-1    =     13087
+   7) Background_fail_LOW_bin_4-1    =   2682.39
+   8) Background_fail_SIG_bin_1-1    =    474.53
+   9) Background_fail_SIG_bin_2-1    =   73.8532
+  10) Background_rpf_expo_par0       =  0.430966
+  11) Background_rpf_expo_par1       = -0.861622
+  12) lumi                           =        -7
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.00241098
+
+At r = 0.002411:	q_mu = 1006.01087	q_A  = 1019.63870	Pmu = 0.00000	1-Pb  = 0.58477	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   =   29.1242
+   1) Background_fail_HIGH_bin_2-1   =   6.48327
+   2) Background_fail_HIGH_bin_3-1   = 1.0802e-05
+   3) Background_fail_HIGH_bin_4-1   = 0.0064754
+   4) Background_fail_LOW_bin_1-1    =    312441
+   5) Background_fail_LOW_bin_2-1    =   59867.3
+   6) Background_fail_LOW_bin_3-1    =   13296.3
+   7) Background_fail_LOW_bin_4-1    =   2990.82
+   8) Background_fail_SIG_bin_1-1    =   627.164
+   9) Background_fail_SIG_bin_2-1    =    134.48
+  10) Background_rpf_expo_par0       = -0.0377509
+  11) Background_rpf_expo_par1       = -0.873842
+  12) lumi                           =  -4.60227
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.00123911
+
+At r = 0.001239:	q_mu = 338.31065	q_A  = 341.30822	Pmu = 0.00000	1-Pb  = 0.53240	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   =   41.2292
+   1) Background_fail_HIGH_bin_2-1   =   11.7085
+   2) Background_fail_HIGH_bin_3-1   =   1.01329
+   3) Background_fail_HIGH_bin_4-1   =  0.412303
+   4) Background_fail_LOW_bin_1-1    =    312630
+   5) Background_fail_LOW_bin_2-1    =     59723
+   6) Background_fail_LOW_bin_3-1    =   13365.3
+   7) Background_fail_LOW_bin_4-1    =   3151.54
+   8) Background_fail_SIG_bin_1-1    =   721.754
+   9) Background_fail_SIG_bin_2-1    =   172.199
+  10) Background_rpf_expo_par0       = -0.382595
+  11) Background_rpf_expo_par1       = -0.883277
+  12) lumi                           =  -1.59443
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000653171
+
+At r = 0.000653:	q_mu = 102.77147	q_A  = 109.69603	Pmu = 0.00000	1-Pb  = 0.63155	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   =   49.5831
+   1) Background_fail_HIGH_bin_2-1   =   15.2018
+   2) Background_fail_HIGH_bin_3-1   =   1.87008
+   3) Background_fail_HIGH_bin_4-1   =  0.647789
+   4) Background_fail_LOW_bin_1-1    =    312773
+   5) Background_fail_LOW_bin_2-1    =   59609.7
+   6) Background_fail_LOW_bin_3-1    =   13383.4
+   7) Background_fail_LOW_bin_4-1    =   3235.22
+   8) Background_fail_SIG_bin_1-1    =   779.624
+   9) Background_fail_SIG_bin_2-1    =   197.042
+  10) Background_rpf_expo_par0       = -0.620336
+  11) Background_rpf_expo_par1       = -0.889979
+  12) lumi                           = -0.541734
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000360202
+
+At r = 0.000360:	q_mu = 28.21290	q_A  = 36.18904	Pmu = 0.00000	1-Pb  = 0.75933	CLs  = 0.00000
+   0) Background_fail_HIGH_bin_1-1   =   54.9071
+   1) Background_fail_HIGH_bin_2-1   =   17.4309
+   2) Background_fail_HIGH_bin_3-1   =   2.41329
+   3) Background_fail_HIGH_bin_4-1   =  0.801814
+   4) Background_fail_LOW_bin_1-1    =    312861
+   5) Background_fail_LOW_bin_2-1    =   59538.7
+   6) Background_fail_LOW_bin_3-1    =   13385.4
+   7) Background_fail_LOW_bin_4-1    =   3276.09
+   8) Background_fail_SIG_bin_1-1    =   811.074
+   9) Background_fail_SIG_bin_2-1    =   211.547
+  10) Background_rpf_expo_par0       = -0.761706
+  11) Background_rpf_expo_par1       = -0.894031
+  12) lumi                           = -0.203753
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000213718
+
+At r = 0.000214:	q_mu = 7.31312	q_A  = 13.50464	Pmu = 0.00342	1-Pb  = 0.83412	CLs  = 0.00410
+   0) Background_fail_HIGH_bin_1-1   =   57.9746
+   1) Background_fail_HIGH_bin_2-1   =   18.7312
+   2) Background_fail_HIGH_bin_3-1   =   2.76038
+   3) Background_fail_HIGH_bin_4-1   =  0.905164
+   4) Background_fail_LOW_bin_1-1    =    312913
+   5) Background_fail_LOW_bin_2-1    =     59500
+   6) Background_fail_LOW_bin_3-1    =   13384.6
+   7) Background_fail_LOW_bin_4-1    =    3296.1
+   8) Background_fail_SIG_bin_1-1    =   827.358
+   9) Background_fail_SIG_bin_2-1    =   219.376
+  10) Background_rpf_expo_par0       =  -0.83826
+  11) Background_rpf_expo_par1       = -0.896237
+  12) lumi                           = -0.0863083
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000140476
+
+At r = 0.000140:	q_mu = 1.81601	q_A  = 6.14567	Pmu = 0.08889	1-Pb  = 0.87107	CLs  = 0.10205
+   0) Background_fail_HIGH_bin_1-1   =   56.4012
+   1) Background_fail_HIGH_bin_2-1   =   18.0628
+   2) Background_fail_HIGH_bin_3-1   =   2.57768
+   3) Background_fail_HIGH_bin_4-1   =   0.85014
+   4) Background_fail_LOW_bin_1-1    =    312883
+   5) Background_fail_LOW_bin_2-1    =   59517.9
+   6) Background_fail_LOW_bin_3-1    =   13384.6
+   7) Background_fail_LOW_bin_4-1    =   3285.93
+   8) Background_fail_SIG_bin_1-1    =    819.12
+   9) Background_fail_SIG_bin_2-1    =     215.4
+  10) Background_rpf_expo_par0       = -0.799556
+  11) Background_rpf_expo_par1       =  -0.89511
+  12) lumi                           = -0.139765
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000177097
+
+At r = 0.000177:	q_mu = 4.12336	q_A  = 9.47991	Pmu = 0.02115	1-Pb  = 0.85276	CLs  = 0.02480
+   0) Background_fail_HIGH_bin_1-1   =   57.3261
+   1) Background_fail_HIGH_bin_2-1   =   18.4552
+   2) Background_fail_HIGH_bin_3-1   =   2.68339
+   3) Background_fail_HIGH_bin_4-1   =  0.881843
+   4) Background_fail_LOW_bin_1-1    =    312902
+   5) Background_fail_LOW_bin_2-1    =   59508.3
+   6) Background_fail_LOW_bin_3-1    =     13385
+   7) Background_fail_LOW_bin_4-1    =   3292.07
+   8) Background_fail_SIG_bin_1-1    =   824.012
+   9) Background_fail_SIG_bin_2-1    =    217.75
+  10) Background_rpf_expo_par0       = -0.822297
+  11) Background_rpf_expo_par1       = -0.895792
+  12) lumi                           = -0.110392
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000155251
+
+At r = 0.000155:	q_mu = 2.63855	q_A  = 7.40682	Pmu = 0.05215	1-Pb  = 0.86372	CLs  = 0.06038
+   0) Background_fail_HIGH_bin_1-1   =   56.9806
+   1) Background_fail_HIGH_bin_2-1   =   18.3087
+   2) Background_fail_HIGH_bin_3-1   =   2.64364
+   3) Background_fail_HIGH_bin_4-1   =  0.869838
+   4) Background_fail_LOW_bin_1-1    =    312893
+   5) Background_fail_LOW_bin_2-1    =   59510.7
+   6) Background_fail_LOW_bin_3-1    =   13384.5
+   7) Background_fail_LOW_bin_4-1    =    3289.7
+   8) Background_fail_SIG_bin_1-1    =   822.179
+   9) Background_fail_SIG_bin_2-1    =   216.874
+  10) Background_rpf_expo_par0       = -0.814248
+  11) Background_rpf_expo_par1       = -0.895532
+  12) lumi                           = -0.121417
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000163324
+
+At r = 0.000163:	q_mu = 3.15019	q_A  = 8.14407	Pmu = 0.03796	1-Pb  = 0.85968	CLs  = 0.04415
+   0) Background_fail_HIGH_bin_1-1   =   57.1593
+   1) Background_fail_HIGH_bin_2-1   =   18.3844
+   2) Background_fail_HIGH_bin_3-1   =   2.66416
+   3) Background_fail_HIGH_bin_4-1   =  0.876022
+   4) Background_fail_LOW_bin_1-1    =    312897
+   5) Background_fail_LOW_bin_2-1    =   59509.2
+   6) Background_fail_LOW_bin_3-1    =   13384.7
+   7) Background_fail_LOW_bin_4-1    =    3290.9
+   8) Background_fail_SIG_bin_1-1    =   823.124
+   9) Background_fail_SIG_bin_2-1    =   217.327
+  10) Background_rpf_expo_par0       = -0.818475
+  11) Background_rpf_expo_par1       = -0.895663
+  12) lumi                           = -0.115196
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000159143
+
+At r = 0.000159:	q_mu = 2.87974	q_A  = 7.75800	Pmu = 0.04485	1-Pb  = 0.86178	CLs  = 0.05204
+   0) Background_fail_HIGH_bin_1-1   =   57.0828
+   1) Background_fail_HIGH_bin_2-1   =   18.3521
+   2) Background_fail_HIGH_bin_3-1   =   2.65555
+   3) Background_fail_HIGH_bin_4-1   =  0.873403
+   4) Background_fail_LOW_bin_1-1    =    312898
+   5) Background_fail_LOW_bin_2-1    =   59509.6
+   6) Background_fail_LOW_bin_3-1    =   13384.3
+   7) Background_fail_LOW_bin_4-1    =   3290.31
+   8) Background_fail_SIG_bin_1-1    =   822.704
+   9) Background_fail_SIG_bin_2-1    =   217.131
+  10) Background_rpf_expo_par0       = -0.817729
+  11) Background_rpf_expo_par1       = -0.895656
+  12) lumi                           = -0.118609
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000160795
+
+At r = 0.000161:	q_mu = 2.98516	q_A  = 7.90949	Pmu = 0.04202	1-Pb  = 0.86095	CLs  = 0.04880
+   0) Background_fail_HIGH_bin_1-1   =   57.1136
+   1) Background_fail_HIGH_bin_2-1   =   18.3651
+   2) Background_fail_HIGH_bin_3-1   =   2.65894
+   3) Background_fail_HIGH_bin_4-1   =   0.87444
+   4) Background_fail_LOW_bin_1-1    =    312898
+   5) Background_fail_LOW_bin_2-1    =   59509.8
+   6) Background_fail_LOW_bin_3-1    =   13384.6
+   7) Background_fail_LOW_bin_4-1    =   3290.59
+   8) Background_fail_SIG_bin_1-1    =   822.882
+   9) Background_fail_SIG_bin_2-1    =   217.211
+  10) Background_rpf_expo_par0       = -0.818035
+  11) Background_rpf_expo_par1       = -0.895647
+  12) lumi                           = -0.116278
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000159966
+
+At r = 0.000160:	q_mu = 2.93204	q_A  = 7.83328	Pmu = 0.04342	1-Pb  = 0.86137	CLs  = 0.05041
+   0) Background_fail_HIGH_bin_1-1   =   57.1101
+   1) Background_fail_HIGH_bin_2-1   =   18.3637
+   2) Background_fail_HIGH_bin_3-1   =   2.65858
+   3) Background_fail_HIGH_bin_4-1   =   0.87433
+   4) Background_fail_LOW_bin_1-1    =    312897
+   5) Background_fail_LOW_bin_2-1    =   59509.5
+   6) Background_fail_LOW_bin_3-1    =   13384.5
+   7) Background_fail_LOW_bin_4-1    =   3290.54
+   8) Background_fail_SIG_bin_1-1    =   822.858
+   9) Background_fail_SIG_bin_2-1    =   217.202
+  10) Background_rpf_expo_par0       =  -0.81781
+  11) Background_rpf_expo_par1       = -0.895653
+  12) lumi                           = -0.116746
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000160298
+
+At r = 0.000160:	q_mu = 2.95324	q_A  = 7.86371	Pmu = 0.04285	1-Pb  = 0.86120	CLs  = 0.04976
+   0) Background_fail_HIGH_bin_1-1   =   57.1135
+   1) Background_fail_HIGH_bin_2-1   =   18.3651
+   2) Background_fail_HIGH_bin_3-1   =   2.65894
+   3) Background_fail_HIGH_bin_4-1   =   0.87444
+   4) Background_fail_LOW_bin_1-1    =    312897
+   5) Background_fail_LOW_bin_2-1    =   59509.6
+   6) Background_fail_LOW_bin_3-1    =   13384.6
+   7) Background_fail_LOW_bin_4-1    =   3290.58
+   8) Background_fail_SIG_bin_1-1    =   822.879
+   9) Background_fail_SIG_bin_2-1    =    217.21
+  10) Background_rpf_expo_par0       = -0.817844
+  11) Background_rpf_expo_par1       = -0.895649
+  12) lumi                           = -0.116634
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000160132
+
+At r = 0.000160:	q_mu = 2.94266	q_A  = 7.84851	Pmu = 0.04313	1-Pb  = 0.86128	CLs  = 0.05008
+   0) Background_fail_HIGH_bin_1-1   =   57.1125
+   1) Background_fail_HIGH_bin_2-1   =   18.3646
+   2) Background_fail_HIGH_bin_3-1   =   2.65883
+   3) Background_fail_HIGH_bin_4-1   =  0.874407
+   4) Background_fail_LOW_bin_1-1    =    312897
+   5) Background_fail_LOW_bin_2-1    =   59509.5
+   6) Background_fail_LOW_bin_3-1    =   13384.5
+   7) Background_fail_LOW_bin_4-1    =   3290.56
+   8) Background_fail_SIG_bin_1-1    =   822.873
+   9) Background_fail_SIG_bin_2-1    =   217.208
+  10) Background_rpf_expo_par0       = -0.817753
+  11) Background_rpf_expo_par1       = -0.895649
+  12) lumi                           = -0.116791
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000160199
+
+At r = 0.000160:	q_mu = 2.94690	q_A  = 7.85461	Pmu = 0.04302	1-Pb  = 0.86125	CLs  = 0.04995
+   0) Background_fail_HIGH_bin_1-1   =   57.1137
+   1) Background_fail_HIGH_bin_2-1   =   18.3651
+   2) Background_fail_HIGH_bin_3-1   =   2.65895
+   3) Background_fail_HIGH_bin_4-1   =  0.874444
+   4) Background_fail_LOW_bin_1-1    =    312897
+   5) Background_fail_LOW_bin_2-1    =   59509.6
+   6) Background_fail_LOW_bin_3-1    =   13384.6
+   7) Background_fail_LOW_bin_4-1    =   3290.58
+   8) Background_fail_SIG_bin_1-1    =   822.881
+   9) Background_fail_SIG_bin_2-1    =   217.211
+  10) Background_rpf_expo_par0       = -0.817758
+  11) Background_rpf_expo_par1       = -0.895646
+  12) lumi                           = -0.116719
+  13) lumi_In                        =         0
+  14) n_exp_binfail_HIGH_proc_Background =         1
+  15) n_exp_binfail_LOW_proc_Background =         1
+  16) n_exp_binfail_SIG_proc_Background =         1
+  17) n_exp_binpass_HIGH_proc_Background_expo =         1
+  18) n_exp_binpass_LOW_proc_Background_expo =         1
+  19) n_exp_binpass_SIG_proc_Background_expo =         1
+  20) r                              = 0.000160166
+
+At r = 0.000160:	q_mu = 2.94479	q_A  = 7.85157	Pmu = 0.04308	1-Pb  = 0.86127	CLs  = 0.05002
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0002
+Expected  2.5%: r < 0.0001
+Expected 16.0%: r < 0.0001
+Expected 50.0%: r < 0.0001
+Expected 84.0%: r < 0.0002
+Expected 97.5%: r < 0.0002
+
+Done in 0.01 min (cpu), 0.01 min (real)
+431 log messages saved to combine_logger.out

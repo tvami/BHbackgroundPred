@@ -1,0 +1,15 @@
+Background_fail_par0:Background_rpf_expo_par0 = -1.8165405501440325e-06
+Background_fail_par0:Background_rpf_expo_par1 = -1.2099741854180196e-06
+Background_fail_par0:lumi = 0.0051832418744555174
+Background_fail_par0:r = -0.015356064173650623
+Background_fail_par1:Background_fail_par0 = -0.7575492998379035
+Background_fail_par1:Background_rpf_expo_par0 = -6.381503874215956e-05
+Background_fail_par1:Background_rpf_expo_par1 = -4.250574804742363e-05
+Background_fail_par1:lumi = 0.18208804950742377
+Background_fail_par1:r = -0.5394607555497369
+Background_rpf_expo_par0:lumi = -3.9928670376497255e-05
+Background_rpf_expo_par1:Background_rpf_expo_par0 = 0.8003503572266869
+Background_rpf_expo_par1:lumi = -2.6595581391296155e-05
+r:Background_rpf_expo_par0 = 0.000118294140254581
+r:Background_rpf_expo_par1 = 7.879307005537268e-05
+r:lumi = -0.337537156050525

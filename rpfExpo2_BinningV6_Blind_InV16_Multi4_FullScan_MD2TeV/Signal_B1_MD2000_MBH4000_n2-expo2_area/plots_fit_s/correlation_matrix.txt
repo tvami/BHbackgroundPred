@@ -1,0 +1,15 @@
+Background_rpf_expo2_par0:SVM = -0.09463108064847099
+Background_rpf_expo2_par0:lumi = 0.0038862687897798904
+Background_rpf_expo2_par1:Background_rpf_expo2_par0 = -0.9920436546797408
+Background_rpf_expo2_par1:SVM = 0.09673738100660312
+Background_rpf_expo2_par1:lumi = -0.0039728882346808415
+Background_rpf_expo2_par2:Background_rpf_expo2_par0 = 0.9800524553085697
+Background_rpf_expo2_par2:Background_rpf_expo2_par1 = -0.99511241754973
+Background_rpf_expo2_par2:SVM = -0.09840111514811023
+Background_rpf_expo2_par2:lumi = 0.004042867391593564
+lumi:SVM = -0.00041377501045690597
+r:Background_rpf_expo2_par0 = -0.9463594693196492
+r:Background_rpf_expo2_par1 = 0.9674524531201876
+r:Background_rpf_expo2_par2 = -0.9844931737942105
+r:SVM = 0.10076174945621727
+r:lumi = -0.004133034386390808

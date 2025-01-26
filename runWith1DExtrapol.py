@@ -60,6 +60,13 @@ _rpf_options = {
     '2x2': {
         'form': '0.1*(@0+@1*x+@2*x**2)*(1+@3*y+@4*y**2)',
         'constraints': _generate_constraints(4)
+    },
+    'expo': {
+        'form': 'exp(-@0*x+@1)',
+        'constraints': {
+            0: {"MIN": -50, "MAX": 50},
+            1: {"MIN": -500, "MAX": 500}
+        }
     }
 }
 
@@ -104,9 +111,11 @@ def make_workspace():
     fail_name = 'Background_'+f
     # this is the actual binned distribution of the fail
     #bkg_f = BinnedDistribution(fail_name, bkg_hists[f], binning_f, constant=False)
-    bkg_f_func = "100*@0*exp(@1*x)"
-    bkg_f_const = {0:{"MIN":0.,"MAX":100,"NOM":1.},1:{"MIN":-50,"MAX":0,"NOM":-0.1}}
-    bkg_f = SemiParametricFunction(fail_name, bkg_hists[f], binning_f, bkg_f_func, constraints=bkg_f_const,funcCeiling=10.)
+    # bkg_f_func = "100*@0*exp(@1*x)"
+    bkg_f_func = "100*@0/(pow(x,@1+@2*(log(x)*log(x))))"  # ATLAS2
+    # bkg_f_const = {0:{"MIN":0.,"MAX":100,"NOM":1.},1:{"MIN":-50,"MAX":0,"NOM":-0.1}}
+    bkg_f_const = {0:{"MIN":0.,"MAX":100,"NOM":1.},1:{"MIN":0,"MAX":50,"NOM":0.1},2:{"MIN":0,"MAX":50,"NOM":0.1}}
+    bkg_f = SemiParametricFunction(fail_name, bkg_hists[f], binning_f, bkg_f_func, constraints=bkg_f_const,funcCeiling=8.)
     # now we add it to the 2DAlphabet ledger
     twoD.AddAlphaObj('Background',f, bkg_f)
 
@@ -153,15 +162,15 @@ def perform_fit(signal, tf, rMaxExt = 30, extra=''):
     print("perform fit")
     twoD.MLfit('{}-{}_area'.format(signal, tf), rMin=0, rMax=rMaxExt, verbosity=1, extra=extra)
 
-def plot_fit(signal, tf):
+def plot_fit(signal, tf, lumi='137.4'):
     working_area = workingArea
     print("DoingTwoDAlphabet")
     twoD = TwoDAlphabet(working_area, '{}/runConfig.json'.format(working_area), loadPrevious=True)
     print("Doing twoD.ledger.select")
     subset = twoD.ledger.select(_select_signal, '{}'.format(signal), tf) 
     print("Doing twoD.StdPlots")
-    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset)
-    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, True)
+    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, lumiText=lumi+r' $fb^{-1}$ (13 TeV)')
+    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, True, lumiText=lumi+r' $fb^{-1}$ (13 TeV)')
 
 def GOF(signal,tf,condor=True, extra=''):
     # replace the blindedFit option in the config file with COMMENT to effectively "unblind" the GoF
@@ -346,20 +355,12 @@ def test_FTest(poly1, poly2, signal=''):
 if __name__ == "__main__":
     make_workspace()
 
-    signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
-    #signal_areas = ["Signal_ppStau-557"]
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800"]
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871"]
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871", "Signal_gluinoCS-1800","Signal_gmsbStau-1218", "Signal_gmsbStau-1409", "Signal_gmsbStau-1599","Signal_gmsbStau-247", "Signal_gmsbStau-308", "Signal_gmsbStau-432", "Signal_gmsbStau-557", "Signal_gmsbStau-651", "Signal_gmsbStau-745", "Signal_gmsbStau-871", "Signal_stop-1000", "Signal_stop-1200", "Signal_stop-1400", "Signal_stop-1600", "Signal_stop-1800", "Signal_stop-2000", "Signal_stop-2200", "Signal_stop-2400", "Signal_stop-2600", "Signal_stop-500", "Signal_stop-800", "Signal_stopCS-1200", "Signal_stopCS-1400", "Signal_stopCS-1600", "Signal_stopCS-1800", "Signal_stopCS-2000", "Signal_stopCS-2200", "Signal_stopCS-2400", "Signal_stopCS-2600", "Signal_stopCS-500", "Signal_stopCS-800","Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800","Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800", "Signal_tauPrime2e-2600", "Signal_tauPrime2e-400", "Signal_tauPrime2e-600"]
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_gluinoCS-1800", "Signal_gluinoCS-2000", "Signal_gluinoCS-2200", "Signal_gluinoCS-2400", "Signal_gluinoCS-2600", "Signal_gluinoCS-500", "Signal_gluinoCS-800", "Signal_gmsbStau-1029", "Signal_gmsbStau-1218", "Signal_gmsbStau-1409", "Signal_gmsbStau-1599", "Signal_gmsbStau-200", "Signal_gmsbStau-247", "Signal_gmsbStau-308", "Signal_gmsbStau-432", "Signal_gmsbStau-557", "Signal_gmsbStau-651", "Signal_gmsbStau-745", "Signal_gmsbStau-871", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-200", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871", "Signal_stop-1000", "Signal_stop-1200", "Signal_stop-1400", "Signal_stop-1600", "Signal_stop-1800", "Signal_stop-2000", "Signal_stop-2200", "Signal_stop-2400", "Signal_stop-2600", "Signal_stop-500", "Signal_stop-800", "Signal_stopCS-1000", "Signal_stopCS-1200", "Signal_stopCS-1400", "Signal_stopCS-1600", "Signal_stopCS-1800", "Signal_stopCS-2000", "Signal_stopCS-2200", "Signal_stopCS-2400", "Signal_stopCS-2600", "Signal_stopCS-500", "Signal_stopCS-800", "Signal_tauPrime1e-1000", "Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800", "Signal_tauPrime1e-200", "Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800",  "Signal_tauPrime2e-200", "Signal_tauPrime2e-800", "Signal_tauPrime2e-1000", "Signal_tauPrime2e-1400", "Signal_tauPrime2e-1800", "Signal_tauPrime2e-2200", "Signal_tauPrime2e-2600"]
-    #signal_areas = ["Signal_tauPrime1e-200", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800", "Signal_tauPrime1e-1000", "Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800", "Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600",  "Signal_tauPrime2e-200", "Signal_tauPrime2e-400", "Signal_tauPrime2e-600", "Signal_tauPrime2e-800", "Signal_tauPrime2e-1000", "Signal_tauPrime2e-1400", "Signal_tauPrime2e-1800", "Signal_tauPrime2e-2200", "Signal_tauPrime2e-2600"]
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_gluinoCS-1800", "Signal_gluinoCS-2000", "Signal_gluinoCS-2200", "Signal_gluinoCS-2400", "Signal_gluinoCS-2600", "Signal_gluinoCS-500", "Signal_gluinoCS-800", "Signal_gmsbStau-1029", "Signal_gmsbStau-1218", "Signal_gmsbStau-1409", "Signal_gmsbStau-1599", "Signal_gmsbStau-200", "Signal_gmsbStau-247", "Signal_gmsbStau-308", "Signal_gmsbStau-432", "Signal_gmsbStau-557", "Signal_gmsbStau-651", "Signal_gmsbStau-745", "Signal_gmsbStau-871", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-200", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871", "Signal_stop-1000", "Signal_stop-1200", "Signal_stop-1400", "Signal_stop-1600", "Signal_stop-1800", "Signal_stop-2000", "Signal_stop-2200", "Signal_stop-2400", "Signal_stop-2600", "Signal_stop-500", "Signal_stop-800", "Signal_stopCS-1000", "Signal_stopCS-1200", "Signal_stopCS-1400", "Signal_stopCS-1600", "Signal_stopCS-1800", "Signal_stopCS-2000", "Signal_stopCS-2200", "Signal_stopCS-2400", "Signal_stopCS-2600", "Signal_stopCS-500", "Signal_stopCS-800", "Signal_tauPrime1e-1000", "Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800", "Signal_tauPrime1e-200", "Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800",  "Signal_tauPrime2e-200", "Signal_tauPrime2e-400", "Signal_tauPrime2e-600", "Signal_tauPrime2e-800", "Signal_tauPrime2e-1000", "Signal_tauPrime2e-1400", "Signal_tauPrime2e-1800", "Signal_tauPrime2e-2200", "Signal_tauPrime2e-2600"]
-    #signal_areas = ["Signal_tauPrime1e-1000", "Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800", "Signal_tauPrime1e-200", "Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800", "Signal_tauPrime2e-1000", "Signal_tauPrime2e-1400", "Signal_tauPrime2e-1800", "Signal_tauPrime2e-200", "Signal_tauPrime2e-2200", "Signal_tauPrime2e-2600", "Signal_tauPrime2e-400", "Signal_tauPrime2e-600"]
-    # No CS models:
-    #signal_areas = ["Signal_gluino-1000", "Signal_gluino-1400", "Signal_gluino-1600", "Signal_gluino-1800", "Signal_gluino-2000", "Signal_gluino-2200", "Signal_gluino-2400", "Signal_gluino-2600", "Signal_gluino-800", "Signal_gmsbStau-1029", "Signal_gmsbStau-1218", "Signal_gmsbStau-1409", "Signal_gmsbStau-1599", "Signal_gmsbStau-200", "Signal_gmsbStau-247", "Signal_gmsbStau-308", "Signal_gmsbStau-432", "Signal_gmsbStau-557", "Signal_gmsbStau-651", "Signal_gmsbStau-745", "Signal_gmsbStau-871", "Signal_ppStau-1029", "Signal_ppStau-1218", "Signal_ppStau-200", "Signal_ppStau-247", "Signal_ppStau-308", "Signal_ppStau-432", "Signal_ppStau-557", "Signal_ppStau-651", "Signal_ppStau-745", "Signal_ppStau-871", "Signal_stop-1000", "Signal_stop-1200", "Signal_stop-1400", "Signal_stop-1600", "Signal_stop-1800", "Signal_stop-2000", "Signal_stop-2200", "Signal_stop-2400", "Signal_stop-2600", "Signal_stop-500", "Signal_stop-800", "Signal_tauPrime1e-1000", "Signal_tauPrime1e-1400", "Signal_tauPrime1e-1800", "Signal_tauPrime1e-200", "Signal_tauPrime1e-2200", "Signal_tauPrime1e-2600", "Signal_tauPrime1e-400", "Signal_tauPrime1e-600", "Signal_tauPrime1e-800", "Signal_tauPrime2e-1000", "Signal_tauPrime2e-1400", "Signal_tauPrime2e-1800", "Signal_tauPrime2e-200", "Signal_tauPrime2e-2200", "Signal_tauPrime2e-2600", "Signal_tauPrime2e-400", "Signal_tauPrime2e-600"]
-
+    # signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
+    signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
+    # signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
+    
     #tf_type = '0x0'
-    tf_type = '1x0'
+    tf_type = 'expo'
 
     for signal in signal_areas :
       # When there are 100 signals, let's make sure we only run on the ones we didnt do before
@@ -375,7 +376,7 @@ if __name__ == "__main__":
           content = file.read()
           if not "Fit failed" in content: fitPassed = True
           rMax = rMax / 10.
-      plot_fit(signal,tf_type)
+      plot_fit(signal,tf_type,lumi='137.6')
       print("\n\n\nFit is succesful, running limits now for " + str(signal))
       run_limits(signal,tf_type)
       #GOF(signal,tf_type,condor=False)

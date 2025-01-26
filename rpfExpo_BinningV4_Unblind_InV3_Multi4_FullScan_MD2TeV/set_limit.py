@@ -211,7 +211,7 @@ if not options.blind:
     if ("BH" in cstr) :
     #   g_limit.GetXaxis().SetRangeUser(2.5, 11.5)
       g_limit.GetXaxis().SetRangeUser(4.5, 11.5)
-      g_limit.SetMaximum(1)
+      g_limit.SetMaximum(1e2)
       g_limit.SetMinimum(1e-5)
 else:
     print('Blinded')

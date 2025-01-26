@@ -1,0 +1,155 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is FitDiagnostics
+Set Default Value of Parameter mask_pass_SIG To : 1
+Set Default Value of Parameter mask_pass_HIGH To : 1
+Set Default Value of Parameter r To : 1
+>>> 2 out of 6 channels masked
+
+>> Found 15 floating parameters
+>> The following parameters are protected in the event of negative eigenvalues:
+>> Verifying eigenvalues are all positive (iteration 0)
+Eigenvalue 14 : -0.00174644
+ - -0.793611	Background_fail_par1
+ - 0.557269	Background_fail_par2
+ - 0.244197	Background_fail_par0
+ - 1.66291e-11	Background_fail_LOW_bin_3-1
+ - 1.45074e-11	Background_fail_SIG_bin_1-1
+>> Attempt 0 failed, remove the variable with largest eigenvector component...
+>> Dropping Background_fail_par1 from the hessian
+>> Verifying eigenvalues are all positive (iteration 1)
+>> All eigenvalues are positive
+>> Inverting Hessian...
+>> Matrix inverted
+>> Note: the following parameters were dropped to make the covariance matrix pos-def:
+     - Background_fail_par1
+ Fit B-only, status = 0, numBadNLL = 0, covariance quality = -1
+Running Minos for POI r
+WARNING: underflow to inf in pdf_binpass_LOW_obsOnly for bin 0, weight 129420
+FASTEXIT from pdf_binpass_LOW_obsOnly
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (1.7624e+11) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=1.10698e+08	Background_fail_HIGH_bin_2-1=3.06176e+08	Background_fail_LOW_bin_1-1=3.73401e+08	Background_fail_LOW_bin_2-1=8.17626e+08	Background_fail_LOW_bin_3-1=6.36842e+08	Background_fail_LOW_bin_4-1=7.23627e+07	Background_fail_SIG_bin_1-1=9.7132e+08	Background_fail_SIG_bin_2-1=4.04743e+08	Background_fail_par0=86.8119	Background_fail_par1=39.5193	Background_fail_par2=48.2482	Background_rpf_expo_par0=49.3585	Background_rpf_expo_par1=-435.379	SVM=-607564	lumi=19747.5	r=0.00175033
+RooAbsReal::pass_LOW[ params=(Background_fail_LOW_bin_1-1,Background_fail_LOW_bin_2-1,Background_fail_LOW_bin_3-1,Background_fail_LOW_bin_4-1,Background_rpf_expo_par0,Background_rpf_expo_par1,SVM,lumi,n_exp_binpass_LOW_proc_Background_expo,r) catParams=() ]
+     Number of events is negative or error @ params=(Background_fail_LOW_bin_1-1 = 3.73401e+08 +/- 470.677,Background_fail_LOW_bin_2-1 = 8.17626e+08 +/- 201.992,Background_fail_LOW_bin_3-1 = 6.36842e+08 +/- 94.112,Background_fail_LOW_bin_4-1 = 7.23627e+07 +/- 46.0882,Background_rpf_expo_par0 = 49.3585 +/- 0.0561513,Background_rpf_expo_par1 = -435.379 +/- 0.00250668,SVM = -607564 +/- 1.03849,lumi = 19747.5 +/- 1.00049,n_exp_binpass_LOW_proc_Background_expo = 1,r = 0.00175033 +/- 0.00053229), catParams=()
+
+WARNING: underflow to inf in pdf_binpass_LOW_obsOnly for bin 0, weight 129420
+FASTEXIT from pdf_binpass_LOW_obsOnly
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (1.7624e+11) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=8.80281e+08	Background_fail_HIGH_bin_2-1=5.05402e+07	Background_fail_LOW_bin_1-1=7.5712e+08	Background_fail_LOW_bin_2-1=3.80832e+08	Background_fail_LOW_bin_3-1=9.77903e+07	Background_fail_LOW_bin_4-1=19886.7	Background_fail_SIG_bin_1-1=3.88014e+08	Background_fail_SIG_bin_2-1=9.30135e+08	Background_fail_par0=29.6501	Background_fail_par1=28.8713	Background_fail_par2=0.825964	Background_rpf_expo_par0=-27.8812	Background_rpf_expo_par1=-345.271	SVM=-291488	lumi=9474.17	r=0.00175033
+RooAbsReal::pass_LOW[ params=(Background_fail_LOW_bin_1-1,Background_fail_LOW_bin_2-1,Background_fail_LOW_bin_3-1,Background_fail_LOW_bin_4-1,Background_rpf_expo_par0,Background_rpf_expo_par1,SVM,lumi,n_exp_binpass_LOW_proc_Background_expo,r) catParams=() ]
+     Number of events is negative or error @ params=(Background_fail_LOW_bin_1-1 = 7.5712e+08 +/- 470.677,Background_fail_LOW_bin_2-1 = 3.80832e+08 +/- 201.992,Background_fail_LOW_bin_3-1 = 9.77903e+07 +/- 94.112,Background_fail_LOW_bin_4-1 = 19886.7 +/- 46.0882,Background_rpf_expo_par0 = -27.8812 +/- 0.0561513,Background_rpf_expo_par1 = -345.271 +/- 0.00250668,SVM = -291488 +/- 1.03849,lumi = 9474.17 +/- 1.00049,n_exp_binpass_LOW_proc_Background_expo = 1,r = 0.00175033 +/- 0.00053229), catParams=()
+
+WARNING: underflow to inf in pdf_binpass_LOW_obsOnly for bin 0, weight 129420
+FASTEXIT from pdf_binpass_LOW_obsOnly
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (1.7624e+11) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=8.24128e+08	Background_fail_HIGH_bin_2-1=3.29516e+08	Background_fail_LOW_bin_1-1=8.83341e+08	Background_fail_LOW_bin_2-1=8.27394e+08	Background_fail_LOW_bin_3-1=9.99551e+08	Background_fail_LOW_bin_4-1=9.84724e+08	Background_fail_SIG_bin_1-1=9.28058e+07	Background_fail_SIG_bin_2-1=5.59586e+08	Background_fail_par0=6.86823	Background_fail_par1=44.8224	Background_fail_par2=16.1016	Background_rpf_expo_par0=-45.1065	Background_rpf_expo_par1=284.46	SVM=-133966	lumi=4354.28	r=0.00175033
+RooAbsReal::pass_LOW[ params=(Background_fail_LOW_bin_1-1,Background_fail_LOW_bin_2-1,Background_fail_LOW_bin_3-1,Background_fail_LOW_bin_4-1,Background_rpf_expo_par0,Background_rpf_expo_par1,SVM,lumi,n_exp_binpass_LOW_proc_Background_expo,r) catParams=() ]
+     Number of events is negative or error @ params=(Background_fail_LOW_bin_1-1 = 8.83341e+08 +/- 470.677,Background_fail_LOW_bin_2-1 = 8.27394e+08 +/- 201.992,Background_fail_LOW_bin_3-1 = 9.99551e+08 +/- 94.112,Background_fail_LOW_bin_4-1 = 9.84724e+08 +/- 46.0882,Background_rpf_expo_par0 = -45.1065 +/- 0.0561513,Background_rpf_expo_par1 = 284.46 +/- 0.00250668,SVM = -133966 +/- 1.03849,lumi = 4354.28 +/- 1.00049,n_exp_binpass_LOW_proc_Background_expo = 1,r = 0.00175033 +/- 0.00053229), catParams=()
+
+WARNING: underflow to inf in pdf_binpass_LOW_obsOnly for bin 0, weight 129420
+FASTEXIT from pdf_binpass_LOW_obsOnly
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (1.7624e+11) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=5.55552e+08	Background_fail_HIGH_bin_2-1=4.75116e+08	Background_fail_LOW_bin_1-1=5.099e+08	Background_fail_LOW_bin_2-1=2.16459e+08	Background_fail_LOW_bin_3-1=3.85903e+08	Background_fail_LOW_bin_4-1=3.26601e+08	Background_fail_SIG_bin_1-1=1.69256e+07	Background_fail_SIG_bin_2-1=1.2081e+08	Background_fail_par0=1.24611	Background_fail_par1=18.9414	Background_fail_par2=0.254956	Background_rpf_expo_par0=-3.88698	Background_rpf_expo_par1=437.028	SVM=-56227.8	lumi=1827.56	r=0.00175033
+RooAbsReal::pass_LOW[ params=(Background_fail_LOW_bin_1-1,Background_fail_LOW_bin_2-1,Background_fail_LOW_bin_3-1,Background_fail_LOW_bin_4-1,Background_rpf_expo_par0,Background_rpf_expo_par1,SVM,lumi,n_exp_binpass_LOW_proc_Background_expo,r) catParams=() ]
+     Number of events is negative or error @ params=(Background_fail_LOW_bin_1-1 = 5.099e+08 +/- 470.677,Background_fail_LOW_bin_2-1 = 2.16459e+08 +/- 201.992,Background_fail_LOW_bin_3-1 = 3.85903e+08 +/- 94.112,Background_fail_LOW_bin_4-1 = 3.26601e+08 +/- 46.0882,Background_rpf_expo_par0 = -3.88698 +/- 0.0561513,Background_rpf_expo_par1 = 437.028 +/- 0.00250668,SVM = -56227.8 +/- 1.03849,lumi = 1827.56 +/- 1.00049,n_exp_binpass_LOW_proc_Background_expo = 1,r = 0.00175033 +/- 0.00053229), catParams=()
+
+WARNING: underflow to inf in pdf_binpass_LOW_obsOnly for bin 0, weight 129420
+FASTEXIT from pdf_binpass_LOW_obsOnly
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (1.7624e+11) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=8.12448e+07	Background_fail_HIGH_bin_2-1=5.33041e+08	Background_fail_LOW_bin_1-1=6.68472e+07	Background_fail_LOW_bin_2-1=2.90422e+07	Background_fail_LOW_bin_3-1=5.31343e+07	Background_fail_LOW_bin_4-1=4.35032e+07	Background_fail_SIG_bin_1-1=2.06189e+06	Background_fail_SIG_bin_2-1=1.48671e+07	Background_fail_par0=0.152507	Background_fail_par1=6.84954	Background_fail_par2=0.115381	Background_rpf_expo_par0=-18.0114	Background_rpf_expo_par1=178.033	SVM=-19312.4	lumi=627.704	r=0.00175033
+RooAbsReal::pass_LOW[ params=(Background_fail_LOW_bin_1-1,Background_fail_LOW_bin_2-1,Background_fail_LOW_bin_3-1,Background_fail_LOW_bin_4-1,Background_rpf_expo_par0,Background_rpf_expo_par1,SVM,lumi,n_exp_binpass_LOW_proc_Background_expo,r) catParams=() ]
+     Number of events is negative or error @ params=(Background_fail_LOW_bin_1-1 = 6.68472e+07 +/- 470.677,Background_fail_LOW_bin_2-1 = 2.90422e+07 +/- 201.992,Background_fail_LOW_bin_3-1 = 5.31343e+07 +/- 94.112,Background_fail_LOW_bin_4-1 = 4.35032e+07 +/- 46.0882,Background_rpf_expo_par0 = -18.0114 +/- 0.0561513,Background_rpf_expo_par1 = 178.033 +/- 0.00250668,SVM = -19312.4 +/- 1.03849,lumi = 627.704 +/- 1.00049,n_exp_binpass_LOW_proc_Background_expo = 1,r = 0.00175033 +/- 0.00053229), catParams=()
+
+WARNING: underflow to inf in pdf_binpass_LOW_obsOnly for bin 0, weight 129420
+FASTEXIT from pdf_binpass_LOW_obsOnly
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (1.7624e+11) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=3.87707e+06	Background_fail_HIGH_bin_2-1=3.0877e+07	Background_fail_LOW_bin_1-1=1.78619e+06	Background_fail_LOW_bin_2-1=1.83332e+06	Background_fail_LOW_bin_3-1=2.78803e+06	Background_fail_LOW_bin_4-1=2.16626e+06	Background_fail_SIG_bin_1-1=110091	Background_fail_SIG_bin_2-1=709295	Background_fail_par0=0.00839079	Background_fail_par1=26.3055	Background_fail_par2=0.0815443	Background_rpf_expo_par0=48.1158	Background_rpf_expo_par1=38.3482	SVM=-4149.9	lumi=134.88	r=0.00175033
+RooAbsReal::pass_LOW[ params=(Background_fail_LOW_bin_1-1,Background_fail_LOW_bin_2-1,Background_fail_LOW_bin_3-1,Background_fail_LOW_bin_4-1,Background_rpf_expo_par0,Background_rpf_expo_par1,SVM,lumi,n_exp_binpass_LOW_proc_Background_expo,r) catParams=() ]
+     Number of events is negative or error @ params=(Background_fail_LOW_bin_1-1 = 1.78619e+06 +/- 470.677,Background_fail_LOW_bin_2-1 = 1.83332e+06 +/- 201.992,Background_fail_LOW_bin_3-1 = 2.78803e+06 +/- 94.112,Background_fail_LOW_bin_4-1 = 2.16626e+06 +/- 46.0882,Background_rpf_expo_par0 = 48.1158 +/- 0.0561513,Background_rpf_expo_par1 = 38.3482 +/- 0.00250668,SVM = -4149.9 +/- 1.03849,lumi = 134.88 +/- 1.00049,n_exp_binpass_LOW_proc_Background_expo = 1,r = 0.00175033 +/- 0.00053229), catParams=()
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (1.7624e+11) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=20941.2	Background_fail_HIGH_bin_2-1=174685	Background_fail_LOW_bin_1-1=183496	Background_fail_LOW_bin_2-1=102653	Background_fail_LOW_bin_3-1=49749.1	Background_fail_LOW_bin_4-1=24166.6	Background_fail_SIG_bin_1-1=2555.71	Background_fail_SIG_bin_2-1=5266.09	Background_fail_par0=0.00023927	Background_fail_par1=5.44369	Background_fail_par2=42.6198	Background_rpf_expo_par0=49.0069	Background_rpf_expo_par1=1.81266	SVM=-289.311	lumi=9.39962	r=0.00175033
+
+WARNING: underflow to inf in pdf_binfail_LOW_obsOnly for bin 0, weight 314269
+FASTEXIT from pdf_binfail_LOW_obsOnly
+WARNING: underflow to inf in pdf_binfail_SIG_obsOnly for bin 0, weight 874
+FASTEXIT from pdf_binfail_SIG_obsOnly
+WARNING: underflow to inf in pdf_binfail_HIGH_obsOnly for bin 0, weight 69
+FASTEXIT from pdf_binfail_HIGH_obsOnly
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (1.76923e+13) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=1.12617e+07	Background_fail_HIGH_bin_2-1=2.1244e+06	Background_fail_LOW_bin_1-1=133903	Background_fail_LOW_bin_2-1=24548.1	Background_fail_LOW_bin_3-1=24122.9	Background_fail_LOW_bin_4-1=268207	Background_fail_SIG_bin_1-1=296458	Background_fail_SIG_bin_2-1=2.04333e+06	Background_fail_par0=2.94935e-05	Background_fail_par1=12.0237	Background_fail_par2=17.0555	Background_rpf_expo_par0=-38.379	Background_rpf_expo_par1=2.88114	SVM=7376.46	lumi=177.757	r=0.00175033
+RooAbsReal::fail_LOW[ params=(Background_fail_LOW_bin_1-1,Background_fail_LOW_bin_2-1,Background_fail_LOW_bin_3-1,Background_fail_LOW_bin_4-1,SVM,lumi,n_exp_binfail_LOW_proc_Background,r) catParams=() ]
+     Number of events is negative or error @ params=(Background_fail_LOW_bin_1-1 = 133903 +/- 470.677,Background_fail_LOW_bin_2-1 = 24548.1 +/- 201.992,Background_fail_LOW_bin_3-1 = 24122.9 +/- 94.112,Background_fail_LOW_bin_4-1 = 268207 +/- 46.0882,SVM = 7376.46 +/- 1.03849,lumi = 177.757 +/- 1.00049,n_exp_binfail_LOW_proc_Background = 1,r = 0.00175033 +/- 0.00053229), catParams=()
+RooAbsReal::fail_SIG[ params=(Background_fail_SIG_bin_1-1,Background_fail_SIG_bin_2-1,SVM,lumi,n_exp_binfail_SIG_proc_Background,r) catParams=() ]
+     Number of events is negative or error @ params=(Background_fail_SIG_bin_1-1 = 296458 +/- 29.549,Background_fail_SIG_bin_2-1 = 2.04333e+06 +/- 15.0566,SVM = 7376.46 +/- 1.03849,lumi = 177.757 +/- 1.00049,n_exp_binfail_SIG_proc_Background = 1,r = 0.00175033 +/- 0.00053229), catParams=()
+RooAbsReal::fail_HIGH[ params=(Background_fail_HIGH_bin_1-1,Background_fail_HIGH_bin_2-1,Background_fail_par0,Background_fail_par1,Background_fail_par2,SVM,lumi,n_exp_binfail_HIGH_proc_Background,r) catParams=() ]
+     Number of events is negative or error @ params=(Background_fail_HIGH_bin_1-1 = 1.12617e+07 +/- 8.29557,Background_fail_HIGH_bin_2-1 = 2.1244e+06 +/- 4.06315,Background_fail_par0 = 2.94935e-05 +/- 6.34681e-06,Background_fail_par1 = 12.0237 +/- 0.46184,Background_fail_par2 = 17.0555 +/- 0.538409,SVM = 7376.46 +/- 1.03849,lumi = 177.757 +/- 1.00049,n_exp_binfail_HIGH_proc_Background = 1,r = 0.00175033 +/- 0.00053229), catParams=()
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (1.76923e+13) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=25668.7	Background_fail_HIGH_bin_2-1=1818.64	Background_fail_LOW_bin_1-1=264133	Background_fail_LOW_bin_2-1=49795.5	Background_fail_LOW_bin_3-1=10279.1	Background_fail_LOW_bin_4-1=801.676	Background_fail_SIG_bin_1-1=0.701525	Background_fail_SIG_bin_2-1=3271.07	Background_fail_par0=8.13486e-05	Background_fail_par1=49.9687	Background_fail_par2=1.98585	Background_rpf_expo_par0=11.9056	Background_rpf_expo_par1=-0.729906	SVM=368.005	lumi=8.91081	r=0.00175033
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (6.31242e+23) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=705788	Background_fail_HIGH_bin_2-1=1.94425e+06	Background_fail_LOW_bin_1-1=941297	Background_fail_LOW_bin_2-1=881140	Background_fail_LOW_bin_3-1=1.33403e+06	Background_fail_LOW_bin_4-1=912014	Background_fail_SIG_bin_1-1=66633.3	Background_fail_SIG_bin_2-1=357951	Background_fail_par0=93.2453	Background_fail_par1=4.6194	Background_fail_par2=9.59788	Background_rpf_expo_par0=48.5288	Background_rpf_expo_par1=31.369	SVM=-1629.23	lumi=4.37273	r=0.00238514
+
+WARNING: underflow to inf in pdf_binfail_SIG_obsOnly for bin 0, weight 874
+FASTEXIT from pdf_binfail_SIG_obsOnly
+WARNING: underflow to inf in pdf_binfail_HIGH_obsOnly for bin 0, weight 69
+FASTEXIT from pdf_binfail_HIGH_obsOnly
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (6.31242e+23) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Background_fail_HIGH_bin_1-1=465791	Background_fail_HIGH_bin_2-1=1.31256e+06	Background_fail_LOW_bin_1-1=621634	Background_fail_LOW_bin_2-1=9371.33	Background_fail_LOW_bin_3-1=6990.99	Background_fail_LOW_bin_4-1=13301.7	Background_fail_SIG_bin_1-1=8181.11	Background_fail_SIG_bin_2-1=100021	Background_fail_par0=40.9259	Background_fail_par1=48.8553	Background_fail_par2=47.1749	Background_rpf_expo_par0=-25.1848	Background_rpf_expo_par1=-6.29575	SVM=1446.72	lumi=48.0626	r=0.00238523
+RooAbsReal::fail_SIG[ params=(Background_fail_SIG_bin_1-1,Background_fail_SIG_bin_2-1,SVM,lumi,n_exp_binfail_SIG_proc_Background,r) catParams=() ]
+     Number of events is negative or error @ params=(Background_fail_SIG_bin_1-1 = 8181.11 +/- 29.549,Background_fail_SIG_bin_2-1 = 100021 +/- 15.0566,SVM = 1446.72 +/- 1.03849,lumi = 48.0626 +/- 1.00049,n_exp_binfail_SIG_proc_Background = 1,r = 0.00238523 +/- 0.00053229), catParams=()
+RooAbsReal::fail_HIGH[ params=(Background_fail_HIGH_bin_1-1,Background_fail_HIGH_bin_2-1,Background_fail_par0,Background_fail_par1,Background_fail_par2,SVM,lumi,n_exp_binfail_HIGH_proc_Background,r) catParams=() ]
+     Number of events is negative or error @ params=(Background_fail_HIGH_bin_1-1 = 465791 +/- 8.29557,Background_fail_HIGH_bin_2-1 = 1.31256e+06 +/- 4.06315,Background_fail_par0 = 40.9259 +/- 6.34681e-06,Background_fail_par1 = 48.8553 +/- 0.46184,Background_fail_par2 = 47.1749 +/- 0.538409,SVM = 1446.72 +/- 1.03849,lumi = 48.0626 +/- 1.00049,n_exp_binfail_HIGH_proc_Background = 1,r = 0.00238523 +/- 0.00053229), catParams=()
+
+>> Found 16 floating parameters
+>> The following parameters are protected in the event of negative eigenvalues: r
+>> Verifying eigenvalues are all positive (iteration 0)
+Eigenvalue 14 : -0.00193365
+ - 0.746339	Background_fail_par1
+ - -0.567158	Background_fail_par0
+ - -0.283825	Background_fail_par2
+ - 0.167509	r
+ - -0.0872414	Background_fail_HIGH_bin_2-1
+Eigenvalue 15 : -0.00426383
+ - 0.597367	Background_fail_par2
+ - -0.540067	Background_fail_par0
+ - 0.416355	r
+ - -0.318487	Background_fail_par1
+ - -0.214561	Background_fail_HIGH_bin_2-1
+>> Attempt 0 failed, remove the variable with largest eigenvector component...
+>> Dropping Background_fail_par2 from the hessian
+>> Verifying eigenvalues are all positive (iteration 1)
+Eigenvalue 14 : -0.0023987
+ - -0.738839	Background_fail_par0
+ - 0.501825	Background_fail_par1
+ - 0.373454	r
+ - -0.194104	Background_fail_HIGH_bin_2-1
+ - -0.133008	Background_fail_HIGH_bin_1-1
+>> Attempt 1 failed, remove the variable with largest eigenvector component...
+>> Dropping Background_fail_par0 from the hessian
+>> Verifying eigenvalues are all positive (iteration 2)
+>> All eigenvalues are positive
+>> Inverting Hessian...
+>> Matrix inverted
+>> Note: the following parameters were dropped to make the covariance matrix pos-def:
+     - Background_fail_par2
+     - Background_fail_par0
+Fit S+B, status = 0, numBadNLL = 0, covariance quality = -1
+
+ --- FitDiagnostics ---
+Best fit r: 0.000155594  -0.000155594/+49.9998  (68% CL)
+Done in 0.00 min (cpu), 0.01 min (real)
+28 log messages saved to combine_logger.out

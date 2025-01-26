@@ -22,6 +22,6 @@ Running Minos for POI r
 Fit S+B, status = 0, numBadNLL = 0, covariance quality = -1
 
  --- FitDiagnostics ---
-Best fit r: 2.21429e-06  -2.21429e-06/+50  (68% CL)
+Best fit r: 2.0791e-09  -2.0791e-09/+50  (68% CL)
 Done in 0.00 min (cpu), 0.00 min (real)
 21 log messages saved to combine_logger.out

@@ -98,13 +98,13 @@
       "VARIATION": "nominal"
     },
     "data_obs": {
-      "ALIAS": "Data",
+      "ALIAS": "FakeData",
       "COLOR": "black",
       "LOC": "./histograms_for_2DAlphabet_v11//BH_$process.root:h$region",
       "NAME": "data_obs",
       "SCALE": 1.0,
       "SYSTEMATICS": [],
-      "TITLE": "Data",
+      "TITLE": "Fake Data",
       "TYPE": "DATA",
       "VARIATION": "nominal"
     }

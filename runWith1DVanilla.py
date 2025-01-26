@@ -44,6 +44,7 @@ _rpf_options = {
         'constraints': {
             0: {"MIN": 0.0, "MAX": 50},
             1: {"MIN": -50, "MAX": 500}
+            # 1: {"MIN": -50, "MAX": 0.}
         }
     },
     '0x1': {
@@ -62,6 +63,10 @@ _rpf_options = {
         'form': '0.1*(@0+@1*x+@2*x**2)*(1+@3*y)',
         'constraints': _generate_constraints(4)
     },
+    '3x0': {
+        'form': '0.1*(@0+@1*x+@2*x**2+@3*x**3)*(@4)',
+        'constraints': _generate_constraints(5)
+    },
     '2x2': {
         'form': '0.1*(@0+@1*x+@2*x**2)*(1+@3*y+@4*y**2)',
         'constraints': _generate_constraints(4)
@@ -69,8 +74,16 @@ _rpf_options = {
     'expo': {
         'form': 'exp(-@0*x+@1)',
         'constraints': {
-            0: {"MIN": -1.0, "MAX": 50},
+            0: {"MIN": -50, "MAX": 50},
             1: {"MIN": -500, "MAX": 500}
+        }
+    },
+    'expo2': {
+        'form': 'exp(@0+@1*x+@2*x**2)',
+        'constraints': {
+            0: {"MIN": -50, "MAX": 50},
+            1: {"MIN": -50, "MAX": 50},
+            2: {"MIN": -500, "MAX": 500}
         }
     }
 }
@@ -356,13 +369,16 @@ if __name__ == "__main__":
     make_workspace()
 
     # signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
-    #signal_areas = ["Signal_B1_MD2000_MBH3000_n2"]
-    # signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
-    signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
+    # signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
+    signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
+    # signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
 
-    #tf_type = '0x0'
-    #tf_type = '1x0'
-    tf_type = 'expo'
+    # tf_type = '0x0'
+    # tf_type = '1x0'
+    # tf_type = '2x0'
+    # tf_type = '3x0'
+    # tf_type = 'expo'
+    tf_type = 'expo2'
 
     for signal in signal_areas :
       # When there are 100 signals, let's make sure we only run on the ones we didnt do before
@@ -378,7 +394,7 @@ if __name__ == "__main__":
           content = file.read()
           if not "Fit failed" in content: fitPassed = True
           rMax = rMax / 10.
-      plot_fit(signal,tf_type,lumi='137.4')
+      plot_fit(signal,tf_type,lumi='137.6')
       print("\n\n\nFit is succesful, running limits now for " + str(signal))
       run_limits(signal,tf_type)
     #   GOF(signal,tf_type,condor=False)
