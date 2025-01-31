@@ -377,8 +377,8 @@ if __name__ == "__main__":
     # tf_type = '1x0'
     # tf_type = '2x0'
     # tf_type = '3x0'
-    # tf_type = 'expo'
-    tf_type = 'expo2'
+    tf_type = 'expo'  # nominal
+    # tf_type = 'expo2'
 
     for signal in signal_areas :
       # When there are 100 signals, let's make sure we only run on the ones we didnt do before
@@ -397,8 +397,8 @@ if __name__ == "__main__":
       plot_fit(signal,tf_type,lumi='137.6')
       print("\n\n\nFit is succesful, running limits now for " + str(signal))
       run_limits(signal,tf_type)
-    #   GOF(signal,tf_type,condor=False)
-    #   plot_GOF(signal,tf_type,condor=False)
+      #GOF(signal,tf_type,condor=False)
+      #plot_GOF(signal,tf_type,condor=False)
       #SignalInjection(signal, tf_type, r=0, condor=False)
       #plot_SignalInjection(signal, tf_type, r=0, condor=False)
       #Impacts(signal,tf_type)
