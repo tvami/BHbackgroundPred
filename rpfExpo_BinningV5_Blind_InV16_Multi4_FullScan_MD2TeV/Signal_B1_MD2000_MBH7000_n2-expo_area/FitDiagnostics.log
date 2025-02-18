@@ -7,44 +7,11 @@ Set Default Value of Parameter mask_pass_HIGH To : 1
 Set Default Value of Parameter r To : 1
 >>> 2 out of 6 channels masked
 
->> Found 15 floating parameters
->> The following parameters are protected in the event of negative eigenvalues:
->> Verifying eigenvalues are all positive (iteration 0)
->> All eigenvalues are positive
->> Inverting Hessian...
->> Matrix inverted
- Fit B-only, status = 0, numBadNLL = 0, covariance quality = -1
+ Fit B-only, status = 0, numBadNLL = 0, covariance quality = 3
 Running Minos for POI r
->> Found 16 floating parameters
->> The following parameters are protected in the event of negative eigenvalues: r
->> Verifying eigenvalues are all positive (iteration 0)
-Eigenvalue 15 : -0.0146718
- - -0.905933	r
- - 0.318818	Background_fail_HIGH_bin_4-1
- - 0.201215	Background_fail_HIGH_bin_3-1
- - 0.140727	SVM
- - 0.118152	Background_fail_HIGH_bin_2-1
->> Attempt 0 failed, remove the variable with largest eigenvector component...
->> Dropping Background_fail_HIGH_bin_4-1 from the hessian
->> Verifying eigenvalues are all positive (iteration 1)
-Eigenvalue 14 : -1.11022e-16
- - -1	Background_fail_HIGH_bin_5-1
- - -1.56402e-10	Background_fail_LOW_bin_1-1
- - 1.22817e-10	Background_rpf_expo_par1
- - 5.93263e-11	Background_rpf_expo_par0
- - -6.90715e-12	Background_fail_LOW_bin_2-1
->> Attempt 1 failed, remove the variable with largest eigenvector component...
->> Dropping Background_fail_HIGH_bin_5-1 from the hessian
->> Verifying eigenvalues are all positive (iteration 2)
->> All eigenvalues are positive
->> Inverting Hessian...
->> Matrix inverted
->> Note: the following parameters were dropped to make the covariance matrix pos-def:
-     - Background_fail_HIGH_bin_4-1
-     - Background_fail_HIGH_bin_5-1
-Fit S+B, status = 0, numBadNLL = 0, covariance quality = -1
+Fit S+B, status = 0, numBadNLL = 0, covariance quality = 3
 
  --- FitDiagnostics ---
-Best fit r: 4.52031e-10  -4.52031e-10/+5  (68% CL)
+Best fit r: 4.52031e-10  -4.52031e-10/+0.0031851  (68% CL)
 Done in 0.00 min (cpu), 0.00 min (real)
 27 log messages saved to combine_logger.out

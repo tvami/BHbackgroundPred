@@ -1,0 +1,5 @@
+text2workspace.py card.txt
+combineTool.py -M Impacts -d card.root -t -1 --expectSignal 1 --rMin 0 --doInitialFit --allPars -m 1 -n t1 --setParameters Background_fail_HIGH_bin_5-1=0.000001,Background_fail_HIGH_bin_4-1=0.999992,Background_rpf_expo_par0=-1.7624568529889193,Background_rpf_expo_par1=-0.9270486738210548
+combineTool.py -M Impacts -d card.root -o impacts_t1.json -t -1 --expectSignal 1 --rMin 0 --doFits -m 1 -n t1 --setParameters Background_fail_HIGH_bin_5-1=0.000001,Background_fail_HIGH_bin_4-1=0.999992,Background_rpf_expo_par0=-1.7624568529889193,Background_rpf_expo_par1=-0.9270486738210548
+combineTool.py -M Impacts -d card.root -m 1 -n t1 -o impacts_t1.json --setParameters Background_fail_HIGH_bin_5-1=0.000001,Background_fail_HIGH_bin_4-1=0.999992,Background_rpf_expo_par0=-1.7624568529889193,Background_rpf_expo_par1=-0.9270486738210548
+plotImpacts.py -i impacts_t1.json -o impacts_t1

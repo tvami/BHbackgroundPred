@@ -369,10 +369,15 @@ if __name__ == "__main__":
     make_workspace()
 
     # signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
-    # signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
-    signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
+    # signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
+    # signal_areas = ["Signal_B1_MD3000_MBH4000_n2","Signal_B1_MD3000_MBH5000_n2","Signal_B1_MD3000_MBH6000_n2","Signal_B1_MD3000_MBH7000_n2","Signal_B1_MD3000_MBH8000_n2","Signal_B1_MD3000_MBH9000_n2","Signal_B1_MD3000_MBH10000_n2","Signal_B1_MD3000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
-
+    # signal_areas = ["Signal_B1_MD5000_MBH6000_n2","Signal_B1_MD5000_MBH7000_n2","Signal_B1_MD5000_MBH8000_n2","Signal_B1_MD5000_MBH9000_n2","Signal_B1_MD5000_MBH10000_n2","Signal_B1_MD5000_MBH11000_n2"]
+    # signal_areas = ["Signal_B1_MD6000_MBH7000_n2","Signal_B1_MD6000_MBH8000_n2","Signal_B1_MD6000_MBH9000_n2","Signal_B1_MD6000_MBH10000_n2","Signal_B1_MD6000_MBH11000_n2"]
+    # signal_areas = ["Signal_B1_MD7000_MBH8000_n2","Signal_B1_MD7000_MBH9000_n2","Signal_B1_MD7000_MBH10000_n2","Signal_B1_MD7000_MBH11000_n2"]
+    # signal_areas = ["Signal_B1_MD8000_MBH9000_n2","Signal_B1_MD8000_MBH10000_n2","Signal_B1_MD8000_MBH11000_n2"]
+    signal_areas = ["Signal_B1_MD9000_MBH10000_n2","Signal_B1_MD9000_MBH11000_n2"]
+    
     # tf_type = '0x0'
     # tf_type = '1x0'
     # tf_type = '2x0'
@@ -388,7 +393,8 @@ if __name__ == "__main__":
       rMax = 50
       while not (fitPassed) :
         print("\n\n\nperform_fit with rMax = " + str(rMax))
-        perform_fit(signal,tf_type,rMax,extra='--robustHesse 1')
+        # perform_fit(signal,tf_type,rMax,extra='--robustHesse 1')
+        perform_fit(signal,tf_type,rMax)
         # Do fitting until the fit passes
         with open(workingArea + "/" + signal + f"-{tf_type}_area/FitDiagnostics.log", 'r') as file:
           content = file.read()

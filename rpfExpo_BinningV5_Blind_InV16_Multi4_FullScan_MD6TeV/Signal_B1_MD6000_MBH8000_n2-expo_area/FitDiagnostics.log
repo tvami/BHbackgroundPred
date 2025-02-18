@@ -1,0 +1,17 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is FitDiagnostics
+Set Default Value of Parameter mask_pass_SIG To : 1
+Set Default Value of Parameter mask_pass_HIGH To : 1
+Set Default Value of Parameter r To : 1
+>>> 2 out of 6 channels masked
+
+ Fit B-only, status = 0, numBadNLL = 0, covariance quality = 3
+Running Minos for POI r
+Fit S+B, status = 0, numBadNLL = 0, covariance quality = 3
+
+ --- FitDiagnostics ---
+Best fit r: 2.78092e-10  -2.78092e-10/+0.0522267  (68% CL)
+Done in 0.00 min (cpu), 0.00 min (real)
+26 log messages saved to combine_logger.out
