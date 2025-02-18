@@ -126,7 +126,7 @@ if __name__ == '__main__':
     FAIL_SVM_down = f"SVM_score <  {SVM_score_down} && Sphericity > 0.1"
     
     N = 5
-    sample = "QCD"  # QCD, signal, data
+    sample = "data"  # QCD, signal, data
     lumi = 137.62 * 1000   # 137.62 * 1000  # 96.14 * 1000 # 59.8 * 1000 unit pb^-1
     outDir = "./histograms_for_2DAlphabet_v17"
     blind = False
@@ -275,8 +275,8 @@ if __name__ == '__main__':
         hist_PASS_SVM_down.SetName(f"hpass_SVMsyst_down")
         hist_FAIL_SVM_down.SetName(f"hfail_SVMsyst_down")
         
-        make_output_rootfile([hist_PASS, hist_PASS_SVM_up, hist_PASS_SVM_down, hist_FAIL, hist_FAIL_SVM_up, hist_FAIL_SVM_down], sample, outDir)
-        # make_output_rootfile([hist_PASS, hist_FAIL], sample, outDir)
+        # make_output_rootfile([hist_PASS, hist_PASS_SVM_up, hist_PASS_SVM_down, hist_FAIL, hist_FAIL_SVM_up, hist_FAIL_SVM_down], sample, outDir)
+        make_output_rootfile([hist_PASS, hist_FAIL], sample, outDir)
         
 
     
