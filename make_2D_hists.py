@@ -111,6 +111,14 @@ if __name__ == '__main__':
     SVM_score_cut = 0.63
     SVM_score_up = 0.7
     SVM_score_down = 0.5
+    
+    PASS = f"SVM_score >= {SVM_score_cut}"
+    FAIL = f"SVM_score <  {SVM_score_cut}"
+    PASS_SVM_up = f"SVM_score >= {SVM_score_up}"
+    FAIL_SVM_up = f"SVM_score <  {SVM_score_up}"
+    PASS_SVM_down = f"SVM_score >= {SVM_score_down}"
+    FAIL_SVM_down = f"SVM_score <  {SVM_score_down}"
+    
     # PASS = f"SVM_score >= {SVM_score_cut} && Sphericity > 0.1"
     # FAIL = f"SVM_score <  {SVM_score_cut} && Sphericity > 0.1"
     # PASS_SVM_up = f"SVM_score >= {SVM_score_up} && Sphericity > 0.1"
@@ -118,17 +126,18 @@ if __name__ == '__main__':
     # PASS_SVM_down = f"SVM_score >= {SVM_score_down} && Sphericity > 0.1"
     # FAIL_SVM_down = f"SVM_score <  {SVM_score_down} && Sphericity > 0.1"
     
-    PASS = f"SVM_score >= 0.5 && SVM_score <= 0.63 && Sphericity > 0.1"
-    FAIL = f"SVM_score < 0.5 && Sphericity > 0.1"
-    PASS_SVM_up = f"SVM_score >= {SVM_score_up} && Sphericity > 0.1"
-    FAIL_SVM_up = f"SVM_score <  {SVM_score_up} && Sphericity > 0.1"
-    PASS_SVM_down = f"SVM_score >= {SVM_score_down} && Sphericity > 0.1"
-    FAIL_SVM_down = f"SVM_score <  {SVM_score_down} && Sphericity > 0.1"
+    # PASS = f"SVM_score >= 0.5 && SVM_score <= 0.63 && Sphericity > 0.1"
+    # FAIL = f"SVM_score < 0.5 && Sphericity > 0.1"
+    # PASS_SVM_up = f"SVM_score >= {SVM_score_up} && Sphericity > 0.1"
+    # FAIL_SVM_up = f"SVM_score <  {SVM_score_up} && Sphericity > 0.1"
+    # PASS_SVM_down = f"SVM_score >= {SVM_score_down} && Sphericity > 0.1"
+    # FAIL_SVM_down = f"SVM_score <  {SVM_score_down} && Sphericity > 0.1"
     
     N = 5
-    sample = "data"  # QCD, signal, data
+    sample = "signal"  # QCD, signal, data
     lumi = 137.62 * 1000   # 137.62 * 1000  # 96.14 * 1000 # 59.8 * 1000 unit pb^-1
-    outDir = "./histograms_for_2DAlphabet_v17"
+    # outDir = "./histograms_for_2DAlphabet_v17"
+    outDir = "./histograms_for_2DAlphabet_v15_remake"
     blind = False
     
     if sample == "QCD":
@@ -144,7 +153,7 @@ if __name__ == '__main__':
         Ngen = {}
         
         for sample_type in sample_types:
-            rootfile_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_QCD_new/{}/".format(sample_type)
+            rootfile_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_QCD_new/{}/".format(sample_type)
             
             hist_PASS = ROOT.TH2F(f"Hist_PASS_{sample_type}", "ST vs Multiplicity 2D Hist", int((xmax-xmin)/50.), xmin, xmax, 20, 0, 20)
             hist_FAIL = ROOT.TH2F(f"Hist_FAIL_{sample_type}", "ST vs Multiplicity 2D Hist", int((xmax-xmin)/50.), xmin, xmax, 20, 0, 20)
@@ -187,7 +196,7 @@ if __name__ == '__main__':
     
     elif sample == "signal":
         
-        signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_signal_new"
+        signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_signal_new"
         sample_types = [sample_type for sample_type in os.listdir(signal_dir) if os.path.isdir(os.path.join(signal_dir, sample_type))]
         
         for sample_type in sample_types:

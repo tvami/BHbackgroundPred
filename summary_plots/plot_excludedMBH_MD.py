@@ -11,7 +11,8 @@ working_dir = '/home/users/dazhang/works/phaseSpace/BlackHoleSearch/CMSSW_14_1_0
 MD_MBH_excluded = {}
 
 for MD in MD_list:
-    limit_plot = os.path.join(working_dir, f'rpfExpo_BinningV5_Blind_InV16_Multi4_FullScan_MD{MD:.0f}TeV/limits_combine_137p6fb_signals_BH1_MD{(MD*1000):.0f}_BH.C')
+    # limit_plot = os.path.join(working_dir, f'rpfExpo_BinningV5_Blind_InV16_Multi4_FullScan_MD{MD:.0f}TeV/limits_combine_137p6fb_signals_BH1_MD{(MD*1000):.0f}_BH.C')
+    limit_plot = os.path.join(working_dir, f'rpfExpo_BinningV5_Blind_InV15_Multi4_FullScan_MD{MD:.0f}TeV/limits_combine_137p6fb_signals_BH1_MD{(MD*1000):.0f}_BH.C')
     ROOT.gROOT.ProcessLine('.x %s' % limit_plot)
     
     canvas = ROOT.gROOT.FindObject("climits")
@@ -42,6 +43,10 @@ for MD in MD_list:
     if MD_MBH_excluded[MD] == -1:
         MD_MBH_excluded.pop(MD)
 
+print(MD_MBH_excluded)
+for key, value in MD_MBH_excluded.items():
+    print(f"MD: {key} TeV, excluded MBH: {value} TeV")
+
 # draw the excluded MBH vs MD in ROOT
 canvas = ROOT.TCanvas("canvas", "canvas", 800, 600)
 graph = ROOT.TGraph(len(MD_MBH_excluded), np.array(list(MD_MBH_excluded.keys())), np.array(list(MD_MBH_excluded.values())))
@@ -52,6 +57,6 @@ graph.SetMarkerStyle(20)
 graph.GetXaxis().SetRangeUser(1, 8);
 graph.GetYaxis().SetRangeUser(6, 11);
 graph.Draw("APL")
-canvas.SaveAs("excludedMBH_MD.pdf")
+canvas.SaveAs("excludedMBH_MD_SVMOnly.pdf")
     
     
