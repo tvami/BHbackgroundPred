@@ -932,7 +932,7 @@ def _runMLfit(cardOrW, blinding, verbosity, rMin, rMax, setParams, usePreviousFi
     params_to_set = ','.join(['mask_%s_%s=1'%(r,suffix) for r in blinding for suffix in ['SIG', 'HIGH']]+['%s=%s'%(p,v) for p,v in setParams.items()]+['r=1'])
     param_options += '--setParameters '+params_to_set
 
-    fit_cmd = 'combine -M FitDiagnostics {card_or_w} {param_options} --saveWorkspace --cminDefaultMinimizerStrategy {defMinStrat} --rMin {rmin} --rMax {rmax} -v {verbosity} {extra}'
+    fit_cmd = 'combine -M FitDiagnostics {card_or_w} {param_options} --saveWorkspace --cminDefaultMinimizerStrategy {defMinStrat} --rMin {rmin} --rMax {rmax} -v {verbosity}  --robustFit=1 --setRobustFitAlgo Minuit2 {extra}'
     fit_cmd = fit_cmd.format(
         card_or_w='initifalFitWorkspace.root --snapshotName initialFit' if usePreviousFit else cardOrW,
         param_options=param_options,

@@ -457,7 +457,7 @@ def make_pad_2D(outname, hist, style='lego', logzFlag=False, ROOTout=None,
     Returns:
         [type]: [description]
     '''
-    pad = _make_pad_gen(outname)
+    pad = _make_pad_gen(outname+str(time.time()))
     pad.SetLeftMargin(0.15)
     pad.SetRightMargin(0.2)
     pad.SetBottomMargin(0.12)
@@ -741,11 +741,11 @@ def make_systematic_plots(twoD):
 
                 plt.style.use([hep.style.CMS])
                 fig, ax = plt.subplots(figsize=(12, 8), dpi=200)
-                hep.cms.text("WiP",loc=1)
-                ax.set_title(f'{p}, {s}', pad=12)
+                hep.cms.text("WiP",loc=0)
+                ax.set_title(f'{p}, {s}', pad=12, fontsize=18)
                 hep.histplot(histos, edges, stack=False, ax=ax, label=labels, histtype='step', linestyle=styles, color=colors)
                 handles, labelsproj = ax.get_legend_handles_labels()
-                ax.set_xlabel(getattr(binning,axis.lower()+'title'))
+                ax.set_xlabel(f"${getattr(binning, axis.lower()+'title')}$")
                 ax.set_ylabel('Events')
                 plt.legend(loc='best')
 
@@ -867,7 +867,7 @@ def _reduced_corr_matrix(fit_result, varsToIgnore=[], varsOfInterest=[], thresho
                 finalParamsDict[finalPars.at(cm_index).GetName()] = cm_index
 
     nFinalParams = len(finalParamsDict.keys())
-    out = ROOT.TH2D('correlation_matrix','correlation_matrix',nFinalParams,0,nFinalParams,nFinalParams,0,nFinalParams)
+    out = ROOT.TH2D('correlation_matrix'+str(time.time()),'correlation_matrix'+str(time.time()),nFinalParams,0,nFinalParams,nFinalParams,0,nFinalParams)
     out_txt = ''
 
     for out_x_index, paramXName in enumerate(sorted(finalParamsDict.keys())):
@@ -895,7 +895,7 @@ def plot_correlation_matrix(varsToIgnore, threshold=0, corrText=False):
         fit_result = fit_result_file.Get("fit_"+fittag)
         if hasattr(fit_result,'correlationMatrix'):
             corrMtrx, corrTxt = _reduced_corr_matrix(fit_result, varsToIgnore=varsToIgnore, threshold=threshold)
-            corrMtrxCan = ROOT.TCanvas('c','c',1400,1000)
+            corrMtrxCan = ROOT.TCanvas('c'+str(fittag),'c'+str(fittag),1400,1000)
             corrMtrxCan.cd()
             corrMtrxCan.SetBottomMargin(0.22)
             corrMtrxCan.SetLeftMargin(0.17)

@@ -389,17 +389,8 @@ if __name__ == "__main__":
       # When there are 100 signals, let's make sure we only run on the ones we didnt do before
       if os.path.exists(workingArea + "/" + signal + f"-{tf_type}_area/done") : continue
       fitPassed = False
-      # If the fit failed iterate on rMax
-      rMax = 50
-      while not (fitPassed) :
-        print("\n\n\nperform_fit with rMax = " + str(rMax))
-        # perform_fit(signal,tf_type,rMax,extra='--robustHesse 1')
-        perform_fit(signal,tf_type,rMax)
-        # Do fitting until the fit passes
-        with open(workingArea + "/" + signal + f"-{tf_type}_area/FitDiagnostics.log", 'r') as file:
-          content = file.read()
-          if not "Fit failed" in content: fitPassed = True
-          rMax = rMax / 10.
+      # With Minuit2 hopefully the `perform_fit` will pass
+      perform_fit(signal,tf_type,50)
       plot_fit(signal,tf_type,lumi='137.6')
       print("\n\n\nFit is succesful, running limits now for " + str(signal))
       run_limits(signal,tf_type)
