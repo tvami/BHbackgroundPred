@@ -152,7 +152,7 @@ def make_workspace():
 
 
 # function for perfomring the fit
-def perform_fit(signal, tf, rMaxExt = 30, extra=''):
+def perform_fit(signal, tf, rMaxExt = 1, extra=''):
     '''
         signal [str] = 'Type-Mass'
         tf [str] = 0x0, 0x1, 1x0, 1x1, 1x2, 2x2
@@ -376,7 +376,8 @@ if __name__ == "__main__":
     # signal_areas = ["Signal_B1_MD6000_MBH7000_n2","Signal_B1_MD6000_MBH8000_n2","Signal_B1_MD6000_MBH9000_n2","Signal_B1_MD6000_MBH10000_n2","Signal_B1_MD6000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD7000_MBH8000_n2","Signal_B1_MD7000_MBH9000_n2","Signal_B1_MD7000_MBH10000_n2","Signal_B1_MD7000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD8000_MBH9000_n2","Signal_B1_MD8000_MBH10000_n2","Signal_B1_MD8000_MBH11000_n2"]
-    signal_areas = ["Signal_B1_MD9000_MBH10000_n2","Signal_B1_MD9000_MBH11000_n2"]
+    # signal_areas = ["Signal_B1_MD9000_MBH10000_n2","Signal_B1_MD9000_MBH11000_n2"]
+    signal_areas = ["Signal_B1_MD2000_MBH8000_n2"]
     
     # tf_type = '0x0'
     # tf_type = '1x0'
@@ -388,9 +389,14 @@ if __name__ == "__main__":
     for signal in signal_areas :
       # When there are 100 signals, let's make sure we only run on the ones we didnt do before
       if os.path.exists(workingArea + "/" + signal + f"-{tf_type}_area/done") : continue
-      fitPassed = False
-      # With Minuit2 hopefully the `perform_fit` will pass
-      perform_fit(signal,tf_type,50)
+      # Perform fit with rMax at 1, but now use Minuit2 which should always succeed in the fit
+      perform_fit(signal,tf_type)
+      # Persist if the fit worked
+      with open(workingArea + "/" + signal + f"-{tf_type}_area/FitDiagnostics.log", 'r') as file:
+        content = file.read()
+      if "Fit failed" in content: 
+        print(" Fit failed!!!! ")
+        continue
       plot_fit(signal,tf_type,lumi='137.6')
       print("\n\n\nFit is succesful, running limits now for " + str(signal))
       run_limits(signal,tf_type)
@@ -399,5 +405,5 @@ if __name__ == "__main__":
       #SignalInjection(signal, tf_type, r=0, condor=False)
       #plot_SignalInjection(signal, tf_type, r=0, condor=False)
       #Impacts(signal,tf_type)
-      os.system("cp " + workingArea + "/base.root " + workingArea + "/" + signal + f"-{tf_type}_area/.")
+      #os.system("cp " + workingArea + "/base.root " + workingArea + "/" + signal + f"-{tf_type}_area/.")
       open(workingArea + "/" + signal + f"-{tf_type}_area/done", 'w').close()
