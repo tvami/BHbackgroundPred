@@ -152,11 +152,11 @@ def make_workspace():
 
 
 # function for perfomring the fit
-def perform_fit(signal, tf, rMaxExt = 1, extra=''):
+def perform_fit(signal, tf, rMaxExt = 0.1, extra=''):
     '''
         signal [str] = 'Type-Mass'
         tf [str] = 0x0, 0x1, 1x0, 1x1, 1x2, 2x2
-	extra (str) = any extra flags to pass to Combine when running the ML fit
+	    extra (str) = any extra flags to pass to Combine when running the ML fit
     '''
     # this is the name of the directory created in the workspace function
     working_area = workingArea
@@ -173,7 +173,7 @@ def perform_fit(signal, tf, rMaxExt = 1, extra=''):
 
     # perform fit
     print("perform fit")
-    twoD.MLfit('{}-{}_area'.format(signal, tf), rMin=0, rMax=rMaxExt, verbosity=1, extra=extra)
+    twoD.MLfit('{}-{}_area'.format(signal, tf), rMin=0, rMax=rMaxExt, verbosity=0, extra=extra)
 
 def plot_fit(signal, tf, lumi='137.4'):
     working_area = workingArea
@@ -182,8 +182,10 @@ def plot_fit(signal, tf, lumi='137.4'):
     print("Doing twoD.ledger.select")
     subset = twoD.ledger.select(_select_signal, '{}'.format(signal), tf) 
     print("Doing twoD.StdPlots")
+    # Postfit plots
     twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, lumiText=lumi+r' $fb^{-1}$ (13 TeV)')
-    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, True, lumiText=lumi+r' $fb^{-1}$ (13 TeV)')
+    # Prefit plots
+    # twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, True, lumiText=lumi+r' $fb^{-1}$ (13 TeV)')
 
 def GOF(signal,tf,condor=True, extra=''):
     # replace the blindedFit option in the config file with COMMENT to effectively "unblind" the GoF
@@ -248,7 +250,7 @@ def run_limits(signal, tf):
     twoD.Limit(
 	subtag='{}-{}_area'.format(signal, tf),
 	blindData=False,	# BE SURE TO CHANGE THIS IF YOU NEED TO BLIND YOUR DATA 
-	verbosity=1,
+	verbosity=0,
 	condor=False
     )
 
@@ -366,7 +368,7 @@ def test_FTest(poly1, poly2, signal=''):
     plot_FTest(base_fstat,nRpfs1,nRpfs2,nBins)
 
 if __name__ == "__main__":
-    make_workspace()
+    # make_workspace()
 
     # signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
     # signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
@@ -377,7 +379,7 @@ if __name__ == "__main__":
     # signal_areas = ["Signal_B1_MD7000_MBH8000_n2","Signal_B1_MD7000_MBH9000_n2","Signal_B1_MD7000_MBH10000_n2","Signal_B1_MD7000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD8000_MBH9000_n2","Signal_B1_MD8000_MBH10000_n2","Signal_B1_MD8000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD9000_MBH10000_n2","Signal_B1_MD9000_MBH11000_n2"]
-    signal_areas = ["Signal_B1_MD2000_MBH8000_n2"]
+    signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
     
     # tf_type = '0x0'
     # tf_type = '1x0'
@@ -388,22 +390,27 @@ if __name__ == "__main__":
 
     for signal in signal_areas :
       # When there are 100 signals, let's make sure we only run on the ones we didnt do before
-      if os.path.exists(workingArea + "/" + signal + f"-{tf_type}_area/done") : continue
-      # Perform fit with rMax at 1, but now use Minuit2 which should always succeed in the fit
-      perform_fit(signal,tf_type)
-      # Persist if the fit worked
-      with open(workingArea + "/" + signal + f"-{tf_type}_area/FitDiagnostics.log", 'r') as file:
-        content = file.read()
-      if "Fit failed" in content: 
-        print(" Fit failed!!!! ")
-        continue
-      plot_fit(signal,tf_type,lumi='137.6')
-      print("\n\n\nFit is succesful, running limits now for " + str(signal))
+    #   if os.path.exists(workingArea + "/" + signal + f"-{tf_type}_area/done") : continue
+      print("\n\n\n====================================")
+      fitPassed = False
+      # If the fit failed iterate on rMax
+    #   rMax = 10
+    #   while not (fitPassed) :
+    #     print("\n----------------------------------")
+    #     print("Perform_fit with rMax = " + str(rMax))
+    #     perform_fit(signal,tf_type,rMax,extra='')
+    #     # Do fitting until the fit passes
+    #     with open(workingArea + "/" + signal + f"-{tf_type}_area/FitDiagnostics.log", 'r') as file:
+    #       content = file.read()
+    #       if not "Fit failed" in content: fitPassed = True
+    #       rMax = rMax / 2.
+    #   plot_fit(signal,tf_type,lumi='137.6')
+    #   print("\n\n\nFit is succesful, running limits now for " + str(signal))
       run_limits(signal,tf_type)
-      #GOF(signal,tf_type,condor=False)
-      #plot_GOF(signal,tf_type,condor=False)
-      #SignalInjection(signal, tf_type, r=0, condor=False)
-      #plot_SignalInjection(signal, tf_type, r=0, condor=False)
-      #Impacts(signal,tf_type)
-      #os.system("cp " + workingArea + "/base.root " + workingArea + "/" + signal + f"-{tf_type}_area/.")
-      open(workingArea + "/" + signal + f"-{tf_type}_area/done", 'w').close()
+    #   GOF(signal,tf_type,condor=False)
+    #   plot_GOF(signal,tf_type,condor=False)
+    #   #SignalInjection(signal, tf_type, r=0, condor=False)
+    #   #plot_SignalInjection(signal, tf_type, r=0, condor=False)
+    #   #Impacts(signal,tf_type)
+    #   #os.system("cp " + workingArea + "/base.root " + workingArea + "/" + signal + f"-{tf_type}_area/.")
+    #   open(workingArea + "/" + signal + f"-{tf_type}_area/done", 'w').close()

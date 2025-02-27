@@ -473,7 +473,7 @@ class TwoDAlphabet:
         return masked_regions
 
     def GoodnessOfFit(self, subtag, ntoys, card_or_w='card.txt', freezeSignal=False, seed=123456,
-                            verbosity=0, extra='', condor=False, eosRootfiles=None, njobs=0, makeEnv=False):
+                            verbosity=0, extra='', condor=False, eosRootfiles=None, njobs=0, makeEnv=True):
         # NOTE: There's no way to blind data here - need to evaluate it to get the p-value
         # param_str = '' if setParams == {} else '--setParameters '+','.join(['%s=%s'%(p,v) for p,v in setParams.items()])
 
@@ -932,7 +932,7 @@ def _runMLfit(cardOrW, blinding, verbosity, rMin, rMax, setParams, usePreviousFi
     params_to_set = ','.join(['mask_%s_%s=1'%(r,suffix) for r in blinding for suffix in ['SIG', 'HIGH']]+['%s=%s'%(p,v) for p,v in setParams.items()]+['r=1'])
     param_options += '--setParameters '+params_to_set
 
-    fit_cmd = 'combine -M FitDiagnostics {card_or_w} {param_options} --saveWorkspace --rMin {rmin} --rMax {rmax} -v {verbosity}  --robustFit=1 --setRobustFitAlgo Minuit2 {extra}'
+    fit_cmd = 'combine -M FitDiagnostics {card_or_w} {param_options} --saveWorkspace --rMin {rmin} --rMax {rmax} -v {verbosity} --cminDefaultMinimizerStrategy {defMinStrat} --robustHesse 1 {extra}'
     fit_cmd = fit_cmd.format(
         card_or_w='initifalFitWorkspace.root --snapshotName initialFit' if usePreviousFit else cardOrW,
         param_options=param_options,
