@@ -1,0 +1,13 @@
+universe = vanilla
+environment = CONDOR_ID=$(Process)
+Executable = /home/users/tvami/backup/work/BlackHole/CMSSW_14_1_0_pre4/src/rpfExpo_BinningV5_Blind_InV15_Multi4_FullScan_MD2TeV-v2/Signal_B1_MD2000_MBH3000_n2-expo_area/run_rpfExpo_BinningV5_Blind_InV15_Multi4_FullScan_MD2TeV-v2_Signal_B1_MD2000_MBH3000_n2-expo_area_gof_toys.sh
+Should_Transfer_Files = YES
+WhenToTransferOutput = ON_EXIT
+Output = notneeded/output_$(Cluster)_$(Process).stdout
+Error = notneeded/output_$(Cluster)_$(Process).stderr
+Log = notneeded/output_$(Cluster)_$(Process).log
+transfer_input_files = /home/users/tvami/backup/work/BlackHole/CMSSW_14_1_0_pre4/src/rpfExpo_BinningV5_Blind_InV15_Multi4_FullScan_MD2TeV-v2/Signal_B1_MD2000_MBH3000_n2-expo_area/notneeded/rpfExpo_BinningV5_Blind_InV15_Multi4_FullScan_MD2TeV-v2_Signal_B1_MD2000_MBH3000_n2-expo_area_gof_toys_input.tgz
+request_memory = 2000
+x509userproxy = $ENV(X509_USER_PROXY)
+Arguments = "$(args)"
+Queue args from /home/users/tvami/backup/work/BlackHole/CMSSW_14_1_0_pre4/src/rpfExpo_BinningV5_Blind_InV15_Multi4_FullScan_MD2TeV-v2/Signal_B1_MD2000_MBH3000_n2-expo_area/run_rpfExpo_BinningV5_Blind_InV15_Multi4_FullScan_MD2TeV-v2_Signal_B1_MD2000_MBH3000_n2-expo_area_gof_toys_args.txt
