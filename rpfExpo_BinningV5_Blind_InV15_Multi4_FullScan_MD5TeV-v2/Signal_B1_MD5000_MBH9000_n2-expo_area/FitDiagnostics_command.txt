@@ -1,0 +1,1 @@
+combine -M FitDiagnostics card.txt --text2workspace "--channel-masks" --setParameters mask_pass_SIG=1,mask_pass_HIGH=1,r=1 --saveWorkspace --rMin 0 --rMax 1.25 -v 0 --cminDefaultMinimizerStrategy 0 --robustHesse 1 
