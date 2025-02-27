@@ -41,9 +41,9 @@ Bin                       Total relative bkg uncert. (prefit)
 fail_HIGH                 0.00000   
 fail_LOW                  0.00000   
 fail_SIG                  0.00000   
-pass_HIGH                 0.10543   
-pass_LOW                  0.10022   
-pass_SIG                  0.10243   
+pass_HIGH                 0.10527   
+pass_LOW                  0.10023   
+pass_SIG                  0.10244   
 >> Doing postfit: fail_HIGH,Background
 >> Doing postfit: fail_HIGH,Signal_B1_MD2000_MBH10000_n2
 >> Doing postfit: fail_HIGH,TotalBkg
@@ -77,24 +77,24 @@ pass_SIG                  0.10243
 
 Bin                       Total relative bkg uncert. (postfit)
 ----------------------------------------------------------
-fail_HIGH                 0.10422   
-fail_LOW                  0.00163   
-fail_SIG                  0.03068   
-pass_HIGH                 0.11187   
-pass_LOW                  0.00243   
-pass_SIG                  0.03514   
+fail_HIGH                 0.04568   
+fail_LOW                  0.00094   
+fail_SIG                  0.01379   
+pass_HIGH                 0.05559   
+pass_LOW                  0.00221   
+pass_SIG                  0.02354   
 
 Bin                       Process              Scale factor
 ----------------------------------------------------------
-fail_HIGH                 Background           0.95586   
-fail_HIGH                 Signal_B1_MD2000_MBH10000_n2 0.44523   
+fail_HIGH                 Background           0.99778   
+fail_HIGH                 Signal_B1_MD2000_MBH10000_n2 1.89853   
 fail_LOW                  Background           1.00000   
-fail_LOW                  Signal_B1_MD2000_MBH10000_n2 0.44519   
+fail_LOW                  Signal_B1_MD2000_MBH10000_n2 1.89592   
 fail_SIG                  Background           1.00000   
-fail_SIG                  Signal_B1_MD2000_MBH10000_n2 0.44520   
-pass_HIGH                 Background_expo      0.61566   
-pass_HIGH                 Signal_B1_MD2000_MBH10000_n2 0.44513   
-pass_LOW                  Background_expo      0.38172   
-pass_LOW                  Signal_B1_MD2000_MBH10000_n2 0.44512   
-pass_SIG                  Background_expo      0.53363   
-pass_SIG                  Signal_B1_MD2000_MBH10000_n2 0.44513   
+fail_SIG                  Signal_B1_MD2000_MBH10000_n2 1.89654   
+pass_HIGH                 Background_expo      0.12108   
+pass_HIGH                 Signal_B1_MD2000_MBH10000_n2 1.89163   
+pass_LOW                  Background_expo      0.15940   
+pass_LOW                  Signal_B1_MD2000_MBH10000_n2 1.89100   
+pass_SIG                  Background_expo      0.13434   
+pass_SIG                  Signal_B1_MD2000_MBH10000_n2 1.89125   

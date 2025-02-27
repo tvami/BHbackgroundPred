@@ -7,24 +7,24 @@ Set Default Value of Parameter mask_pass_HIGH To : 1
 Set Default Value of Parameter r To : 1
 >>> 2 out of 6 channels masked
 
->> Found 15 floating parameters
+>> Found 16 floating parameters
 >> The following parameters are protected in the event of negative eigenvalues: r
 >> Verifying eigenvalues are all positive (iteration 0)
-Eigenvalue 14 : -0.133245
- - -0.712117	Background_fail_HIGH_bin_4-1
- - 0.682645	r
- - 0.126471	SVM
- - -0.0960148	Background_fail_HIGH_bin_3-1
- - -0.0384505	Background_fail_HIGH_bin_2-1
+Eigenvalue 15 : -0.0107654
+ - 0.71019	r
+ - -0.557554	Background_fail_HIGH_bin_5-1
+ - -0.3536	Background_fail_HIGH_bin_4-1
+ - -0.21764	Background_fail_HIGH_bin_3-1
+ - -0.102297	Background_fail_HIGH_bin_2-1
 >> Attempt 0 failed, remove the variable with largest eigenvector component...
->> Dropping Background_fail_HIGH_bin_4-1 from the hessian
+>> Dropping Background_fail_HIGH_bin_5-1 from the hessian
 >> Verifying eigenvalues are all positive (iteration 1)
 >> All eigenvalues are positive
 >> Inverting Hessian...
 >> Matrix inverted
 >> Note: the following parameters were dropped to make the covariance matrix pos-def:
-     - Background_fail_HIGH_bin_4-1
+     - Background_fail_HIGH_bin_5-1
 
  --- FitDiagnostics ---
-Best fit r: 0.00449817  -0.00449817/+9.9955  (68% CL)
+Best fit r: 5.7584e-09  -5.7584e-09/+1.25  (68% CL)
 Done in 0.00 min (cpu), 0.00 min (real)

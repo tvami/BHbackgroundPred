@@ -368,7 +368,7 @@ def test_FTest(poly1, poly2, signal=''):
     plot_FTest(base_fstat,nRpfs1,nRpfs2,nBins)
 
 if __name__ == "__main__":
-    # make_workspace()
+    make_workspace()
 
     # signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
     # signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
@@ -394,18 +394,18 @@ if __name__ == "__main__":
       print("\n\n\n====================================")
       fitPassed = False
       # If the fit failed iterate on rMax
-    #   rMax = 10
-    #   while not (fitPassed) :
-    #     print("\n----------------------------------")
-    #     print("Perform_fit with rMax = " + str(rMax))
-    #     perform_fit(signal,tf_type,rMax,extra='')
-    #     # Do fitting until the fit passes
-    #     with open(workingArea + "/" + signal + f"-{tf_type}_area/FitDiagnostics.log", 'r') as file:
-    #       content = file.read()
-    #       if not "Fit failed" in content: fitPassed = True
-    #       rMax = rMax / 2.
-    #   plot_fit(signal,tf_type,lumi='137.6')
-    #   print("\n\n\nFit is succesful, running limits now for " + str(signal))
+      rMax = 10
+      while not (fitPassed) :
+        print("\n----------------------------------")
+        print("Perform_fit with rMax = " + str(rMax))
+        perform_fit(signal,tf_type,rMax,extra='')
+        # Do fitting until the fit passes
+        with open(workingArea + "/" + signal + f"-{tf_type}_area/FitDiagnostics.log", 'r') as file:
+          content = file.read()
+          if not "Fit failed" in content: fitPassed = True
+          rMax = rMax / 2.
+      plot_fit(signal,tf_type,lumi='137.6')
+      print("\n\n\nFit is succesful, running limits now for " + str(signal))
       run_limits(signal,tf_type)
     #   GOF(signal,tf_type,condor=False)
     #   plot_GOF(signal,tf_type,condor=False)
