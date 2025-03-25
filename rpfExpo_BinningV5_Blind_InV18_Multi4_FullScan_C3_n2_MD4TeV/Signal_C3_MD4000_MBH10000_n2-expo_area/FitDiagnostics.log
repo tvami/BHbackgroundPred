@@ -1,0 +1,56 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is FitDiagnostics
+Set Default Value of Parameter mask_pass_SIG To : 1
+Set Default Value of Parameter mask_pass_HIGH To : 1
+Set Default Value of Parameter r To : 1
+>>> 2 out of 6 channels masked
+
+>> Found 16 floating parameters
+>> The following parameters are protected in the event of negative eigenvalues: r
+>> Verifying eigenvalues are all positive (iteration 0)
+Eigenvalue 14 : -1.11022e-16
+ - 1	Background_fail_HIGH_bin_5-1
+ - -5.06991e-10	r
+ - -1.50197e-10	lumi
+ - 1.4975e-10	Background_fail_SIG_bin_2-1
+ - 1.14118e-10	Background_fail_SIG_bin_1-1
+Eigenvalue 15 : -0.00357725
+ - 0.990296	r
+ - -0.132023	SVM
+ - -0.04122	Background_fail_HIGH_bin_4-1
+ - -0.0123177	Background_fail_HIGH_bin_3-1
+ - -0.00425685	Background_fail_HIGH_bin_2-1
+>> Attempt 0 failed, remove the variable with largest eigenvector component...
+>> Dropping SVM from the hessian
+>> Verifying eigenvalues are all positive (iteration 1)
+Eigenvalue 14 : -0.000118482
+ - -0.999007	r
+ - 0.0423049	Background_fail_HIGH_bin_4-1
+ - 0.0126414	Background_fail_HIGH_bin_3-1
+ - 0.00436657	Background_fail_HIGH_bin_2-1
+ - 0.00365433	lumi
+>> Attempt 1 failed, remove the variable with largest eigenvector component...
+>> Dropping Background_fail_HIGH_bin_4-1 from the hessian
+>> Verifying eigenvalues are all positive (iteration 2)
+Eigenvalue 13 : -5.55112e-17
+ - 1	Background_fail_HIGH_bin_5-1
+ - 7.93173e-10	r
+ - -1.54956e-10	lumi
+ - 1.49031e-10	Background_fail_SIG_bin_2-1
+ - 1.13893e-10	Background_fail_SIG_bin_1-1
+>> Attempt 2 failed, remove the variable with largest eigenvector component...
+>> Dropping Background_fail_HIGH_bin_5-1 from the hessian
+>> Verifying eigenvalues are all positive (iteration 3)
+>> All eigenvalues are positive
+>> Inverting Hessian...
+>> Matrix inverted
+>> Note: the following parameters were dropped to make the covariance matrix pos-def:
+     - SVM
+     - Background_fail_HIGH_bin_4-1
+     - Background_fail_HIGH_bin_5-1
+
+ --- FitDiagnostics ---
+Best fit r: 5.95224e-12  -5.95224e-12/+10  (68% CL)
+Done in 0.00 min (cpu), 0.00 min (real)

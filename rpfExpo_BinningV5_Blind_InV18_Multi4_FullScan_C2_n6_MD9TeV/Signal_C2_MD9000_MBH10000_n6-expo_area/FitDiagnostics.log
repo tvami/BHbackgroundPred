@@ -1,0 +1,40 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is FitDiagnostics
+Set Default Value of Parameter mask_pass_SIG To : 1
+Set Default Value of Parameter mask_pass_HIGH To : 1
+Set Default Value of Parameter r To : 1
+>>> 2 out of 6 channels masked
+
+>> Found 16 floating parameters
+>> The following parameters are protected in the event of negative eigenvalues: r
+>> Verifying eigenvalues are all positive (iteration 0)
+Eigenvalue 15 : -0.00291413
+ - 0.992027	r
+ - -0.119489	SVM
+ - -0.0379078	Background_fail_HIGH_bin_4-1
+ - -0.0115621	Background_fail_HIGH_bin_3-1
+ - -0.00429493	Background_fail_HIGH_bin_2-1
+>> Attempt 0 failed, remove the variable with largest eigenvector component...
+>> Dropping SVM from the hessian
+>> Verifying eigenvalues are all positive (iteration 1)
+Eigenvalue 14 : -9.96008e-05
+ - -0.999162	r
+ - 0.0387202	Background_fail_HIGH_bin_4-1
+ - 0.0118095	Background_fail_HIGH_bin_3-1
+ - 0.00438507	Background_fail_HIGH_bin_2-1
+ - 0.00374529	lumi
+>> Attempt 1 failed, remove the variable with largest eigenvector component...
+>> Dropping Background_fail_HIGH_bin_4-1 from the hessian
+>> Verifying eigenvalues are all positive (iteration 2)
+>> All eigenvalues are positive
+>> Inverting Hessian...
+>> Matrix inverted
+>> Note: the following parameters were dropped to make the covariance matrix pos-def:
+     - SVM
+     - Background_fail_HIGH_bin_4-1
+
+ --- FitDiagnostics ---
+Best fit r: 2.60422e-11  -2.60422e-11/+10  (68% CL)
+Done in 0.00 min (cpu), 0.02 min (real)

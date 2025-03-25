@@ -1,0 +1,52 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is FitDiagnostics
+Set Default Value of Parameter mask_pass_SIG To : 1
+Set Default Value of Parameter mask_pass_HIGH To : 1
+Set Default Value of Parameter r To : 1
+>>> 2 out of 6 channels masked
+
+>> Found 16 floating parameters
+>> The following parameters are protected in the event of negative eigenvalues: r
+>> Verifying eigenvalues are all positive (iteration 0)
+Eigenvalue 14 : -5.55112e-17
+ - 1	Background_fail_HIGH_bin_5-1
+ - -3.30389e-10	r
+ - 1.53261e-10	lumi
+ - 1.45209e-10	Background_fail_HIGH_bin_4-1
+ - 1.44451e-10	Background_fail_SIG_bin_2-1
+Eigenvalue 15 : -0.0111847
+ - -0.972788	r
+ - 0.227397	SVM
+ - 0.0422793	Background_fail_HIGH_bin_4-1
+ - 0.0124762	Background_fail_HIGH_bin_3-1
+ - 0.00411506	Background_fail_HIGH_bin_2-1
+>> Attempt 0 failed, remove the variable with largest eigenvector component...
+>> Dropping SVM from the hessian
+>> Verifying eigenvalues are all positive (iteration 1)
+Eigenvalue 13 : -5.55112e-17
+ - -1	Background_fail_HIGH_bin_5-1
+ - -1.06591e-08	r
+ - 3.59258e-10	Background_fail_HIGH_bin_4-1
+ - -1.40022e-10	Background_fail_SIG_bin_2-1
+ - -1.26744e-10	Background_fail_LOW_bin_2-1
+Eigenvalue 14 : -0.000138849
+ - -0.99884	r
+ - 0.0458195	Background_fail_HIGH_bin_4-1
+ - 0.0135192	Background_fail_HIGH_bin_3-1
+ - 0.00445234	Background_fail_HIGH_bin_2-1
+ - 0.00365173	lumi
+>> Attempt 1 failed, remove the variable with largest eigenvector component...
+>> Dropping Background_fail_HIGH_bin_4-1 from the hessian
+>> Verifying eigenvalues are all positive (iteration 2)
+>> All eigenvalues are positive
+>> Inverting Hessian...
+>> Matrix inverted
+>> Note: the following parameters were dropped to make the covariance matrix pos-def:
+     - SVM
+     - Background_fail_HIGH_bin_4-1
+
+ --- FitDiagnostics ---
+Best fit r: 6.24616e-12  -6.24616e-12/+10  (68% CL)
+Done in 0.00 min (cpu), 0.00 min (real)

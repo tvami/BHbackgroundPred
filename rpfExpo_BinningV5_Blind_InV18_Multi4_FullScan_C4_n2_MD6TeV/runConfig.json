@@ -1,0 +1,133 @@
+{
+  "BINNING": {
+    "default": {
+      "X": {
+        "BINS": [
+          2000,
+          2500,
+          3000,
+          3500,
+          4000,
+          4500,
+          5000,
+          5500,
+          6000,
+          6500,
+          7000,
+          13000
+        ],
+        "NAME": "ST",
+        "SIGEND": 5000,
+        "SIGSTART": 4000,
+        "TITLE": "S_{T}"
+      },
+      "Y": {
+        "MAX": 20,
+        "MIN": 4,
+        "NAME": "N",
+        "NBINS": 1,
+        "TITLE": "N"
+      }
+    }
+  },
+  "GLOBAL": {
+    "FILE": "BH_$process.root",
+    "HIST": "h$region",
+    "HIST_DOWN": "h$region_$syst_down",
+    "HIST_UP": "h$region_$syst_up",
+    "SIGNAME": [
+      "Signal_C4_MD6000_MBH7000_n2",
+      "Signal_C4_MD6000_MBH8000_n2",
+      "Signal_C4_MD6000_MBH9000_n2",
+      "Signal_C4_MD6000_MBH10000_n2",
+      "Signal_C4_MD6000_MBH11000_n2"
+    ],
+    "path": "./histograms_for_2DAlphabet_v18/"
+  },
+  "NAME": "NotRelevantString",
+  "OPTIONS": {
+    "blindedFit": [
+      "pass"
+    ],
+    "blindedPlots": [
+      "pass"
+    ],
+    "plotEvtsPerUnitVolt": true,
+    "plotTemplateComparisonsVol": true
+  },
+  "PROCESSES": {
+    "SIGNAME": {
+      "COLOR": "red",
+      "LOC": "./histograms_for_2DAlphabet_v18//BH_$process.root:h$region",
+      "NAME": "SIGNAME",
+      "SCALE": 1.0,
+      "SYSTEMATICS": [
+        "lumi",
+        "SVM"
+      ],
+      "SYSTEMATICSvolt": [
+        "lumi",
+        "pileup",
+        "systOnF",
+        "systOnG",
+        "systOnTrigger",
+        "systOnPt",
+        "systOnMuReco",
+        "systOnMuID",
+        "systOnMuTrigger"
+      ],
+      "TITLE": "BH signal",
+      "TYPE": "SIGNAL",
+      "VARIATION": "nominal"
+    },
+    "data_obs": {
+      "ALIAS": "Data",
+      "COLOR": "black",
+      "LOC": "./histograms_for_2DAlphabet_v18//BH_$process.root:h$region",
+      "NAME": "data_obs",
+      "SCALE": 1.0,
+      "SYSTEMATICS": [],
+      "TITLE": "Data",
+      "TYPE": "DATA",
+      "VARIATION": "nominal"
+    }
+  },
+  "REGIONS": {
+    "fail": {
+      "BINNING": "default",
+      "PROCESSES": [
+        "SIGNAME"
+      ]
+    },
+    "pass": {
+      "BINNING": "default",
+      "PROCESSES": [
+        "SIGNAME"
+      ]
+    }
+  },
+  "SYSTEMATICS": {
+    "SVM": {
+      "ALIAS": "SVMsyst",
+      "DOWN": "./histograms_for_2DAlphabet_v18//BH_$process.root:h$region_$syst_down",
+      "SIGMA": 1.0,
+      "UP": "./histograms_for_2DAlphabet_v18//BH_$process.root:h$region_$syst_up"
+    },
+    "lumi": {
+      "CODE": 0,
+      "VAL": 1.016
+    },
+    "pileup": {
+      "ALIAS": "PUsyst",
+      "DOWN": "./histograms_for_2DAlphabet_v18//BH_$process.root:h$region_$syst_down",
+      "SIGMA": 1.0,
+      "UP": "./histograms_for_2DAlphabet_v18//BH_$process.root:h$region_$syst_up"
+    },
+    "systOnPS": {
+      "ALIAS": "PSsyst",
+      "DOWN": "./histograms_for_2DAlphabet_v18//BH_$process.root:h$region_$syst_down",
+      "SIGMA": 1.0,
+      "UP": "./histograms_for_2DAlphabet_v18//BH_$process.root:h$region_$syst_up"
+    }
+  }
+}

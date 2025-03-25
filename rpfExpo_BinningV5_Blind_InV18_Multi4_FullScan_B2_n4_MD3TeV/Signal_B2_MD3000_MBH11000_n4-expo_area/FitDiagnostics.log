@@ -1,0 +1,56 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is FitDiagnostics
+Set Default Value of Parameter mask_pass_SIG To : 1
+Set Default Value of Parameter mask_pass_HIGH To : 1
+Set Default Value of Parameter r To : 1
+>>> 2 out of 6 channels masked
+
+>> Found 16 floating parameters
+>> The following parameters are protected in the event of negative eigenvalues: r
+>> Verifying eigenvalues are all positive (iteration 0)
+Eigenvalue 15 : -0.00353474
+ - -0.990893	r
+ - 0.132865	SVM
+ - 0.020867	Background_fail_HIGH_bin_4-1
+ - 0.00510968	Background_fail_HIGH_bin_3-1
+ - 0.00357984	lumi
+>> Attempt 0 failed, remove the variable with largest eigenvector component...
+>> Dropping SVM from the hessian
+>> Verifying eigenvalues are all positive (iteration 1)
+Eigenvalue 13 : -5.55112e-17
+ - 1	Background_fail_HIGH_bin_5-1
+ - -2.54251e-09	r
+ - -1.04684e-10	lumi
+ - 5.44932e-11	Background_fail_HIGH_bin_4-1
+ - -4.08768e-11	Background_fail_LOW_bin_4-1
+Eigenvalue 14 : -3.16064e-05
+ - -0.999748	r
+ - 0.021424	Background_fail_HIGH_bin_4-1
+ - 0.00524587	Background_fail_HIGH_bin_3-1
+ - 0.00367792	lumi
+ - 0.00160186	Background_fail_HIGH_bin_2-1
+>> Attempt 1 failed, remove the variable with largest eigenvector component...
+>> Dropping Background_fail_HIGH_bin_4-1 from the hessian
+>> Verifying eigenvalues are all positive (iteration 2)
+Eigenvalue 13 : -5.55112e-17
+ - -1	Background_fail_HIGH_bin_5-1
+ - -1.34462e-09	r
+ - 1.18987e-10	lumi
+ - 4.09226e-11	Background_fail_LOW_bin_4-1
+ - 2.54046e-11	Background_rpf_expo_par0
+>> Attempt 2 failed, remove the variable with largest eigenvector component...
+>> Dropping Background_fail_HIGH_bin_5-1 from the hessian
+>> Verifying eigenvalues are all positive (iteration 3)
+>> All eigenvalues are positive
+>> Inverting Hessian...
+>> Matrix inverted
+>> Note: the following parameters were dropped to make the covariance matrix pos-def:
+     - SVM
+     - Background_fail_HIGH_bin_4-1
+     - Background_fail_HIGH_bin_5-1
+
+ --- FitDiagnostics ---
+Best fit r: 1.55978e-09  -1.55978e-09/+10  (68% CL)
+Done in 0.00 min (cpu), 0.00 min (real)

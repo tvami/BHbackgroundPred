@@ -2,6 +2,7 @@ import os
 import ROOT
 import numpy as np
 import tdrstyle
+import ctypes
 
 
 ROOT.gROOT.SetBatch(True)
@@ -15,7 +16,8 @@ working_dir = '/home/users/dazhang/works/phaseSpace/BlackHoleSearch/CMSSW_14_1_0
 graphs = []
 
 for MD in MD_list:
-    limit_plot = os.path.join(working_dir, f'rpfExpo_BinningV5_Blind_InV16_Multi4_FullScan_MD{MD:.0f}TeV/limits_combine_137p6fb_signals_BH1_MD{(MD*1000):.0f}_BH.C')
+    # limit_plot = os.path.join(working_dir, f'rpfExpo_BinningV5_Blind_InV16_Multi4_FullScan_MD{MD:.0f}TeV/limits_combine_137p6fb_signals_BH1_MD{(MD*1000):.0f}_BH.C')
+    limit_plot = os.path.join(working_dir, f'rpfExpo_BinningV5_Blind_InV18_Multi4_FullScan_MD{MD:.0f}TeV_n6/limits_combine_137p6fb_signals_B1_n6_MD{(MD*1000):.0f}_BH.C')
     ROOT.gROOT.ProcessLine('.x %s' % limit_plot)
     
     canvas = ROOT.gROOT.FindObject("climits")
@@ -63,9 +65,16 @@ for i, graph in enumerate(graphs):
         graph.Draw("AL")
     else:
         graph.Draw("L same")
+    # print the points
+    print(f"MD: {MD_list[i]:.0f} TeV")
+    for j in range(graph.GetN()):
+        x = ctypes.c_double()
+        y = ctypes.c_double()
+        graph.GetPoint(j, x, y)
+        print(f">> MBH: {x.value} TeV, xs: {y.value} pb")
 
 leg.Draw()
-can.SaveAs("xs_limits.pdf")
+can.SaveAs("xs_limits_B1_n6.pdf")
 
     
     

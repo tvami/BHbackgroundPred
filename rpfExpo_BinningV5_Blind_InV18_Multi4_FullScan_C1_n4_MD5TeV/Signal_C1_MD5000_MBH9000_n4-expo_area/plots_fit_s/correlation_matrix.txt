@@ -1,0 +1,6 @@
+Background_rpf_expo_par0:lumi = 7.52339398127752e-05
+Background_rpf_expo_par1:Background_rpf_expo_par0 = 0.8003106273468392
+Background_rpf_expo_par1:lumi = 4.688343736223049e-05
+r:Background_rpf_expo_par0 = -0.0011002623473611104
+r:Background_rpf_expo_par1 = -0.0006856491720693504
+r:lumi = -0.06837818143034229

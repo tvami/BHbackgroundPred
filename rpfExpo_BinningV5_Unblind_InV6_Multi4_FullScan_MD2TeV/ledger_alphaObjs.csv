@@ -6,5 +6,7 @@
 4,Background_1x1,pass,,,BKG,yellow,,Background
 5,Background_2x0,pass,,,BKG,yellow,,Background
 6,Background_2x1,pass,,,BKG,yellow,,Background
-7,Background_2x2,pass,,,BKG,yellow,,Background
-8,Background_expo,pass,,,BKG,yellow,,Background
+7,Background_3x0,pass,,,BKG,yellow,,Background
+8,Background_2x2,pass,,,BKG,yellow,,Background
+9,Background_expo,pass,,,BKG,yellow,,Background
+10,Background_expo2,pass,,,BKG,yellow,,Background

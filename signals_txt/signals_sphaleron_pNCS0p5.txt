@@ -1,0 +1,4 @@
+Signal_thr8500_pNCS0p5-expo_area, Signal_thr8750_pNCS0p5-expo_area, Signal_thr9000_pNCS0p5-expo_area, Signal_thr9250_pNCS0p5-expo_area, Signal_thr9500_pNCS0p5-expo_area
+8500, 8750, 9000, 9250, 9500
+1.0, 1.0, 1.0, 1.0, 1.0
+1.0, 1.0, 1.0, 1.0, 1.0

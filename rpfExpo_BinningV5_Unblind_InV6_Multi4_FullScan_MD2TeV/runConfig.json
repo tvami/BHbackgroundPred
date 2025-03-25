@@ -36,15 +36,7 @@
     "HIST_DOWNvolt": "h$region_$syst_down",
     "HIST_UPvolt": "h$region_$syst_up",
     "SIGNAME": [
-      "Signal_B1_MD2000_MBH3000_n2",
-      "Signal_B1_MD2000_MBH4000_n2",
-      "Signal_B1_MD2000_MBH5000_n2",
-      "Signal_B1_MD2000_MBH6000_n2",
-      "Signal_B1_MD2000_MBH7000_n2",
-      "Signal_B1_MD2000_MBH8000_n2",
-      "Signal_B1_MD2000_MBH9000_n2",
-      "Signal_B1_MD2000_MBH10000_n2",
-      "Signal_B1_MD2000_MBH11000_n2"
+      "Signal_B1_MD2000_MBH10000_n2"
     ],
     "SIGNAME1": [
       "Signal_gluino-1000",
@@ -65,6 +57,17 @@
       "Signal_B1_MD4000_MBH9000_n2",
       "Signal_B1_MD4000_MBH10000_n2",
       "Signal_B1_MD4000_MBH11000_n2"
+    ],
+    "SIGNAME3": [
+      "Signal_B1_MD2000_MBH3000_n2",
+      "Signal_B1_MD2000_MBH4000_n2",
+      "Signal_B1_MD2000_MBH5000_n2",
+      "Signal_B1_MD2000_MBH6000_n2",
+      "Signal_B1_MD2000_MBH7000_n2",
+      "Signal_B1_MD2000_MBH8000_n2",
+      "Signal_B1_MD2000_MBH9000_n2",
+      "Signal_B1_MD2000_MBH10000_n2",
+      "Signal_B1_MD2000_MBH11000_n2"
     ],
     "path": "./histograms_for_2DAlphabet_v6/"
   },

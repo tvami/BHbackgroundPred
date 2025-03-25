@@ -1,0 +1,125 @@
+
+>>> Random number generator seed is 123456
+Setting robust fit options to Tolerance=0.1 / Strategy=0 / Type,Algo=Minuit2 (note that defaults of CascadeMinimizer if these options were not specified)
+>>> Method used is FitDiagnostics
+Creating pdfs for individual modes (6): .    1.    2.    3.    4.    5.    6done.
+Importing combined pdf model_s
+Missing background ModelConfig 'ModelConfig_bonly' in workspace 'w' in file roostats-YD8GIl.root
+Will make one from the signal ModelConfig 'ModelConfig' setting signal strength 'r' to zero
+Set Default Value of Parameter mask_pass_SIG To : 1
+Set Default Value of Parameter mask_pass_HIGH To : 1
+Set Default Value of Parameter r To : 1
+>>> 2 out of 6 channels masked
+
+>>> Channel masks:
+  1) 0x354a4f30 RooRealVar::  mask_pass_LOW = 0 C  L(-INF - +INF)  "mask_pass_LOW"
+  2) 0x354a57d0 RooRealVar::  mask_pass_SIG = 1 C  L(-INF - +INF)  "mask_pass_SIG"
+  3) 0x354a60b0 RooRealVar:: mask_pass_HIGH = 1 C  L(-INF - +INF)  "mask_pass_HIGH"
+  4) 0x354a6990 RooRealVar::  mask_fail_LOW = 0 C  L(-INF - +INF)  "mask_fail_LOW"
+  5) 0x354a7270 RooRealVar::  mask_fail_SIG = 0 C  L(-INF - +INF)  "mask_fail_SIG"
+  6) 0x354a7b50 RooRealVar:: mask_fail_HIGH = 0 C  L(-INF - +INF)  "mask_fail_HIGH"
+Minimization configured with Type=Minuit2, Algo=Migrad, strategy=1, tolerance=0.1
+Minimization finished with status=0
+Minimization success! status=0
+Minimization configured with Type=Minuit2, Algo=Migrad, strategy=1, tolerance=0.1
+Minuit2Minimizer: Minimize with max-calls 1000 convergence for edm < 0.1 strategy 1
+Minuit2Minimizer::Minuit  - Changing default options
+             StorageLevel :               0
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =                 0 Edm =                 0 NCalls =      9
+Info in <Minuit2>: MnSeedGenerator Initial state  
+  Minimum value : 0
+  Edm           : 0
+  Internal parameters:	[                0                0]	
+  Internal gradient  :	[                0                0]	
+  Internal covariance matrix:
+[[              2              0]
+ [              0              2]]]
+Info in <Minuit2>: VariableMetricBuilder Start iterating until Edm is < 0.0001 with call limit = 1000
+Info in <Minuit2>: VariableMetricBuilder    0 - FCN =                 0 Edm =                 0 NCalls =      9
+Info in <Minuit2>: VariableMetricBuilder After Hessian
+Info in <Minuit2>: VariableMetricBuilder    1 - FCN =                 0 Edm =                 0 NCalls =     19
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = 0
+Edm   = 0
+Nfcn  = 19
+SVM	  = 0	 +/-  1
+lumi	  = 0	 +/-  1
+Minimization finished with status=0
+Minimization success! status=0
+
+  RooFitResult: minimized FCN value: -5.94718e-05, estimated distance to minimum: 5.41319e-08
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+                SVM_In    0.0000e+00
+               lumi_In    0.0000e+00
+  n_exp_binfail_HIGH_proc_Background    1.0000e+00
+  n_exp_binfail_LOW_proc_Background    1.0000e+00
+  n_exp_binfail_SIG_proc_Background    1.0000e+00
+  n_exp_binpass_HIGH_proc_Background_expo    1.0000e+00
+  n_exp_binpass_LOW_proc_Background_expo    1.0000e+00
+  n_exp_binpass_SIG_proc_Background_expo    1.0000e+00
+                     r    0.0000e+00
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+  Background_fail_HIGH_bin_1-1    3.5302e+02    3.5300e+02 +/-  1.88e+01  <none>
+  Background_fail_HIGH_bin_2-1    1.0102e+02    1.0100e+02 +/-  1.00e+01  <none>
+  Background_fail_HIGH_bin_3-1    3.9024e+01    3.9000e+01 +/-  6.25e+00  <none>
+  Background_fail_HIGH_bin_4-1    1.5024e+01    1.5000e+01 +/-  3.87e+00  <none>
+  Background_fail_HIGH_bin_5-1    1.1024e+01    1.1000e+01 +/-  3.32e+00  <none>
+  Background_fail_LOW_bin_1-1    7.8055e+05    7.8055e+05 +/-  8.80e+02  <none>
+  Background_fail_LOW_bin_2-1    1.6979e+05    1.6979e+05 +/-  4.00e+02  <none>
+  Background_fail_LOW_bin_3-1    4.2986e+04    4.2986e+04 +/-  1.98e+02  <none>
+  Background_fail_LOW_bin_4-1    1.1940e+04    1.1940e+04 +/-  1.04e+02  <none>
+  Background_fail_SIG_bin_1-1    3.5900e+03    3.5900e+03 +/-  5.99e+01  <none>
+  Background_fail_SIG_bin_2-1    1.0460e+03    1.0460e+03 +/-  3.23e+01  <none>
+  Background_rpf_expo_par0    1.0542e+00    1.0542e+00 +/-  9.23e-02  <none>
+  Background_rpf_expo_par1   -1.7024e+00   -1.7024e+00 +/-  4.15e-03  <none>
+                   SVM    0.0000e+00    0.0000e+00 +/-  1.00e+00  <none>
+                  lumi    0.0000e+00    0.0000e+00 +/-  1.00e+00  <none>
+
+
+  RooFitResult: minimized FCN value: -5.94718e-05, estimated distance to minimum: 5.41319e-08
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+                SVM_In    0.0000e+00
+               lumi_In    0.0000e+00
+  n_exp_binfail_HIGH_proc_Background    1.0000e+00
+  n_exp_binfail_LOW_proc_Background    1.0000e+00
+  n_exp_binfail_SIG_proc_Background    1.0000e+00
+  n_exp_binpass_HIGH_proc_Background_expo    1.0000e+00
+  n_exp_binpass_LOW_proc_Background_expo    1.0000e+00
+  n_exp_binpass_SIG_proc_Background_expo    1.0000e+00
+                     r    0.0000e+00
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+  Background_fail_HIGH_bin_1-1    3.5302e+02    3.5300e+02 +/-  1.88e+01  <none>
+  Background_fail_HIGH_bin_2-1    1.0102e+02    1.0100e+02 +/-  1.00e+01  <none>
+  Background_fail_HIGH_bin_3-1    3.9024e+01    3.9000e+01 +/-  6.25e+00  <none>
+  Background_fail_HIGH_bin_4-1    1.5024e+01    1.5000e+01 +/-  3.87e+00  <none>
+  Background_fail_HIGH_bin_5-1    1.1024e+01    1.1000e+01 +/-  3.32e+00  <none>
+  Background_fail_LOW_bin_1-1    7.8055e+05    7.8055e+05 +/-  8.80e+02  <none>
+  Background_fail_LOW_bin_2-1    1.6979e+05    1.6979e+05 +/-  4.00e+02  <none>
+  Background_fail_LOW_bin_3-1    4.2986e+04    4.2986e+04 +/-  1.98e+02  <none>
+  Background_fail_LOW_bin_4-1    1.1940e+04    1.1940e+04 +/-  1.04e+02  <none>
+  Background_fail_SIG_bin_1-1    3.5900e+03    3.5900e+03 +/-  5.99e+01  <none>
+  Background_fail_SIG_bin_2-1    1.0460e+03    1.0460e+03 +/-  3.23e+01  <none>
+  Background_rpf_expo_par0    1.0542e+00    1.0542e+00 +/-  9.23e-02  <none>
+  Background_rpf_expo_par1   -1.7024e+00   -1.7024e+00 +/-  4.15e-03  <none>
+                   SVM    0.0000e+00    0.0000e+00 +/-  1.00e+00  <none>
+                  lumi    0.0000e+00    0.0000e+00 +/-  1.00e+00  <none>
+
+ Fit B-only, status = 0, numBadNLL = 0, covariance quality = 3
+
+ --- FitDiagnostics ---
+Fit failed.
+Done in 0.00 min (cpu), 0.00 min (real)
+34 log messages saved to combine_logger.out

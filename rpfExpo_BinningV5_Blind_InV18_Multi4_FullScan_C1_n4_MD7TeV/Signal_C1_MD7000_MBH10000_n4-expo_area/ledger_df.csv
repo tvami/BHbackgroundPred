@@ -1,0 +1,11 @@
+,process,region,binning,color,process_type,scale,variation,source_filename,source_histname,alias,title,combine_idx,lnN,shapes,syst_type,direction,variation_alias
+0,data_obs,pass,default,black,DATA,1.0,nominal,./histograms_for_2DAlphabet_v18//BH_Data.root,hpass,Data,Data,,,,,,
+9,Signal_C1_MD7000_MBH10000_n4,pass,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v18//BH_Signal_C1_MD7000_MBH10000_n4.root,hpass,Signal_C1_MD7000_MBH10000_n4,BH signal,,1.016,,lnN,,
+10,Signal_C1_MD7000_MBH10000_n4,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v18//BH_Signal_C1_MD7000_MBH10000_n4.root,hpass_SVMsyst_up,Signal_C1_MD7000_MBH10000_n4,BH signal,,,1.0,shapes,Up,SVMsyst
+11,Signal_C1_MD7000_MBH10000_n4,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v18//BH_Signal_C1_MD7000_MBH10000_n4.root,hpass_SVMsyst_down,Signal_C1_MD7000_MBH10000_n4,BH signal,,,1.0,shapes,Down,SVMsyst
+12,Signal_C1_MD7000_MBH10000_n4,pass,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v18//BH_Signal_C1_MD7000_MBH10000_n4.root,hpass,Signal_C1_MD7000_MBH10000_n4,BH signal,,,,,,
+17,data_obs,fail,default,black,DATA,1.0,nominal,./histograms_for_2DAlphabet_v18//BH_Data.root,hfail,Data,Data,,,,,,
+26,Signal_C1_MD7000_MBH10000_n4,fail,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v18//BH_Signal_C1_MD7000_MBH10000_n4.root,hfail,Signal_C1_MD7000_MBH10000_n4,BH signal,,1.016,,lnN,,
+27,Signal_C1_MD7000_MBH10000_n4,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v18//BH_Signal_C1_MD7000_MBH10000_n4.root,hfail_SVMsyst_up,Signal_C1_MD7000_MBH10000_n4,BH signal,,,1.0,shapes,Up,SVMsyst
+28,Signal_C1_MD7000_MBH10000_n4,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v18//BH_Signal_C1_MD7000_MBH10000_n4.root,hfail_SVMsyst_down,Signal_C1_MD7000_MBH10000_n4,BH signal,,,1.0,shapes,Down,SVMsyst
+29,Signal_C1_MD7000_MBH10000_n4,fail,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v18//BH_Signal_C1_MD7000_MBH10000_n4.root,hfail,Signal_C1_MD7000_MBH10000_n4,BH signal,,,,,,

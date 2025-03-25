@@ -77,24 +77,24 @@ pass_SIG                  0.10265
 
 Bin                       Total relative bkg uncert. (postfit)
 ----------------------------------------------------------
-fail_HIGH                 0.48321   
+fail_HIGH                 0.48315   
 fail_LOW                  0.00183   
-fail_SIG                  0.01917   
-pass_HIGH                 0.50554   
+fail_SIG                  0.01916   
+pass_HIGH                 0.50547   
 pass_LOW                  0.00328   
 pass_SIG                  0.03506   
 
 Bin                       Process              Scale factor
 ----------------------------------------------------------
-fail_HIGH                 Background           0.95625   
+fail_HIGH                 Background           0.95629   
 fail_HIGH                 Signal_B1_MD2000_MBH10000_n2 0.00000   
 fail_LOW                  Background           0.99994   
 fail_LOW                  Signal_B1_MD2000_MBH10000_n2 0.00000   
 fail_SIG                  Background           1.01181   
 fail_SIG                  Signal_B1_MD2000_MBH10000_n2 0.00000   
-pass_HIGH                 Background_expo      0.04257   
+pass_HIGH                 Background_expo      0.04256   
 pass_HIGH                 Signal_B1_MD2000_MBH10000_n2 0.00000   
-pass_LOW                  Background_expo      0.17385   
+pass_LOW                  Background_expo      0.17384   
 pass_LOW                  Signal_B1_MD2000_MBH10000_n2 0.00000   
-pass_SIG                  Background_expo      0.12147   
+pass_SIG                  Background_expo      0.12146   
 pass_SIG                  Signal_B1_MD2000_MBH10000_n2 0.00000   

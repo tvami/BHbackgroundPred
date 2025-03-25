@@ -1,0 +1,10 @@
+Background_rpf_expo_par0:SVM = 0.03367418559021706
+Background_rpf_expo_par0:lumi = -0.00843424863011554
+Background_rpf_expo_par1:Background_rpf_expo_par0 = 0.8601000580779563
+Background_rpf_expo_par1:SVM = 0.025870557137374395
+Background_rpf_expo_par1:lumi = -0.006479623114019837
+lumi:SVM = -0.000557916191901581
+r:Background_rpf_expo_par0 = 0.7135769398961364
+r:Background_rpf_expo_par1 = 0.5482064923205529
+r:SVM = 0.04720235168481387
+r:lumi = -0.011819888062108892

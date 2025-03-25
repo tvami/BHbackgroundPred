@@ -77,12 +77,12 @@ pass_SIG                  0.10243
 
 Bin                       Total relative bkg uncert. (postfit)
 ----------------------------------------------------------
-fail_HIGH                 0.10844   
-fail_LOW                  0.00161   
-fail_SIG                  0.03067   
-pass_HIGH                 0.10498   
-pass_LOW                  0.00269   
-pass_SIG                  0.03666   
+fail_HIGH                 116.20508 
+fail_LOW                  0.00163   
+fail_SIG                  0.02682   
+pass_HIGH                 235.28392 
+pass_LOW                  0.00243   
+pass_SIG                  0.03835   
 
 Bin                       Process              Scale factor
 ----------------------------------------------------------
