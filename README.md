@@ -54,6 +54,10 @@ python3 runWith1DVanilla.py ConstFit_InitBinning_Integer_MatPlotLib config_Const
 - v15: is cut at 0.63, X axis going to 13 TeV, real JetHT data (full run2) with SVM systematics
 - **v16 (nominal)**: is SVM cut at 0.63, apply Sphericity > 0.1, X axis going to 13 TeV, real JetHT data (full run2) with SVM systematics
 - v17: is CR (0-0.5) + VR (0.5-0.63), apply Sphericity > 0.1, X axis going to 13 TeV, real JetHT data (full run2)
+- v18: is SVM cut at 0.63, apply Sphericity > 0.1, X axis going to 13 TeV, real JetHT data (full run2) with SVM systematics, all black hole signals
+- v19: is SVM cut at 0.63, X axis going to 13 TeV, real JetHT data (full run2) with SVM systematics, sphaleron signals
+- v20: is SVM cut at 0.63, apply Sphericity > 0.1, X axis going to 13 TeV, real JetHT data (full run2) with SVM systematics, sphaleron signals
+- v21: is SVM cut at 0.63, apply Sphericity > 0.1, X axis going to 13 TeV, real JetHT data (full run2) with SVM + pileup + JES/JER systematics
 
 ## ST Binning versions
 - V1: [2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000,13000]
