@@ -1,0 +1,10 @@
+Background_rpf_expo_par0:JES = -0.00018447823924298452
+Background_rpf_expo_par0:lumi = -0.00010333098507819783
+Background_rpf_expo_par1:Background_rpf_expo_par0 = 0.8003578837835489
+Background_rpf_expo_par1:JES = -0.00011927565259615498
+Background_rpf_expo_par1:lumi = -6.68093467032836e-05
+lumi:JES = 0.016874692084246478
+r:Background_rpf_expo_par0 = 0.00106284502020567
+r:Background_rpf_expo_par1 = 0.0006871896323046992
+r:JES = -0.1735702155402547
+r:lumi = -0.09722112766710757

@@ -559,6 +559,8 @@ class TwoDAlphabet:
 
             if not condor:
                 fit_cmd = fit_cmd.format(seed=seed, ntoys=ntoys)
+                with open('SignalInjection_command.txt','w') as out:
+                    out.write(fit_cmd)
                 execute_cmd(fit_cmd)
                 
             else:
