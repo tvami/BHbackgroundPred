@@ -1,0 +1,313 @@
+#ifdef __CLING__
+#pragma cling optimize(0)
+#endif
+void limits_combine_137p6fb_signals_sphaleron_pNCS0p5_sphaleron()
+{
+//=========Macro generated from canvas: climits/climits
+//=========  (Mon Mar 24 16:10:56 2025) by ROOT version 6.30/07
+   TCanvas *climits = new TCanvas("climits", "climits",0,0,700,600);
+   gStyle->SetOptStat(0);
+   gStyle->SetOptTitle(0);
+   climits->SetHighLightColor(2);
+   climits->Range(8.307,-4.8,9.567,0.5333333);
+   climits->SetFillColor(0);
+   climits->SetBorderMode(0);
+   climits->SetBorderSize(2);
+   climits->SetLogy();
+   climits->SetLeftMargin(0.15);
+   climits->SetRightMargin(0.05);
+   climits->SetBottomMargin(0.15);
+   climits->SetFrameLineWidth(2);
+   climits->SetFrameBorderMode(0);
+   climits->SetFrameLineWidth(2);
+   climits->SetFrameBorderMode(0);
+   
+   Double_t Graph0_fx1[5] = { 8.5, 8.75, 9, 9.25, 9.5 };
+   Double_t Graph0_fy1[5] = { 0.001335144, 0.002227783, 0.004013062, 0.007446289, 0.01489258 };
+   TGraph *graph = new TGraph(5,Graph0_fx1,Graph0_fy1);
+   graph->SetName("Graph0");
+   graph->SetTitle("");
+   graph->SetFillStyle(1000);
+   graph->SetLineStyle(2);
+   graph->SetLineWidth(3);
+   graph->SetMarkerStyle(21);
+   graph->SetMarkerSize(0);
+   
+   TH1F *Graph_Graph01 = new TH1F("Graph_Graph01","",100,8.4,9.6);
+   Graph_Graph01->SetMinimum(0.0001);
+   Graph_Graph01->SetMaximum(1);
+   Graph_Graph01->SetDirectory(nullptr);
+   Graph_Graph01->SetStats(0);
+   Graph_Graph01->SetLineWidth(2);
+   Graph_Graph01->SetMarkerStyle(20);
+   Graph_Graph01->SetMarkerSize(0.9);
+   Graph_Graph01->GetXaxis()->SetTitle("E_{sph} [TeV]");
+   Graph_Graph01->GetXaxis()->SetRange(9,92);
+   Graph_Graph01->GetXaxis()->SetLabelFont(42);
+   Graph_Graph01->GetXaxis()->SetLabelOffset(0.015);
+   Graph_Graph01->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph01->GetXaxis()->SetTitleSize(0.055);
+   Graph_Graph01->GetXaxis()->SetTitleOffset(1.25);
+   Graph_Graph01->GetXaxis()->SetTitleFont(42);
+   Graph_Graph01->GetYaxis()->SetTitle("PEF");
+   Graph_Graph01->GetYaxis()->SetLabelFont(42);
+   Graph_Graph01->GetYaxis()->SetLabelOffset(0.015);
+   Graph_Graph01->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph01->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph01->GetYaxis()->SetTickLength(0.02);
+   Graph_Graph01->GetYaxis()->SetTitleOffset(1.5);
+   Graph_Graph01->GetYaxis()->SetTitleFont(42);
+   Graph_Graph01->GetZaxis()->SetLabelFont(42);
+   Graph_Graph01->GetZaxis()->SetLabelOffset(0.015);
+   Graph_Graph01->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph01->GetZaxis()->SetTitleSize(0.065);
+   Graph_Graph01->GetZaxis()->SetTitleOffset(1.1);
+   Graph_Graph01->GetZaxis()->SetTitleFont(42);
+   graph->SetHistogram(Graph_Graph01);
+   
+   graph->Draw("al");
+   
+   Double_t Graph1_fx2[12] = { 8.5, 8.75, 9, 9.25, 9.5, 9.5, 9.5, 9.5, 9.25, 9, 8.75, 8.5 };
+   Double_t Graph1_fy2[12] = { 0.004056797, 0.006771779, 0.01219856, 0.02263889, 0.04528202, 0.04528202, 0.004479408, 0.004479408, 0.002268791, 0.00122273, 0.0006961823, 0.0004276633 };
+   graph = new TGraph(12,Graph1_fx2,Graph1_fy2);
+   graph->SetName("Graph1");
+   graph->SetTitle("Graph");
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#ffcc00");
+   graph->SetFillColor(ci);
+   graph->SetFillStyle(1000);
+   graph->SetLineColor(0);
+   graph->SetMarkerStyle(20);
+   graph->SetMarkerSize(0.9);
+   
+   TH1F *Graph_Graph12 = new TH1F("Graph_Graph12","Graph",100,8.4,9.6);
+   Graph_Graph12->SetMinimum(0.000384897);
+   Graph_Graph12->SetMaximum(0.04976746);
+   Graph_Graph12->SetDirectory(nullptr);
+   Graph_Graph12->SetStats(0);
+   Graph_Graph12->SetLineWidth(2);
+   Graph_Graph12->SetMarkerStyle(20);
+   Graph_Graph12->SetMarkerSize(0.9);
+   Graph_Graph12->GetXaxis()->SetLabelFont(42);
+   Graph_Graph12->GetXaxis()->SetLabelOffset(0.015);
+   Graph_Graph12->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph12->GetXaxis()->SetTitleSize(0.065);
+   Graph_Graph12->GetXaxis()->SetTitleOffset(1.1);
+   Graph_Graph12->GetXaxis()->SetTitleFont(42);
+   Graph_Graph12->GetYaxis()->SetLabelFont(42);
+   Graph_Graph12->GetYaxis()->SetLabelOffset(0.015);
+   Graph_Graph12->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph12->GetYaxis()->SetTitleSize(0.065);
+   Graph_Graph12->GetYaxis()->SetTickLength(0.02);
+   Graph_Graph12->GetYaxis()->SetTitleOffset(1.1);
+   Graph_Graph12->GetYaxis()->SetTitleFont(42);
+   Graph_Graph12->GetZaxis()->SetLabelFont(42);
+   Graph_Graph12->GetZaxis()->SetLabelOffset(0.015);
+   Graph_Graph12->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph12->GetZaxis()->SetTitleSize(0.065);
+   Graph_Graph12->GetZaxis()->SetTitleOffset(1.1);
+   Graph_Graph12->GetZaxis()->SetTitleFont(42);
+   graph->SetHistogram(Graph_Graph12);
+   
+   graph->Draw("lf");
+   
+   Double_t Graph2_fx3[12] = { 8.5, 8.75, 9, 9.25, 9.5, 9.5, 9.5, 9.5, 9.25, 9, 8.75, 8.5 };
+   Double_t Graph2_fy3[12] = { 0.002431464, 0.004128112, 0.007516237, 0.0140652, 0.02836785, 0.02836785, 0.00789623, 0.00789623, 0.003967658, 0.002138307, 0.001198739, 0.0007254304 };
+   graph = new TGraph(12,Graph2_fx3,Graph2_fy3);
+   graph->SetName("Graph2");
+   graph->SetTitle("Graph");
+
+   ci = TColor::GetColor("#00cc00");
+   graph->SetFillColor(ci);
+   graph->SetFillStyle(1000);
+   graph->SetLineColor(0);
+   graph->SetMarkerStyle(20);
+   graph->SetMarkerSize(0.9);
+   
+   TH1F *Graph_Graph23 = new TH1F("Graph_Graph23","Graph",100,8.4,9.6);
+   Graph_Graph23->SetMinimum(0.0006528874);
+   Graph_Graph23->SetMaximum(0.0311321);
+   Graph_Graph23->SetDirectory(nullptr);
+   Graph_Graph23->SetStats(0);
+   Graph_Graph23->SetLineWidth(2);
+   Graph_Graph23->SetMarkerStyle(20);
+   Graph_Graph23->SetMarkerSize(0.9);
+   Graph_Graph23->GetXaxis()->SetLabelFont(42);
+   Graph_Graph23->GetXaxis()->SetLabelOffset(0.015);
+   Graph_Graph23->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph23->GetXaxis()->SetTitleSize(0.065);
+   Graph_Graph23->GetXaxis()->SetTitleOffset(1.1);
+   Graph_Graph23->GetXaxis()->SetTitleFont(42);
+   Graph_Graph23->GetYaxis()->SetLabelFont(42);
+   Graph_Graph23->GetYaxis()->SetLabelOffset(0.015);
+   Graph_Graph23->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph23->GetYaxis()->SetTitleSize(0.065);
+   Graph_Graph23->GetYaxis()->SetTickLength(0.02);
+   Graph_Graph23->GetYaxis()->SetTitleOffset(1.1);
+   Graph_Graph23->GetYaxis()->SetTitleFont(42);
+   Graph_Graph23->GetZaxis()->SetLabelFont(42);
+   Graph_Graph23->GetZaxis()->SetLabelOffset(0.015);
+   Graph_Graph23->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph23->GetZaxis()->SetTitleSize(0.065);
+   Graph_Graph23->GetZaxis()->SetTitleOffset(1.1);
+   Graph_Graph23->GetZaxis()->SetTitleFont(42);
+   graph->SetHistogram(Graph_Graph23);
+   
+   graph->Draw("lf");
+   
+   Double_t Graph0_fx4[5] = { 8.5, 8.75, 9, 9.25, 9.5 };
+   Double_t Graph0_fy4[5] = { 0.001335144, 0.002227783, 0.004013062, 0.007446289, 0.01489258 };
+   graph = new TGraph(5,Graph0_fx4,Graph0_fy4);
+   graph->SetName("Graph0");
+   graph->SetTitle("");
+   graph->SetFillStyle(1000);
+   graph->SetLineStyle(2);
+   graph->SetLineWidth(3);
+   graph->SetMarkerStyle(21);
+   graph->SetMarkerSize(0);
+   
+   TH1F *Graph_Graph04 = new TH1F("Graph_Graph04","",100,8.4,9.6);
+   Graph_Graph04->SetMinimum(0.0001);
+   Graph_Graph04->SetMaximum(1);
+   Graph_Graph04->SetDirectory(nullptr);
+   Graph_Graph04->SetStats(0);
+   Graph_Graph04->SetLineWidth(2);
+   Graph_Graph04->SetMarkerStyle(20);
+   Graph_Graph04->SetMarkerSize(0.9);
+   Graph_Graph04->GetXaxis()->SetTitle("E_{sph} [TeV]");
+   Graph_Graph04->GetXaxis()->SetRange(9,92);
+   Graph_Graph04->GetXaxis()->SetLabelFont(42);
+   Graph_Graph04->GetXaxis()->SetLabelOffset(0.015);
+   Graph_Graph04->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph04->GetXaxis()->SetTitleSize(0.055);
+   Graph_Graph04->GetXaxis()->SetTitleOffset(1.25);
+   Graph_Graph04->GetXaxis()->SetTitleFont(42);
+   Graph_Graph04->GetYaxis()->SetTitle("PEF");
+   Graph_Graph04->GetYaxis()->SetLabelFont(42);
+   Graph_Graph04->GetYaxis()->SetLabelOffset(0.015);
+   Graph_Graph04->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph04->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph04->GetYaxis()->SetTickLength(0.02);
+   Graph_Graph04->GetYaxis()->SetTitleOffset(1.5);
+   Graph_Graph04->GetYaxis()->SetTitleFont(42);
+   Graph_Graph04->GetZaxis()->SetLabelFont(42);
+   Graph_Graph04->GetZaxis()->SetLabelOffset(0.015);
+   Graph_Graph04->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph04->GetZaxis()->SetTitleSize(0.065);
+   Graph_Graph04->GetZaxis()->SetTitleOffset(1.1);
+   Graph_Graph04->GetZaxis()->SetTitleFont(42);
+   graph->SetHistogram(Graph_Graph04);
+   
+   graph->Draw("l");
+   
+   TLegend *leg = new TLegend(0.5,0.7,0.92,0.89,NULL,"brNDC");
+   leg->SetBorderSize(0);
+   leg->SetTextFont(62);
+   leg->SetLineColor(0);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(0);
+   TLegendEntry *entry=leg->AddEntry("NULL","95% CL Upper Limits","h");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(62);
+   entry=leg->AddEntry("Graph1","Expected Limit #pm1#sigma, #pm2#sigma","f");
+
+   ci = TColor::GetColor("#ffcc00");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(1000);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(62);
+   leg->Draw();
+   TLine *line = new TLine(0.517,0.75,0.588,0.75);
+
+   ci = TColor::GetColor("#00cc00");
+   line->SetLineColor(ci);
+   line->SetLineWidth(22);
+   line->SetNDC();
+   line->Draw();
+   line = new TLine(0.517,0.75,0.588,0.75);
+   line->SetLineStyle(2);
+   line->SetLineWidth(3);
+   line->SetNDC();
+   line->Draw();
+   line = new TLine(-1,0,-1,-1);
+
+   ci = TColor::GetColor("#666666");
+   line->SetLineColor(ci);
+   line->SetLineStyle(2);
+   line->Draw();
+   TLatex *   tex = new TLatex(-1.005,0,"  -1.00 TeV");
+
+   ci = TColor::GetColor("#666666");
+   tex->SetTextColor(ci);
+   tex->SetTextFont(43);
+   tex->SetTextSize(14);
+   tex->SetTextAngle(90);
+   tex->SetLineWidth(2);
+   tex->Draw();
+   
+   TH1F *Graph_copy = new TH1F("Graph_copy","",100,8.4,9.6);
+   Graph_copy->SetMinimum(0.0001);
+   Graph_copy->SetMaximum(1);
+   Graph_copy->SetDirectory(nullptr);
+   Graph_copy->SetStats(0);
+   Graph_copy->SetLineWidth(2);
+   Graph_copy->SetMarkerStyle(20);
+   Graph_copy->SetMarkerSize(0.9);
+   Graph_copy->GetXaxis()->SetTitle("E_{sph} [TeV]");
+   Graph_copy->GetXaxis()->SetRange(9,92);
+   Graph_copy->GetXaxis()->SetLabelFont(42);
+   Graph_copy->GetXaxis()->SetLabelOffset(0.015);
+   Graph_copy->GetXaxis()->SetLabelSize(0.05);
+   Graph_copy->GetXaxis()->SetTitleSize(0.055);
+   Graph_copy->GetXaxis()->SetTitleOffset(1.25);
+   Graph_copy->GetXaxis()->SetTitleFont(42);
+   Graph_copy->GetYaxis()->SetTitle("PEF");
+   Graph_copy->GetYaxis()->SetLabelFont(42);
+   Graph_copy->GetYaxis()->SetLabelOffset(0.015);
+   Graph_copy->GetYaxis()->SetLabelSize(0.05);
+   Graph_copy->GetYaxis()->SetTitleSize(0.05);
+   Graph_copy->GetYaxis()->SetTickLength(0.02);
+   Graph_copy->GetYaxis()->SetTitleOffset(1.5);
+   Graph_copy->GetYaxis()->SetTitleFont(42);
+   Graph_copy->GetZaxis()->SetLabelFont(42);
+   Graph_copy->GetZaxis()->SetLabelOffset(0.015);
+   Graph_copy->GetZaxis()->SetLabelSize(0.05);
+   Graph_copy->GetZaxis()->SetTitleSize(0.065);
+   Graph_copy->GetZaxis()->SetTitleOffset(1.1);
+   Graph_copy->GetZaxis()->SetTitleFont(42);
+   Graph_copy->Draw("sameaxis");
+      tex = new TLatex(0.95,0.915,"35.9 fb^{-1} + 41.5 fb^{-1} + 60 fb^{-1} (13 TeV)");
+   tex->SetNDC();
+   tex->SetTextAlign(31);
+   tex->SetTextFont(42);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.15,0.915,"CMS");
+   tex->SetNDC();
+   tex->SetTextFont(61);
+   tex->SetTextSize(0.08);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.3,0.96,"");
+   tex->SetNDC();
+   tex->SetTextAlign(23);
+   tex->SetTextFont(52);
+   tex->SetTextSize(0.0608);
+   tex->SetLineWidth(2);
+   tex->Draw();
+   climits->Modified();
+   climits->SetSelected(climits);
+}

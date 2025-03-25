@@ -1,0 +1,43 @@
+,process,region,binning,color,process_type,scale,variation,source_filename,source_histname,alias,title,combine_idx,lnN,shapes,syst_type,direction,variation_alias
+0,data_obs,pass,default,black,DATA,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Data.root,hpass,Data,Data,,,,,,
+1,Signal_thr8500_pNCS0p5,pass,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8500_pNCS0p5.root,hpass,Signal_thr8500_pNCS0p5,Sphaleron signal,,1.016,,lnN,,
+2,Signal_thr8500_pNCS0p5,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8500_pNCS0p5.root,hpass_SVMsyst_up,Signal_thr8500_pNCS0p5,Sphaleron signal,,,1.0,shapes,Up,SVMsyst
+3,Signal_thr8500_pNCS0p5,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8500_pNCS0p5.root,hpass_SVMsyst_down,Signal_thr8500_pNCS0p5,Sphaleron signal,,,1.0,shapes,Down,SVMsyst
+4,Signal_thr8500_pNCS0p5,pass,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8500_pNCS0p5.root,hpass,Signal_thr8500_pNCS0p5,Sphaleron signal,,,,,,
+5,Signal_thr8750_pNCS0p5,pass,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8750_pNCS0p5.root,hpass,Signal_thr8750_pNCS0p5,Sphaleron signal,,1.016,,lnN,,
+6,Signal_thr8750_pNCS0p5,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8750_pNCS0p5.root,hpass_SVMsyst_up,Signal_thr8750_pNCS0p5,Sphaleron signal,,,1.0,shapes,Up,SVMsyst
+7,Signal_thr8750_pNCS0p5,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8750_pNCS0p5.root,hpass_SVMsyst_down,Signal_thr8750_pNCS0p5,Sphaleron signal,,,1.0,shapes,Down,SVMsyst
+8,Signal_thr8750_pNCS0p5,pass,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8750_pNCS0p5.root,hpass,Signal_thr8750_pNCS0p5,Sphaleron signal,,,,,,
+9,Signal_thr9000_pNCS0p5,pass,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9000_pNCS0p5.root,hpass,Signal_thr9000_pNCS0p5,Sphaleron signal,,1.016,,lnN,,
+10,Signal_thr9000_pNCS0p5,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9000_pNCS0p5.root,hpass_SVMsyst_up,Signal_thr9000_pNCS0p5,Sphaleron signal,,,1.0,shapes,Up,SVMsyst
+11,Signal_thr9000_pNCS0p5,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9000_pNCS0p5.root,hpass_SVMsyst_down,Signal_thr9000_pNCS0p5,Sphaleron signal,,,1.0,shapes,Down,SVMsyst
+12,Signal_thr9000_pNCS0p5,pass,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9000_pNCS0p5.root,hpass,Signal_thr9000_pNCS0p5,Sphaleron signal,,,,,,
+13,Signal_thr9250_pNCS0p5,pass,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9250_pNCS0p5.root,hpass,Signal_thr9250_pNCS0p5,Sphaleron signal,,1.016,,lnN,,
+14,Signal_thr9250_pNCS0p5,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9250_pNCS0p5.root,hpass_SVMsyst_up,Signal_thr9250_pNCS0p5,Sphaleron signal,,,1.0,shapes,Up,SVMsyst
+15,Signal_thr9250_pNCS0p5,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9250_pNCS0p5.root,hpass_SVMsyst_down,Signal_thr9250_pNCS0p5,Sphaleron signal,,,1.0,shapes,Down,SVMsyst
+16,Signal_thr9250_pNCS0p5,pass,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9250_pNCS0p5.root,hpass,Signal_thr9250_pNCS0p5,Sphaleron signal,,,,,,
+17,Signal_thr9500_pNCS0p5,pass,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9500_pNCS0p5.root,hpass,Signal_thr9500_pNCS0p5,Sphaleron signal,,1.016,,lnN,,
+18,Signal_thr9500_pNCS0p5,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9500_pNCS0p5.root,hpass_SVMsyst_up,Signal_thr9500_pNCS0p5,Sphaleron signal,,,1.0,shapes,Up,SVMsyst
+19,Signal_thr9500_pNCS0p5,pass,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9500_pNCS0p5.root,hpass_SVMsyst_down,Signal_thr9500_pNCS0p5,Sphaleron signal,,,1.0,shapes,Down,SVMsyst
+20,Signal_thr9500_pNCS0p5,pass,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9500_pNCS0p5.root,hpass,Signal_thr9500_pNCS0p5,Sphaleron signal,,,,,,
+21,data_obs,fail,default,black,DATA,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Data.root,hfail,Data,Data,,,,,,
+22,Signal_thr8500_pNCS0p5,fail,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8500_pNCS0p5.root,hfail,Signal_thr8500_pNCS0p5,Sphaleron signal,,1.016,,lnN,,
+23,Signal_thr8500_pNCS0p5,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8500_pNCS0p5.root,hfail_SVMsyst_up,Signal_thr8500_pNCS0p5,Sphaleron signal,,,1.0,shapes,Up,SVMsyst
+24,Signal_thr8500_pNCS0p5,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8500_pNCS0p5.root,hfail_SVMsyst_down,Signal_thr8500_pNCS0p5,Sphaleron signal,,,1.0,shapes,Down,SVMsyst
+25,Signal_thr8500_pNCS0p5,fail,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8500_pNCS0p5.root,hfail,Signal_thr8500_pNCS0p5,Sphaleron signal,,,,,,
+26,Signal_thr8750_pNCS0p5,fail,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8750_pNCS0p5.root,hfail,Signal_thr8750_pNCS0p5,Sphaleron signal,,1.016,,lnN,,
+27,Signal_thr8750_pNCS0p5,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8750_pNCS0p5.root,hfail_SVMsyst_up,Signal_thr8750_pNCS0p5,Sphaleron signal,,,1.0,shapes,Up,SVMsyst
+28,Signal_thr8750_pNCS0p5,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8750_pNCS0p5.root,hfail_SVMsyst_down,Signal_thr8750_pNCS0p5,Sphaleron signal,,,1.0,shapes,Down,SVMsyst
+29,Signal_thr8750_pNCS0p5,fail,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr8750_pNCS0p5.root,hfail,Signal_thr8750_pNCS0p5,Sphaleron signal,,,,,,
+30,Signal_thr9000_pNCS0p5,fail,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9000_pNCS0p5.root,hfail,Signal_thr9000_pNCS0p5,Sphaleron signal,,1.016,,lnN,,
+31,Signal_thr9000_pNCS0p5,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9000_pNCS0p5.root,hfail_SVMsyst_up,Signal_thr9000_pNCS0p5,Sphaleron signal,,,1.0,shapes,Up,SVMsyst
+32,Signal_thr9000_pNCS0p5,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9000_pNCS0p5.root,hfail_SVMsyst_down,Signal_thr9000_pNCS0p5,Sphaleron signal,,,1.0,shapes,Down,SVMsyst
+33,Signal_thr9000_pNCS0p5,fail,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9000_pNCS0p5.root,hfail,Signal_thr9000_pNCS0p5,Sphaleron signal,,,,,,
+34,Signal_thr9250_pNCS0p5,fail,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9250_pNCS0p5.root,hfail,Signal_thr9250_pNCS0p5,Sphaleron signal,,1.016,,lnN,,
+35,Signal_thr9250_pNCS0p5,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9250_pNCS0p5.root,hfail_SVMsyst_up,Signal_thr9250_pNCS0p5,Sphaleron signal,,,1.0,shapes,Up,SVMsyst
+36,Signal_thr9250_pNCS0p5,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9250_pNCS0p5.root,hfail_SVMsyst_down,Signal_thr9250_pNCS0p5,Sphaleron signal,,,1.0,shapes,Down,SVMsyst
+37,Signal_thr9250_pNCS0p5,fail,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9250_pNCS0p5.root,hfail,Signal_thr9250_pNCS0p5,Sphaleron signal,,,,,,
+38,Signal_thr9500_pNCS0p5,fail,default,red,SIGNAL,1.0,lumi,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9500_pNCS0p5.root,hfail,Signal_thr9500_pNCS0p5,Sphaleron signal,,1.016,,lnN,,
+39,Signal_thr9500_pNCS0p5,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9500_pNCS0p5.root,hfail_SVMsyst_up,Signal_thr9500_pNCS0p5,Sphaleron signal,,,1.0,shapes,Up,SVMsyst
+40,Signal_thr9500_pNCS0p5,fail,default,red,SIGNAL,1.0,SVM,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9500_pNCS0p5.root,hfail_SVMsyst_down,Signal_thr9500_pNCS0p5,Sphaleron signal,,,1.0,shapes,Down,SVMsyst
+41,Signal_thr9500_pNCS0p5,fail,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v20//Sphaleron_Signal_thr9500_pNCS0p5.root,hfail,Signal_thr9500_pNCS0p5,Sphaleron signal,,,,,,
