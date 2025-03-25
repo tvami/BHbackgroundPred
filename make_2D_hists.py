@@ -7,6 +7,7 @@ ROOT.gROOT.SetBatch(True)
 ROOT.gStyle.SetOptFit(0)
 # ROOT.gStyle.SetOptStat(0);
 
+
 # unit pb
 crossSectionArray_QCD = {
     # "QCD_HT50to100.root" : 187700000.0,  # +-1639000
@@ -20,53 +21,51 @@ crossSectionArray_QCD = {
     "QCD_HT2000toInf" : 21.74, # +-0.2019
 }
 
-# unit pb
-crossSectionArray_blackmax = {
-    "BlackHole_B1_MD2000_MBH3000_n2" : 89.4228,
-    "BlackHole_B1_MD2000_MBH4000_n2" : 21.474,
-    "BlackHole_B1_MD2000_MBH5000_n2" : 4.79294,
-    "BlackHole_B1_MD2000_MBH6000_n2" : 0.952668,
-    "BlackHole_B1_MD2000_MBH7000_n2" : 0.151634,
-    "BlackHole_B1_MD2000_MBH8000_n2" : 0.017859,
-    "BlackHole_B1_MD2000_MBH9000_n2" : 0.00137232,
-    "BlackHole_B1_MD2000_MBH10000_n2" : 0.000056915,
-    "BlackHole_B1_MD2000_MBH11000_n2" : 0.000000830986,
-    "BlackHole_B1_MD3000_MBH4000_n2" : 6.78799,
-    "BlackHole_B1_MD3000_MBH5000_n2" : 1.55122,
-    "BlackHole_B1_MD3000_MBH6000_n2" : 0.301522,
-    "BlackHole_B1_MD3000_MBH7000_n2" : 0.0486405,
-    "BlackHole_B1_MD3000_MBH8000_n2" : 0.00584229,
-    "BlackHole_B1_MD3000_MBH9000_n2" : 0.000454481,
-    "BlackHole_B1_MD3000_MBH10000_n2" : 0.000018391,
-    "BlackHole_B1_MD3000_MBH11000_n2" : 0.000000276788,
-    "BlackHole_B1_MD4000_MBH5000_n2" : 0.675984,
-    "BlackHole_B1_MD4000_MBH6000_n2" : 0.135296,
-    "BlackHole_B1_MD4000_MBH7000_n2" : 0.0218575,
-    "BlackHole_B1_MD4000_MBH8000_n2" : 0.00263422,
-    "BlackHole_B1_MD4000_MBH9000_n2" : 0.000205028,
-    "BlackHole_B1_MD4000_MBH10000_n2" : 0.00000823413,
-    "BlackHole_B1_MD4000_MBH11000_n2" : 0.000000124564,
-    "BlackHole_B1_MD5000_MBH6000_n2" : 0.0697818,
-    "BlackHole_B1_MD5000_MBH7000_n2" : 0.0116312,
-    "BlackHole_B1_MD5000_MBH8000_n2" : 0.00137388,
-    "BlackHole_B1_MD5000_MBH9000_n2" : 0.000109127,
-    "BlackHole_B1_MD5000_MBH10000_n2" : 0.00000439053,
-    "BlackHole_B1_MD5000_MBH11000_n2" : 0.000000066559,
-    "BlackHole_B1_MD6000_MBH7000_n2" : 0.00677405,
-    "BlackHole_B1_MD6000_MBH8000_n2" : 0.000826004,
-    "BlackHole_B1_MD6000_MBH9000_n2" : 0.0000650319,
-    "BlackHole_B1_MD6000_MBH10000_n2" : 0.00000260528,
-    "BlackHole_B1_MD6000_MBH11000_n2" : 0.0000000396912,
-    "BlackHole_B1_MD7000_MBH8000_n2" : 0.000525429,
-    "BlackHole_B1_MD7000_MBH9000_n2" : 0.0000418709,
-    "BlackHole_B1_MD7000_MBH10000_n2" : 0.00000169923,
-    "BlackHole_B1_MD7000_MBH11000_n2" : 0.0000000256018,
-    "BlackHole_B1_MD8000_MBH9000_n2" : 0.000028304,
-    "BlackHole_B1_MD8000_MBH10000_n2" : 0.0000011523,
-    "BlackHole_B1_MD8000_MBH11000_n2" : 0.0000000174306,
-    "BlackHole_B1_MD9000_MBH10000_n2" : 0.000000826779,
-    "BlackHole_B1_MD9000_MBH11000_n2" : 0.0000000125184,
+dict_nModel_nDataset_blackmax = {
+    1: 1,
+    2: 2,
+    3: 5
 }
+dict_nModel_nDataset_charybdis = {
+    1: 2,
+    2: 4,
+    3: 8,
+    4: 6,
+    5: 10,
+    6: 9
+}
+
+# SVM model training with
+nModel = 1
+nExtra = 2
+
+# mnake histograms for
+model_draw = 'C'  # B or C
+nModel_draw = 6
+
+xs_filename = "BH_xs.csv" if model_draw == 'B' else "BH_xs_charybdis.csv"
+dict_nModel_nDataset = dict_nModel_nDataset_blackmax if model_draw == 'B' else dict_nModel_nDataset_charybdis
+
+# unit pb
+crossSectionArray_signals = {}
+with open(f"./signals_txt/{xs_filename}", "r") as f:
+    lines = f.readlines()
+    for line in lines[1:]:
+        line = line.strip().split(",")
+        sample_type = line[0]
+        nDataset = dict_nModel_nDataset[nModel_draw]
+        if sample_type.find(f"BlackHole_BH{nDataset}_") != -1:
+            # sample type: BlackHole_BH1_MD-2000_MBH-3000_n-2_TuneCUETP8M1_13TeV-blackmax
+            MDsplit = 'MD-' if model_draw == 'B' else 'MD'
+            MBHsplit = 'MBH-' if model_draw == 'B' else 'MBH'
+            nsplit = 'n-' if model_draw == 'B' else '_n'
+            MDval = int(sample_type.split(MDsplit)[1].split("_")[0])
+            MBHval = int(sample_type.split(MBHsplit)[1].split("_")[0])
+            nExtraval = int(sample_type.split(nsplit)[1].split("_")[0])
+            key = "BlackHole_%s%d_MD%d_MBH%d_n%d" % (model_draw, nModel_draw, MDval, MBHval, nExtraval)
+            cross_section = float(line[4])
+            print("key: {}, cross_section: {}".format(key, cross_section))
+            crossSectionArray_signals[key] = cross_section
 
 def make_output_rootfile(hists, sample, out_dir):
     # save the histograms to root file
@@ -112,19 +111,19 @@ if __name__ == '__main__':
     SVM_score_up = 0.7
     SVM_score_down = 0.5
     
-    PASS = f"SVM_score >= {SVM_score_cut}"
-    FAIL = f"SVM_score <  {SVM_score_cut}"
-    PASS_SVM_up = f"SVM_score >= {SVM_score_up}"
-    FAIL_SVM_up = f"SVM_score <  {SVM_score_up}"
-    PASS_SVM_down = f"SVM_score >= {SVM_score_down}"
-    FAIL_SVM_down = f"SVM_score <  {SVM_score_down}"
+    # PASS = f"SVM_score >= {SVM_score_cut}"
+    # FAIL = f"SVM_score <  {SVM_score_cut}"
+    # PASS_SVM_up = f"SVM_score >= {SVM_score_up}"
+    # FAIL_SVM_up = f"SVM_score <  {SVM_score_up}"
+    # PASS_SVM_down = f"SVM_score >= {SVM_score_down}"
+    # FAIL_SVM_down = f"SVM_score <  {SVM_score_down}"
     
-    # PASS = f"SVM_score >= {SVM_score_cut} && Sphericity > 0.1"
-    # FAIL = f"SVM_score <  {SVM_score_cut} && Sphericity > 0.1"
-    # PASS_SVM_up = f"SVM_score >= {SVM_score_up} && Sphericity > 0.1"
-    # FAIL_SVM_up = f"SVM_score <  {SVM_score_up} && Sphericity > 0.1"
-    # PASS_SVM_down = f"SVM_score >= {SVM_score_down} && Sphericity > 0.1"
-    # FAIL_SVM_down = f"SVM_score <  {SVM_score_down} && Sphericity > 0.1"
+    PASS = f"SVM_score >= {SVM_score_cut} && Sphericity > 0.1"
+    FAIL = f"SVM_score <  {SVM_score_cut} && Sphericity > 0.1"
+    PASS_SVM_up = f"SVM_score >= {SVM_score_up} && Sphericity > 0.1"
+    FAIL_SVM_up = f"SVM_score <  {SVM_score_up} && Sphericity > 0.1"
+    PASS_SVM_down = f"SVM_score >= {SVM_score_down} && Sphericity > 0.1"
+    FAIL_SVM_down = f"SVM_score <  {SVM_score_down} && Sphericity > 0.1"
     
     # PASS = f"SVM_score >= 0.5 && SVM_score <= 0.63 && Sphericity > 0.1"
     # FAIL = f"SVM_score < 0.5 && Sphericity > 0.1"
@@ -137,7 +136,7 @@ if __name__ == '__main__':
     sample = "signal"  # QCD, signal, data
     lumi = 137.62 * 1000   # 137.62 * 1000  # 96.14 * 1000 # 59.8 * 1000 unit pb^-1
     # outDir = "./histograms_for_2DAlphabet_v17"
-    outDir = "./histograms_for_2DAlphabet_v15_remake"
+    outDir = "./histograms_for_2DAlphabet_v18"
     blind = False
     
     if sample == "QCD":
@@ -153,7 +152,7 @@ if __name__ == '__main__':
         Ngen = {}
         
         for sample_type in sample_types:
-            rootfile_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_QCD_new/{}/".format(sample_type)
+            rootfile_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH{}_n{}/condor_QCD_new/{}/".format(nModel,nExtra,sample_type)
             
             hist_PASS = ROOT.TH2F(f"Hist_PASS_{sample_type}", "ST vs Multiplicity 2D Hist", int((xmax-xmin)/50.), xmin, xmax, 20, 0, 20)
             hist_FAIL = ROOT.TH2F(f"Hist_FAIL_{sample_type}", "ST vs Multiplicity 2D Hist", int((xmax-xmin)/50.), xmin, xmax, 20, 0, 20)
@@ -191,15 +190,27 @@ if __name__ == '__main__':
         hist_PASS_SVM_down = scale_add_hists_QCD(hists_PASS_SVM_down, Ngen, lumi, "hpass_SVMsyst_down")
         hist_FAIL_SVM_down = scale_add_hists_QCD(hists_FAIL_SVM_down, Ngen, lumi, "hfail_SVMsyst_down")
                 
-        # make_output_rootfile([hist_PASS, hist_PASS_SVM_up, hist_PASS_SVM_down, hist_FAIL, hist_FAIL_SVM_up, hist_FAIL_SVM_down], sample, outDir)
-        make_output_rootfile([hist_PASS, hist_FAIL], sample, outDir)
+        make_output_rootfile([hist_PASS, hist_PASS_SVM_up, hist_PASS_SVM_down, hist_FAIL, hist_FAIL_SVM_up, hist_FAIL_SVM_down], sample, outDir)
+        # make_output_rootfile([hist_PASS, hist_FAIL], sample, outDir)
     
     elif sample == "signal":
         
-        signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_signal_new"
+        if nModel == 1 and nExtra == 2:
+            # signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_signal_new"
+            # signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_signal_B2"
+            # signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_signal_B3"
+            # signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_signal_C1"
+            # signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_signal_C2"
+            signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_signal_{}{}".format(model_draw, nModel_draw)
+            # signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_signal_C4"
+            # signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_signal_C6"
+        else:
+            signal_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH{}_n{}/condor_signal".format(nModel, nExtra)
         sample_types = [sample_type for sample_type in os.listdir(signal_dir) if os.path.isdir(os.path.join(signal_dir, sample_type))]
         
         for sample_type in sample_types:
+            print(f">> making histograms for {sample_type}")
+            
             rootfile_dir = os.path.join(signal_dir, sample_type)
             
             hist_PASS = ROOT.TH2F(f"Hist_PASS_{sample_type}", "ST vs Multiplicity 2D Hist", int((xmax-xmin)/50.), xmin, xmax, 20, 0, 20)
@@ -215,6 +226,7 @@ if __name__ == '__main__':
                     tchain.Add(os.path.join(rootfile_dir, rootfile))
             
             ngen = tchain.GetEntries()
+            print(f"ngen: {ngen}")
             
             tchain.Draw(f"Multiplicity:ST >> Hist_PASS_{sample_type}",f"{PASS}")
             tchain.Draw(f"Multiplicity:ST >> Hist_FAIL_{sample_type}",f"{FAIL}")
@@ -223,12 +235,12 @@ if __name__ == '__main__':
             tchain.Draw(f"Multiplicity:ST >> Hist_PASS_{sample_type}_SVM_down",f"{PASS_SVM_down}")
             tchain.Draw(f"Multiplicity:ST >> Hist_FAIL_{sample_type}_SVM_down",f"{FAIL_SVM_down}")
             
-            hist_PASS.Scale(crossSectionArray_blackmax[sample_type] * lumi / ngen)
-            hist_FAIL.Scale(crossSectionArray_blackmax[sample_type] * lumi / ngen)
-            hist_PASS_SVM_up.Scale(crossSectionArray_blackmax[sample_type] * lumi / ngen)
-            hist_FAIL_SVM_up.Scale(crossSectionArray_blackmax[sample_type] * lumi / ngen)
-            hist_PASS_SVM_down.Scale(crossSectionArray_blackmax[sample_type] * lumi / ngen)
-            hist_FAIL_SVM_down.Scale(crossSectionArray_blackmax[sample_type] * lumi / ngen)
+            hist_PASS.Scale(crossSectionArray_signals[sample_type] * lumi / ngen)
+            hist_FAIL.Scale(crossSectionArray_signals[sample_type] * lumi / ngen)
+            hist_PASS_SVM_up.Scale(crossSectionArray_signals[sample_type] * lumi / ngen)
+            hist_FAIL_SVM_up.Scale(crossSectionArray_signals[sample_type] * lumi / ngen)
+            hist_PASS_SVM_down.Scale(crossSectionArray_signals[sample_type] * lumi / ngen)
+            hist_FAIL_SVM_down.Scale(crossSectionArray_signals[sample_type] * lumi / ngen)
             
             hist_PASS.SetName(f"hpass")
             hist_FAIL.SetName(f"hfail")
@@ -237,14 +249,14 @@ if __name__ == '__main__':
             hist_PASS_SVM_down.SetName(f"hpass_SVMsyst_down")
             hist_FAIL_SVM_down.SetName(f"hfail_SVMsyst_down")
             
-            # make_output_rootfile([hist_PASS, hist_PASS_SVM_up, hist_PASS_SVM_down, hist_FAIL, hist_FAIL_SVM_up, hist_FAIL_SVM_down], sample_type, outDir)
-            make_output_rootfile([hist_PASS, hist_FAIL], sample_type, outDir)
+            make_output_rootfile([hist_PASS, hist_PASS_SVM_up, hist_PASS_SVM_down, hist_FAIL, hist_FAIL_SVM_up, hist_FAIL_SVM_down], sample_type, outDir)
+            # make_output_rootfile([hist_PASS, hist_FAIL], sample_type, outDir)
 
     elif sample == "data":
-        data18_dir     = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_data18"
-        data16_dir     = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_data16_110424"
-        data16post_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_data16post_111224"
-        data17_dir     = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/condor_data17_111224"
+        data18_dir     = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_data18"
+        data16_dir     = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_data16_110424"
+        data16post_dir = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_data16post_111224"
+        data17_dir     = "/home/users/dazhang/works/phaseSpace/BlackHoleSearch/PhaseSpaceOT/EventClassification/eval/blackmax_BH1_n2/condor_data17_111224"
         
         hist_PASS = ROOT.TH2F(f"Hist_PASS_{sample}", "ST vs Multiplicity 2D Hist", int((xmax-xmin)/50.), xmin, xmax, 20, 0, 20)
         hist_FAIL = ROOT.TH2F(f"Hist_FAIL_{sample}", "ST vs Multiplicity 2D Hist", int((xmax-xmin)/50.), xmin, xmax, 20, 0, 20)
@@ -284,8 +296,8 @@ if __name__ == '__main__':
         hist_PASS_SVM_down.SetName(f"hpass_SVMsyst_down")
         hist_FAIL_SVM_down.SetName(f"hfail_SVMsyst_down")
         
-        # make_output_rootfile([hist_PASS, hist_PASS_SVM_up, hist_PASS_SVM_down, hist_FAIL, hist_FAIL_SVM_up, hist_FAIL_SVM_down], sample, outDir)
-        make_output_rootfile([hist_PASS, hist_FAIL], sample, outDir)
+        make_output_rootfile([hist_PASS, hist_PASS_SVM_up, hist_PASS_SVM_down, hist_FAIL, hist_FAIL_SVM_up, hist_FAIL_SVM_down], sample, outDir)
+        # make_output_rootfile([hist_PASS, hist_FAIL], sample, outDir)
         
 
     

@@ -56,8 +56,10 @@ _rpf_options = {
         'constraints': _generate_constraints(3)
     },
     '2x0': {
-        'form': '0.1*(@0+@1*x+@2*x**2)*(@3)',
-        'constraints': _generate_constraints(4)
+        # 'form': '0.1*(@0+@1*x+@2*x**2)*(@3)',
+        # 'constraints': _generate_constraints(4)
+        'form': '0.1*(@0+@1*x+@2*x**2)',
+        'constraints': _generate_constraints(3)
     },
     '2x1': {
         'form': '0.1*(@0+@1*x+@2*x**2)*(1+@3*y)',
@@ -199,12 +201,12 @@ def GOF(signal,tf,condor=True, extra=''):
         twoD.MakeCard(subset, signame+'_area')
     if condor == False:
         twoD.GoodnessOfFit(
-            signame+'-{}_area'.format(tf), ntoys=5000, freezeSignal=0,
+            signame+'-{}_area'.format(tf), ntoys=500, freezeSignal=0,
             condor=False
         )
     else:
         twoD.GoodnessOfFit(
-            signame+'-{}_area'.format(tf), ntoys=5000, freezeSignal=0,
+            signame+'-{}_area'.format(tf), ntoys=500, freezeSignal=0,
             condor=True, njobs=10
         )
 
@@ -285,20 +287,21 @@ def test_FTest(poly1, poly2, signal=''):
     print("rpfSet1: " + str(rpfSet1))
     nRpfs1  = len(rpfSet1.index)
     print(" >>>>>> Num RPF parameters for poly1: " + str(nRpfs1))
-    _gof_for_FTest(twoD, 'gluino-1800-{}_area'.format(poly1), card_or_w='card.txt')
-    gofFile1 = working_area+'/gluino-1800-{}_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'.format(poly1)
+    _gof_for_FTest(twoD, 'Signal_B1_MD2000_MBH10000_n2-{}_area'.format(poly1), card_or_w='card.txt')
+    gofFile1 = working_area+'/Signal_B1_MD2000_MBH10000_n2-{}_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'.format(poly1)
 
     # Get number of RPF params and run GoF for poly2
     params2 = twoD.ledger.select(_select_signal, '{}'.format(signal), poly2).alphaParams
     rpfSet2 = params2[params2["name"].str.contains("rpf")]
+    print("rpfSet2: " + str(rpfSet2))
     nRpfs2  = len(rpfSet2.index)
     print(" >>>>>> Num RPF parameters for poly2: " + str(nRpfs2))
-    _gof_for_FTest(twoD, 'gluino-1800-{}_area'.format(poly2), card_or_w='card.txt')
-    gofFile2 = working_area+'/gluino-1800-{}_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'.format(poly2)
+    _gof_for_FTest(twoD, 'Signal_B1_MD2000_MBH10000_n2-{}_area'.format(poly2), card_or_w='card.txt')
+    gofFile2 = working_area+'/Signal_B1_MD2000_MBH10000_n2-{}_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'.format(poly2)
 
 
     base_fstat = FstatCalc(gofFile1,gofFile2,nRpfs1,nRpfs2,nBins)
-    print(base_fstat)
+    print("base_fstat: ", base_fstat)
 
     def plot_FTest(base_fstat,nRpfs1,nRpfs2,nBins):
         from ROOT import TF1, TH1F, TLegend, TPaveText, TLatex, TArrow, TCanvas, kBlue, gStyle
@@ -369,17 +372,18 @@ def test_FTest(poly1, poly2, signal=''):
 
 if __name__ == "__main__":
     make_workspace()
-
-    # signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
+    
+    # signal_areas = ["Signal_thr8500_pNCS0p5","Signal_thr8750_pNCS0p5","Signal_thr9000_pNCS0p5","Signal_thr9250_pNCS0p5","Signal_thr9500_pNCS0p5"]
+    signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
+    # signal_areas = ["Signal_B1_MD3000_MBH7000_n2","Signal_B1_MD4000_MBH7000_n2"]
     # signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD3000_MBH4000_n2","Signal_B1_MD3000_MBH5000_n2","Signal_B1_MD3000_MBH6000_n2","Signal_B1_MD3000_MBH7000_n2","Signal_B1_MD3000_MBH8000_n2","Signal_B1_MD3000_MBH9000_n2","Signal_B1_MD3000_MBH10000_n2","Signal_B1_MD3000_MBH11000_n2"]
-    signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
+    # signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD5000_MBH6000_n2","Signal_B1_MD5000_MBH7000_n2","Signal_B1_MD5000_MBH8000_n2","Signal_B1_MD5000_MBH9000_n2","Signal_B1_MD5000_MBH10000_n2","Signal_B1_MD5000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD6000_MBH7000_n2","Signal_B1_MD6000_MBH8000_n2","Signal_B1_MD6000_MBH9000_n2","Signal_B1_MD6000_MBH10000_n2","Signal_B1_MD6000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD7000_MBH8000_n2","Signal_B1_MD7000_MBH9000_n2","Signal_B1_MD7000_MBH10000_n2","Signal_B1_MD7000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD8000_MBH9000_n2","Signal_B1_MD8000_MBH10000_n2","Signal_B1_MD8000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD9000_MBH10000_n2","Signal_B1_MD9000_MBH11000_n2"]
-    # signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
     
     # tf_type = '0x0'
     # tf_type = '1x0'
@@ -393,6 +397,7 @@ if __name__ == "__main__":
     #   if os.path.exists(workingArea + "/" + signal + f"-{tf_type}_area/done") : continue
       print("\n\n\n====================================")
       print("Running on signal "+ str(signal))
+      ''''''
       fitPassed = False
       # If the fit failed iterate on rMax
       rMax = 10
@@ -410,8 +415,9 @@ if __name__ == "__main__":
       run_limits(signal,tf_type)
     #   GOF(signal,tf_type,condor=False)
     #   plot_GOF(signal,tf_type,condor=False)
-    #   #SignalInjection(signal, tf_type, r=0, condor=False)
-    #   #plot_SignalInjection(signal, tf_type, r=0, condor=False)
+    #   SignalInjection(signal, tf_type, r=0.1, condor=False)
+    #   plot_SignalInjection(signal, tf_type, r=3, condor=False)
     #   #Impacts(signal,tf_type)
     #   #os.system("cp " + workingArea + "/base.root " + workingArea + "/" + signal + f"-{tf_type}_area/.")
     #   open(workingArea + "/" + signal + f"-{tf_type}_area/done", 'w').close()
+    #   test_FTest('0x0', '1x0', signal)
