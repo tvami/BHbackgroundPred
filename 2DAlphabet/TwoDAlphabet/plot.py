@@ -333,11 +333,11 @@ class Plotter(object):
                         slice_str = '%s < %s < %s'%slice_edges
 
                         if (region == "pass") :
-                            slice_str = "PS score > 0.63"
-                            # slice_str = "0.5 <= PS score <= 0.63"
+                            # slice_str = "PS score > 0.63"
+                            slice_str = "0.5 <= PS score <= 0.63"
                         elif (region == "fail") :
-                            slice_str = "PS score < 0.63"
-                            # slice_str = "PS score < 0.5"
+                            # slice_str = "PS score < 0.63"
+                            slice_str = "PS score < 0.5"
 
                         out_pad_name = f'{self.dir}/base_figs/{projn}_{region}{"" if not logyFlag else "_logy"}'
 
@@ -753,6 +753,47 @@ def make_systematic_plots(twoD):
                 print(f'[2DAlphabet.plot] INFO: Plotting histogram\n\t{outname}')
 
                 plt.savefig(outname)
+                plt.close() # free up memory
+                
+                # make the same plot, but add a ratio plot below in the same canvas
+                # Calculate the ratio to nominal
+                ratio_up = np.where(nominal == 0, 1, up / nominal) # avoid division by zero
+                ratio_down = np.where(nominal == 0, 1, down / nominal) # avoid division by zero
+                ratio_up = np.where(np.logical_and(ratio_up == 0, nominal == 0), 1, ratio_up) # avoid zero in ratio plot
+                ratio_down = np.where(np.logical_and(ratio_down == 0, nominal == 0), 1, ratio_down) # avoid zero in ratio plot
+                # Plot the ratio plot
+                fig, (ax, rax) = plt.subplots(2, 1, sharex=True, gridspec_kw={'height_ratios': [3, 1]}, figsize=(12, 10), dpi=200)
+                hep.cms.text("WiP",loc=0,ax=ax) # Add CMS text to the main plot
+                ax.set_title(f'{p}, {s}', pad=12, fontsize=18)
+                # Plot the nominal, up and down histograms
+                hep.histplot(histos, edges, stack=False, ax=ax, label=labels, histtype='step', linestyle=styles, color=colors)
+                handles, labelsproj = ax.get_legend_handles_labels()
+                ax.set_xlabel("")
+                ax.set_ylabel('Events')
+                ax.legend([handles[idx] for idx in range(len(labels))], [labelsproj[idx] for idx in range(len(labels))])
+                
+                # Plot the ratio
+                hep.histplot([ratio_up, ratio_down], edges,
+                            stack=False, ax=rax,
+                            histtype='step', linestyle=['dashed', 'dashed'], color=['red', 'blue'])
+
+                max_ratio = max(np.max(ratio_up), np.max(ratio_down))
+                if max_ratio == 1:
+                    # If both ratios are 1, set limits to 0.8-1.2
+                    rax.set_ylim(0.8, 1.2)
+                else:
+                    rax.set_ylim(0.5, max_ratio*1.1 if max_ratio > 1 else 1.5) # Set limits for ratio plot, ensure it doesn't go below 0.5 or above 1.2 for visual clarity
+                rax.yaxis.set_major_locator(plt.MaxNLocator(5)) # Set major ticks to 5 for the ratio plot
+                rax.tick_params(axis='y', which='major', labelsize=15) # Set major tick labels to size 10
+                rax.axhline(1, color='black', linestyle='solid', linewidth=1) # Add a horizontal line at y=1
+                rax.axhline(1.2, color='grey', linestyle='dashed', linewidth=1) # Add a horizontal line at y=1.2
+                rax.axhline(0.8, color='grey', linestyle='dashed', linewidth=1) # Add a horizontal line at y=0.8
+                rax.set_ylabel('Ratio')
+                rax.set_xlabel(f"${getattr(binning, axis.lower()+'title')}$") # Set x-axis label for ratio plot
+                
+                outname_ratio = f'{twoD.tag}/UncertPlots/Uncertainty_{p}_{r}_{s}_proj{axis}_ratio.png'
+                print(f'[2DAlphabet.plot] INFO: Plotting histogram with ratio\n\t{outname_ratio}')
+                plt.savefig(outname_ratio)
                 plt.close() # free up memory
 
 def _make_pull_plot(data, bkg, preVsPost=False):
