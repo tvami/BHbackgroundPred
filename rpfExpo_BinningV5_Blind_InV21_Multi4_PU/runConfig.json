@@ -36,9 +36,6 @@
     "HIST_DOWN": "h$region_$syst_down",
     "HIST_UP": "h$region_$syst_up",
     "SIGNAME": [
-      "Signal_B1_MD2000_MBH10000_n2"
-    ],
-    "SIGNAME2": [
       "Signal_B1_MD2000_MBH3000_n2",
       "Signal_B1_MD2000_MBH4000_n2",
       "Signal_B1_MD2000_MBH5000_n2",
@@ -48,6 +45,9 @@
       "Signal_B1_MD2000_MBH9000_n2",
       "Signal_B1_MD2000_MBH10000_n2",
       "Signal_B1_MD2000_MBH11000_n2"
+    ],
+    "SIGNAME2": [
+      "Signal_B1_MD2000_MBH10000_n2"
     ],
     "SIGNAME3": [
       "Signal_B1_MD3000_MBH4000_n2",
