@@ -100,9 +100,9 @@ def _select_signal(row, args):
         else:
             return False
     elif 'Background' in row.process:
-        if row.process == 'Background_'+poly_order:
+        if row.process == 'CMS_EXO24028_Background_'+poly_order:
             return True
-        elif row.process == 'Background':
+        elif row.process == 'CMS_EXO24028_Background':
             return True
         else:
             return False
@@ -128,11 +128,11 @@ def make_workspace():
     # get the binning for the fail region
     binning_f, _ = twoD.GetBinningFor(f)
     # you can change the name as you see fit 
-    fail_name = 'Background_'+f
+    fail_name = 'CMS_EXO24028_Background_'+f
     # this is the actual binned distribution of the fail
     bkg_f = BinnedDistribution(fail_name, bkg_hists[f], binning_f, constant=False)
     # now we add it to the 2DAlphabet ledger
-    twoD.AddAlphaObj('Background',f, bkg_f)
+    twoD.AddAlphaObj('CMS_EXO24028_Background',f, bkg_f)
 
     # now construct all of the possible transfer functions, to be chosen and used later
     for opt_name, opt in _rpf_options.items():
@@ -147,7 +147,7 @@ def make_workspace():
            bkg_p = bkg_f.Multiply(fail_name.replace('fail','pass')+'_'+opt_name, bkg_rpf)
 
            # then add this to the 2DAlphabet ledger
-           twoD.AddAlphaObj('Background_'+opt_name,p,bkg_p,title='Background')
+           twoD.AddAlphaObj('CMS_EXO24028_Background_'+opt_name,p,bkg_p,title='CMS_EXO24028_Background')
 
     # and save it out
     twoD.Save()
@@ -177,7 +177,7 @@ def perform_fit(signal, tf, rMaxExt = 0.1, extra=''):
     print("perform fit")
     twoD.MLfit('{}-{}_area'.format(signal, tf), rMin=0, rMax=rMaxExt, verbosity=0, extra=extra)
 
-def plot_fit(signal, tf, lumi='137.4'):
+def plot_fit(signal, tf, lumi='137.4', slice_strings={}):
     working_area = workingArea
     print("DoingTwoDAlphabet")
     twoD = TwoDAlphabet(working_area, '{}/runConfig.json'.format(working_area), loadPrevious=True)
@@ -185,7 +185,7 @@ def plot_fit(signal, tf, lumi='137.4'):
     subset = twoD.ledger.select(_select_signal, '{}'.format(signal), tf) 
     print("Doing twoD.StdPlots")
     # Postfit plots
-    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, lumiText=lumi+r' $fb^{-1}$ (13 TeV)')
+    twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, lumiText=lumi+r' $fb^{-1}$ (13 TeV)', slice_strings=slice_strings)
     # Prefit plots
     # twoD.StdPlots('{}-{}_area'.format(signal, tf), subset, True, lumiText=lumi+r' $fb^{-1}$ (13 TeV)')
 
@@ -202,7 +202,8 @@ def GOF(signal,tf,condor=True, extra=''):
     if condor == False:
         twoD.GoodnessOfFit(
             signame+'-{}_area'.format(tf), ntoys=500, freezeSignal=0,
-            condor=False
+            condor=False,
+            # extra='--text2workspace --channel-masks --setParameters mask_pass_SIG=1,mask_pass_HIGH=1'  # blinding SIG
         )
     else:
         twoD.GoodnessOfFit(
@@ -375,7 +376,7 @@ if __name__ == "__main__":
     
     # signal_areas = ["Signal_thr8500_pNCS0p5","Signal_thr8750_pNCS0p5","Signal_thr9000_pNCS0p5","Signal_thr9250_pNCS0p5","Signal_thr9500_pNCS0p5"]
     signal_areas = ["Signal_B1_MD2000_MBH10000_n2"]
-    # signal_areas = ["Signal_B1_MD3000_MBH7000_n2","Signal_B1_MD4000_MBH7000_n2"]
+    # signal_areas = ["Signal_B1_MD3000_MBH10000_n2","Signal_B1_MD4000_MBH9000_n2"]
     # signal_areas = ["Signal_B1_MD2000_MBH3000_n2","Signal_B1_MD2000_MBH4000_n2","Signal_B1_MD2000_MBH5000_n2","Signal_B1_MD2000_MBH6000_n2","Signal_B1_MD2000_MBH7000_n2","Signal_B1_MD2000_MBH8000_n2","Signal_B1_MD2000_MBH9000_n2","Signal_B1_MD2000_MBH10000_n2","Signal_B1_MD2000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD3000_MBH4000_n2","Signal_B1_MD3000_MBH5000_n2","Signal_B1_MD3000_MBH6000_n2","Signal_B1_MD3000_MBH7000_n2","Signal_B1_MD3000_MBH8000_n2","Signal_B1_MD3000_MBH9000_n2","Signal_B1_MD3000_MBH10000_n2","Signal_B1_MD3000_MBH11000_n2"]
     # signal_areas = ["Signal_B1_MD4000_MBH5000_n2","Signal_B1_MD4000_MBH6000_n2","Signal_B1_MD4000_MBH7000_n2","Signal_B1_MD4000_MBH8000_n2","Signal_B1_MD4000_MBH9000_n2","Signal_B1_MD4000_MBH10000_n2","Signal_B1_MD4000_MBH11000_n2"]
@@ -391,6 +392,13 @@ if __name__ == "__main__":
     # tf_type = '3x0'
     tf_type = 'expo'  # nominal
     # tf_type = 'expo2'
+    
+    slice_strings = {
+        # 'pass' : 'PS\; score < 0.63, \: S > 0.1, \: N \geq 4',     #
+        # 'fail' : 'PS\; score < 0.63, \: S > 0.1, \: N < 4',        #
+        'pass' : "N \geq 4,\: S > 0.1, \: PS\; score \geq 0.63",
+        'fail' : "N \geq 4,\: S > 0.1, \: PS\; score < 0.63"
+    }
 
     for signal in signal_areas :
       # When there are 100 signals, let's make sure we only run on the ones we didnt do before
@@ -410,13 +418,19 @@ if __name__ == "__main__":
           content = file.read()
           if not "Fit failed" in content: fitPassed = True
           rMax = rMax / 2.
-      plot_fit(signal,tf_type,lumi='137.6')
+    #   plot_fit(signal,tf_type,lumi='137.6',slice_strings=slice_strings)
+      plot_fit(signal,tf_type,lumi='77.4',slice_strings=slice_strings)
+    #   plot_fit(signal,tf_type,lumi='60')
       print("\n\n\nFit is succesful, running limits now for " + str(signal))
       run_limits(signal,tf_type)
     #   GOF(signal,tf_type,condor=False)
     #   plot_GOF(signal,tf_type,condor=False)
-    #   SignalInjection(signal, tf_type, r=0.1, condor=False)
-    #   plot_SignalInjection(signal, tf_type, r=3, condor=False)
+    #   for r in [0, 0.1, 0.5, 1, 2, 3]:
+    #     print("Signal Injection with r = " + str(r))
+    #     SignalInjection(signal, tf_type, r=r, condor=False)
+    #     plot_SignalInjection(signal, tf_type, r=r, condor=False)
+    #   SignalInjection(signal, tf_type, r=0, condor=False)
+    #   plot_SignalInjection(signal, tf_type, r=0, condor=False)
     #   #Impacts(signal,tf_type)
     #   #os.system("cp " + workingArea + "/base.root " + workingArea + "/" + signal + f"-{tf_type}_area/.")
     #   open(workingArea + "/" + signal + f"-{tf_type}_area/done", 'w').close()

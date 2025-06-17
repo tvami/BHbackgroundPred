@@ -270,7 +270,7 @@ class Plotter(object):
 
             make_can('{d}/{p}_{r}_2D'.format(d=self.dir,p=process,r=region), [out_file_name%('prefit')+'.png', out_file_name%('postfit')+'.png'])
 
-    def plot_projections(self, lumiText=r'138 $fb^{-1}$ (13 TeV)', extraText='Preliminary', subtitles={}, units='GeV', regionsToGroup=[]):
+    def plot_projections(self, lumiText=r'138 $fb^{-1}$ (13 TeV)', extraText='Preliminary', subtitles={}, units='GeV', regionsToGroup=[], slice_strings={}):
         '''Plot comparisons of data and the post-fit background model and signal
         using the 1D projections. Canvases are grouped based on projection axis.
         The canvas rows are separate selection regions while the columns
@@ -332,12 +332,14 @@ class Plotter(object):
                         )
                         slice_str = '%s < %s < %s'%slice_edges
 
-                        if (region == "pass") :
-                            # slice_str = "PS score > 0.63"
-                            slice_str = "0.5 <= PS score <= 0.63"
-                        elif (region == "fail") :
-                            # slice_str = "PS score < 0.63"
-                            slice_str = "PS score < 0.5"
+                        # if (region == "pass") :
+                            # slice_str = "N \geq 5,\: S > 0.1, \: PS\; score > 0.63"
+                            # slice_str = "N \geq 5,\: S > 0.1, \: 0.5 \leq PS\; score \leq 0.63"
+                        # elif (region == "fail") :
+                        #     slice_str = "N \geq 5,\: S > 0.1, \: PS\; score < 0.63"
+                            # slice_str = "N \geq 5,\: S > 0.1, \: PS score\; < 0.5"
+                        
+                        slice_str = slice_strings.get(region, slice_str)
 
                         out_pad_name = f'{self.dir}/base_figs/{projn}_{region}{"" if not logyFlag else "_logy"}'
 
@@ -523,7 +525,7 @@ def make_ax_1D(outname, binning, data, bkgs=[], signals=[], title='', subtitle='
     bkgNames = list(dict.fromkeys([hist.GetTitle().split(',')[0] for hist in bkgs]))
     sigNames = list(dict.fromkeys([hist.GetTitle().split(',')[0] for hist in signals]))
     # Replace the ROOT latex "#" with standard latex "\" escape character for python rstring
-    bkgNamesLatex = [r'${}$'.format(bkgName.replace("#","\\")) for bkgName in bkgNames]
+    bkgNamesLatex = [r'${}$'.format(bkgName.replace("#","\\").replace("CMS_EXO24028_","")) for bkgName in bkgNames]
     sigNamesLatex = [r'${}$'.format(sigName.replace("#","\\")) for sigName in sigNames]
     # Sum the common backgrounds and signals
     for bkg in bkgNames:
@@ -616,14 +618,15 @@ def make_ax_1D(outname, binning, data, bkgs=[], signals=[], title='', subtitle='
 
     # pull
     # TAV: After unblinding one needs to come back to this
-    #dataMinusBkg = data_arr - totalBkg_arr
-    dataMinusBkg = np.where(data_arr == 0, 0, data_arr - totalBkg_arr)
+    dataMinusBkg = data_arr - totalBkg_arr # unblinding
+    # dataMinusBkg = np.where(data_arr == 0, 0, data_arr - totalBkg_arr)
     data_error = np.where(dataMinusBkg<0, upper_errors - data_arr, data_arr - lower_errors)
     sigmas = np.sqrt(data_error**2 + totalBkg_err**2) 
     #sigmas = np.sqrt(np.sqrt(data_arr)*np.sqrt(data_arr) + totalBkg_err*totalBkg_err)
     sigmas[sigmas==0.0] = 1e-5 # avoid division by zero 
     pulls =  dataMinusBkg/sigmas
-    rax.bar(bin_centers,pulls, width=widths, color='gray')
+    # rax.bar(bin_centers,pulls, width=widths, color='gray')
+    rax.hist(bin_centers, bins=edges, weights=pulls, color='gray', edgecolor='black', linewidth=0.5, histtype='stepfilled', alpha=0.5)
     rax.set_ylim(-3,3)
     rax.set_ylabel(r'$\frac{Data-Bkg}{\sigma}$')
     axisTitle = binning.xtitle if projn == 'x' else binning.ytitle
@@ -692,10 +695,10 @@ def _get_start_stop(i,slice_idxs):
     stop  = slice_idxs[i+1]
     return start, stop
 
-def gen_projections(ledger, twoD, fittag, loadExisting=False, lumiText=r'138 $fb^{-1}$ (13 TeV)', extraText='Preliminary', subtitles={}, units='GeV', regionsToGroup=[]):
+def gen_projections(ledger, twoD, fittag, loadExisting=False, lumiText=r'138 $fb^{-1}$ (13 TeV)', extraText='Preliminary', subtitles={}, units='GeV', regionsToGroup=[], slice_strings={}):
     plotter = Plotter(ledger, twoD, fittag, loadExisting)
     plotter.plot_2D_distributions()
-    plotter.plot_projections(lumiText, extraText, subtitles, units, regionsToGroup)
+    plotter.plot_projections(lumiText, extraText, subtitles, units, regionsToGroup, slice_strings)
 
 def make_systematic_plots(twoD):
     '''Make plots of the systematic shape variations of each process based on those
@@ -979,6 +982,7 @@ def plot_gof(tag, subtag, seed=123456, condor=False):
         gof_limit_tree = gof_data_file.Get('limit')
         gof_limit_tree.GetEntry(0)
         gof_data = gof_limit_tree.limit
+        print('Observed GOF = %.2f'%gof_data)
 
         # Get toys
         if (gof_data < 1) : print("THe observed limit is less than 1, something seems wrong")
