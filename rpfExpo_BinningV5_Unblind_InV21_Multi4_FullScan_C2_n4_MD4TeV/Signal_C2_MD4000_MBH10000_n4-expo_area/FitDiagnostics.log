@@ -1,0 +1,44 @@
+ <<< Combine >>> 
+ <<< v10.0.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is FitDiagnostics
+Set Default Value of Parameter r To : 1
+>>> 0 out of 6 channels masked
+
+>> Found 18 floating parameters
+>> The following parameters are protected in the event of negative eigenvalues: r
+>> Verifying eigenvalues are all positive (iteration 0)
+Eigenvalue 16 : -1.0943e-05
+ - -0.996961	r
+ - 0.0747011	CMS_EXO24028_Background_fail_HIGH_bin_5-1
+ - 0.0203294	CMS_EXO24028_Background_fail_HIGH_bin_4-1
+ - 0.00622175	CMS_EXO24028_Background_fail_HIGH_bin_3-1
+ - 0.0036758	lumi_13TeV
+Eigenvalue 17 : -1.71802e-05
+ - -0.996939	CMS_EXO24028_Background_fail_HIGH_bin_5-1
+ - -0.0746984	r
+ - -0.0176528	CMS_EXO24028_Background_rpf_expo_par0
+ - -0.0132989	CMS_EXO24028_Background_rpf_expo_par1
+ - -0.00347553	CMS_EXO24028_Background_fail_LOW_bin_3-1
+>> Attempt 0 failed, remove the variable with largest eigenvector component...
+>> Dropping CMS_EXO24028_Background_fail_HIGH_bin_5-1 from the hessian
+>> Verifying eigenvalues are all positive (iteration 1)
+Eigenvalue 16 : -1.09779e-05
+ - -0.999755	r
+ - 0.0203687	CMS_EXO24028_Background_fail_HIGH_bin_4-1
+ - 0.00621259	CMS_EXO24028_Background_fail_HIGH_bin_3-1
+ - 0.00368611	lumi_13TeV
+ - 0.00331612	CMS_scale_j_13TeV
+>> Attempt 1 failed, remove the variable with largest eigenvector component...
+>> Dropping CMS_EXO24028_Background_fail_HIGH_bin_4-1 from the hessian
+>> Verifying eigenvalues are all positive (iteration 2)
+>> All eigenvalues are positive
+>> Inverting Hessian...
+>> Matrix inverted
+>> Note: the following parameters were dropped to make the covariance matrix pos-def:
+     - CMS_EXO24028_Background_fail_HIGH_bin_5-1
+     - CMS_EXO24028_Background_fail_HIGH_bin_4-1
+
+ --- FitDiagnostics ---
+Best fit r: 9.07434e-13  -9.07434e-13/+10  (68% CL)
+Done in 0.00 min (cpu), 0.00 min (real)

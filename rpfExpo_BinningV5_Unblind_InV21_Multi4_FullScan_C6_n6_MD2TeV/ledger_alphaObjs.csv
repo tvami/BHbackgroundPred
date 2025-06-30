@@ -1,0 +1,12 @@
+,process,region,obj,norm,process_type,color,combine_idx,title
+0,CMS_EXO24028_Background,fail,,,BKG,yellow,,CMS_EXO24028_Background
+1,CMS_EXO24028_Background_0x0,pass,,,BKG,yellow,,CMS_EXO24028_Background
+2,CMS_EXO24028_Background_1x0,pass,,,BKG,yellow,,CMS_EXO24028_Background
+3,CMS_EXO24028_Background_0x1,pass,,,BKG,yellow,,CMS_EXO24028_Background
+4,CMS_EXO24028_Background_1x1,pass,,,BKG,yellow,,CMS_EXO24028_Background
+5,CMS_EXO24028_Background_2x0,pass,,,BKG,yellow,,CMS_EXO24028_Background
+6,CMS_EXO24028_Background_2x1,pass,,,BKG,yellow,,CMS_EXO24028_Background
+7,CMS_EXO24028_Background_3x0,pass,,,BKG,yellow,,CMS_EXO24028_Background
+8,CMS_EXO24028_Background_2x2,pass,,,BKG,yellow,,CMS_EXO24028_Background
+9,CMS_EXO24028_Background_expo,pass,,,BKG,yellow,,CMS_EXO24028_Background
+10,CMS_EXO24028_Background_expo2,pass,,,BKG,yellow,,CMS_EXO24028_Background

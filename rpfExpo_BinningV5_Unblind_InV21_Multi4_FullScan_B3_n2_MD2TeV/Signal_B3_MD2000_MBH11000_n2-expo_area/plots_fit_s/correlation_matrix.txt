@@ -1,0 +1,15 @@
+CMS_EXO24028_Background_rpf_expo_par0:CMS_EXO24028_phaseSpace_SVM = 8.512944464552524e-12
+CMS_EXO24028_Background_rpf_expo_par0:CMS_pileup_13TeV = -5.177777505185037e-13
+CMS_EXO24028_Background_rpf_expo_par0:CMS_scale_j_13TeV = -3.905968291520581e-11
+CMS_EXO24028_Background_rpf_expo_par0:lumi_13TeV = -4.959406619727525e-12
+CMS_EXO24028_Background_rpf_expo_par1:CMS_EXO24028_Background_rpf_expo_par0 = 0.7803491402423436
+CMS_EXO24028_Background_rpf_expo_par1:CMS_EXO24028_phaseSpace_SVM = 1.2535826154165398e-11
+CMS_EXO24028_Background_rpf_expo_par1:CMS_pileup_13TeV = -9.653730735063352e-14
+CMS_EXO24028_Background_rpf_expo_par1:CMS_scale_j_13TeV = -2.981125715948358e-11
+CMS_EXO24028_Background_rpf_expo_par1:lumi_13TeV = -3.396566737246934e-12
+CMS_pileup_13TeV:CMS_EXO24028_phaseSpace_SVM = 1.900658315648404e-11
+CMS_scale_j_13TeV:CMS_EXO24028_phaseSpace_SVM = -3.2243299540221045e-22
+CMS_scale_j_13TeV:CMS_pileup_13TeV = 8.934437475181527e-22
+lumi_13TeV:CMS_EXO24028_phaseSpace_SVM = -1.9006583156518763e-11
+lumi_13TeV:CMS_pileup_13TeV = -1.2145223564967937e-21
+lumi_13TeV:CMS_scale_j_13TeV = -3.613554884058077e-22

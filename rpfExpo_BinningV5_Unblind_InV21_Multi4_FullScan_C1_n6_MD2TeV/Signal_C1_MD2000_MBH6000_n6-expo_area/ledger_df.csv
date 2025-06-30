@@ -1,0 +1,19 @@
+,process,region,binning,color,process_type,scale,variation,source_filename,source_histname,alias,title,combine_idx,lnN,shapes,syst_type,direction,variation_alias
+0,data_obs,pass,default,black,DATA,1.0,nominal,./histograms_for_2DAlphabet_v21//BH_Data.root,hpass,Data,Data,,,,,,
+25,Signal_C1_MD2000_MBH6000_n6,pass,default,red,SIGNAL,1.0,lumi_13TeV,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hpass,Signal_C1_MD2000_MBH6000_n6,BH signal,,1.016,,lnN,,
+26,Signal_C1_MD2000_MBH6000_n6,pass,default,red,SIGNAL,1.0,CMS_EXO24028_phaseSpace_SVM,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hpass_SVMsyst_up,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Up,SVMsyst
+27,Signal_C1_MD2000_MBH6000_n6,pass,default,red,SIGNAL,1.0,CMS_EXO24028_phaseSpace_SVM,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hpass_SVMsyst_down,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Down,SVMsyst
+28,Signal_C1_MD2000_MBH6000_n6,pass,default,red,SIGNAL,1.0,CMS_scale_j_13TeV,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hpass_JESsyst_up,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Up,JESsyst
+29,Signal_C1_MD2000_MBH6000_n6,pass,default,red,SIGNAL,1.0,CMS_scale_j_13TeV,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hpass_JESsyst_down,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Down,JESsyst
+30,Signal_C1_MD2000_MBH6000_n6,pass,default,red,SIGNAL,1.0,CMS_pileup_13TeV,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hpass_PUsyst_up,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Up,PUsyst
+31,Signal_C1_MD2000_MBH6000_n6,pass,default,red,SIGNAL,1.0,CMS_pileup_13TeV,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hpass_PUsyst_down,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Down,PUsyst
+32,Signal_C1_MD2000_MBH6000_n6,pass,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hpass,Signal_C1_MD2000_MBH6000_n6,BH signal,,,,,,
+73,data_obs,fail,default,black,DATA,1.0,nominal,./histograms_for_2DAlphabet_v21//BH_Data.root,hfail,Data,Data,,,,,,
+98,Signal_C1_MD2000_MBH6000_n6,fail,default,red,SIGNAL,1.0,lumi_13TeV,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hfail,Signal_C1_MD2000_MBH6000_n6,BH signal,,1.016,,lnN,,
+99,Signal_C1_MD2000_MBH6000_n6,fail,default,red,SIGNAL,1.0,CMS_EXO24028_phaseSpace_SVM,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hfail_SVMsyst_up,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Up,SVMsyst
+100,Signal_C1_MD2000_MBH6000_n6,fail,default,red,SIGNAL,1.0,CMS_EXO24028_phaseSpace_SVM,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hfail_SVMsyst_down,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Down,SVMsyst
+101,Signal_C1_MD2000_MBH6000_n6,fail,default,red,SIGNAL,1.0,CMS_scale_j_13TeV,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hfail_JESsyst_up,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Up,JESsyst
+102,Signal_C1_MD2000_MBH6000_n6,fail,default,red,SIGNAL,1.0,CMS_scale_j_13TeV,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hfail_JESsyst_down,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Down,JESsyst
+103,Signal_C1_MD2000_MBH6000_n6,fail,default,red,SIGNAL,1.0,CMS_pileup_13TeV,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hfail_PUsyst_up,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Up,PUsyst
+104,Signal_C1_MD2000_MBH6000_n6,fail,default,red,SIGNAL,1.0,CMS_pileup_13TeV,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hfail_PUsyst_down,Signal_C1_MD2000_MBH6000_n6,BH signal,,,1.0,shapes,Down,PUsyst
+105,Signal_C1_MD2000_MBH6000_n6,fail,default,red,SIGNAL,1.0,nominal,./histograms_for_2DAlphabet_v21//BH_Signal_C1_MD2000_MBH6000_n6.root,hfail,Signal_C1_MD2000_MBH6000_n6,BH signal,,,,,,

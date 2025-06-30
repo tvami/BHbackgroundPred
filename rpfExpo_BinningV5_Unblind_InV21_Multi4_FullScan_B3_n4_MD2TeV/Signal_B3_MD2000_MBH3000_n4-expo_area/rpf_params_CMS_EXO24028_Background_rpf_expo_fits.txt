@@ -1,0 +1,2 @@
+CMS_EXO24028_Background_rpf_expo_par0: -1.6318524224614184 +/- 0.0
+CMS_EXO24028_Background_rpf_expo_par1: -0.9230016564932951 +/- 0.00318285956536942
